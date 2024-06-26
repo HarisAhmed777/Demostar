@@ -48,28 +48,28 @@ function Homeimg() {
                 </Carousel.Item>
             </Carousel>
         </div>
-        <div className="bg-white container  row abs p-2">
+        <div className="bg-white container w-75 position-absolute abs p-2">
             <button
-                    className={` rounded-pill absbtn col-12 ${activeButton === 'Picnic' ? 'bg-dark text-white' : ''}`}
+                    className={` rounded-pill absbtn ${activeButton === 'Picnic' ? 'bg-dark text-white' : ''}`}
                     onClick={() => handleButtonClick('Picnic')}
                 >
                     Picnic
             </button>
             <button
-                    className={` rounded-pill  ms-3 absbtn col-12 ${activeButton === 'Package' ? 'bg-dark text-white' : ''}`}
+                    className={` rounded-pill  ms-3 absbtn ${activeButton === 'Package' ? 'bg-dark text-white' : ''}`}
                     onClick={() => handleButtonClick('Package')}
                 >
                     Package
             </button>
             <button
-                    className={` rounded-pill ms-3 absbtn col-12 ${activeButton === 'Offer' ? 'bg-dark text-white' : ''}`}
+                    className={` rounded-pill ms-3 absbtn ${activeButton === 'Offer' ? 'bg-dark text-white' : ''}`}
                     onClick={() => handleButtonClick('Offer')}
                 >
                     Offer
             </button>
 
-            <div className="mt-2 newdiv row">
-                <div className="col-12">
+            <div className="d-flex justify-content-between mt-2">
+                <div>
                     <label className="fw-light">location</label><br />
                     <select className="rounded-pill">
                         <option>New York,US</option>
