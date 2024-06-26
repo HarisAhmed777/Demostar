@@ -33,21 +33,31 @@
     color: whitesmoke;
 }
 
-.abs{
+.abs {
+    position: absolute;
+    width: 75%;
     bottom: 60px;
     left: 15%;
     box-shadow: 3px 3px 3px;
     border: 50px !important;
 }
-.sraechbtn{
+.newdiv{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sraechbtn {
     width: 140px;
     color: whitesmoke;
     padding: 5px;
     font-weight: bolder;
 }
-.absbtn{
+
+.absbtn {
     width: 90px;
 }
+
 /* Media Queries */
 @media (max-width: 1200px) {
     .carousel-content h1 {
@@ -80,6 +90,12 @@
     .carousel-content button {
         font-size: 14px;
     }
+
+    /* Remove position absolute for tablet and mobile */
+    .abs {
+        position: static;
+        margin: 20px auto;
+    }
 }
 
 @media (max-width: 576px) {
@@ -92,5 +108,15 @@
     }
     .carousel-content button {
         font-size: 12px;
+    }
+
+    /* Remove position absolute for mobile */
+    .abs {
+        width: 100%;
+        position: static;
+        margin: 20px auto;
+    }
+    .absbtn{
+        display: block;
     }
 }

@@ -56,15 +56,15 @@ const picnicpackages = [
 
 function Picnicpackages() {
     return (
-        <div className="picnic-container w-75">
+        <div className="picnic-container w-100">
             <div className="picnic-container-head">
                 <h2 className="text-start">Top Picnic spots</h2>
                 <p className="text-start">Favourite Destinations Based on customer reviews</p>
             </div>
             <div className="picnic-cards-container">
                 {picnicpackages.map((pkg, index) => (
-                    <div key={index} className="picnic-card ms-3">
-                        <div className="d-flex"><img className="picnic-card-img ms-2" src={pkg.img} alt="Card image cap" /></div>
+                    <div key={index} className="picnic-card ">
+                        <div className="d-flex"><img className="picnic-card-img " src={pkg.img} alt="Card image cap" /></div>
                         <div className="picnic-card-body">
                             <h5 className="picnic-card-title">{pkg.title}</h5>
                             <div className="d-flex justify-content-between">

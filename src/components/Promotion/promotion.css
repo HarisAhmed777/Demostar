@@ -26,4 +26,11 @@
 }
 
 
+@media (max-width:500px) {
+    .pro1{
+        margin-left: 5%;
+    }
+}
+
+
 
