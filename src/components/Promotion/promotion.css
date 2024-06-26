@@ -1,0 +1,29 @@
+.pro1{
+    background-image: url('../images/Promotion1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 500px;
+}
+.cont{
+    margin-left: 100px;
+}
+
+
+
+.pro2{
+    background-image: url('../images/Promotion2.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 500px;
+}
+
+.btnpro{
+    background-color: yellow;
+    color: black;
+
+}
+
+
+

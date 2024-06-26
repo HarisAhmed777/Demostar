@@ -1,0 +1,98 @@
+.containerr {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Ensure layout stacks on smaller screens */
+    align-items: center; /* Center the container content */
+    justify-content: space-between; /* Add space between the content and images */
+}
+
+.imggridwhole {
+    /* margin-top: 100px; */
+    height: 400px; /* Set the height to 400px */
+    background-color:#efefeb;
+    width: 100%; /* Ensure the container width adjusts */
+    max-width: 800px; /* Set a maximum width */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center; /* Center the text content */
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+
+.top-images, .bottom-images {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.image {
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+/* Override widths and heights for specific images */
+.oval-1 {
+    width: 150px;
+    height: 200px;
+    background-image: url('../images/cp1.jpg');
+}
+
+.oval-2 {
+    width: 120px;
+    height: 180px;
+    background-image: url('../images/cp2.avif');
+}
+
+.oval-3 {
+    width: 90px;
+    height: 135px;
+    background-image: url('../images/cp1.jpg');
+}
+
+.oval-4 {
+    width: 110px;
+    height: 160px;
+    background-image: url('../images/cp1.jpg');
+}
+
+.oval-5 {
+    width: 130px;
+    height: 170px;
+    background-image: url('../images/cp1.jpg');
+}
+
+@media (max-width: 500px) {
+    .oval-1, .oval-2, .oval-3, .oval-4, .oval-5 {
+        width: 50px;
+        height: 100px;
+    }
+
+    .top-images, .bottom-images {
+        flex-wrap: nowrap; /* Ensure no wrapping */
+        justify-content: center; /* Center the images */
+    }
+
+    .top-images {
+        justify-content: space-around; /* Space out top images */
+    }
+
+    .bottom-images {
+        justify-content: space-around; /* Space out bottom images */
+    }
+}

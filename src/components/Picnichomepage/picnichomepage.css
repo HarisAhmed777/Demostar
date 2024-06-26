@@ -1,0 +1,195 @@
+.picnic-card-img{
+    height: 120px !important;
+    border-radius: 30px !important;
+    width: 250px !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+
+.picnic-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.picnic-container-head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.picnic-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.picnic-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+}
+
+.picnic-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.picnic-card-body {
+    padding: 15px;
+}
+
+.picnic-card-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.picnic-button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.luxurytravel{
+    width: 800px;
+    height: 400px;
+    background-color: #efefeb;
+
+}
+.luxurytravel {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #efefeb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.luxurytravel .row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.luxurytravel .luxurytravel-text {
+    flex: 1;
+}
+
+.luxurytravel .luxurytravel-text button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.luxurytravel .luxurytravelimages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.luxurytravel .luxurytravelimages img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Specific heights for images */
+.luxurytravel .luxurytravelimages img:nth-child(1) {
+    height: 150px;
+}
+
+.luxurytravel .luxurytravelimages img:nth-child(2) {
+    height: 200px;
+}
+
+.luxurytravel .luxurytravelimages img:nth-child(3) {
+    height: 100px;
+}
+
+.luxurytravel .luxurytravelimages img:nth-child(4) {
+    height: 250px;
+}
+
+.luxurytravel .luxurytravelimages img:nth-child(5) {
+    height: 180px;
+}
+
+    .luxurytravel {
+        padding: 10px;
+    }
+
+    .luxurytravel .row {
+        flex-direction: column;
+    }
+
+    .luxurytravel .luxurytravelimages {
+        grid-template-columns: 1fr;
+    }
+
+    .luxurytravel .luxurytravel-text {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        .luxurytravel {
+            padding: 10px;
+        }
+    
+        .luxurytravel .row {
+            flex-direction: column;
+        }
+    
+        .luxurytravel .luxurytravelimages {
+            grid-template-columns: 1fr;
+        }
+    
+        .luxurytravel .luxurytravel-text {
+            margin-bottom: 20px;
+        }
+    }
+    
+@media (max-width: 992px) {
+    .picnic-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .picnic-card-img {
+        height: 150px;
+    }
+
+    .picnic-card-title {
+        font-size: 1rem;
+    }
+
+    .picnic-button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .picnic-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .picnic-card-img {
+        height: 150px;
+    }
+
+    .picnic-card-title {
+        font-size: 1rem;
+    }
+
+    .picnic-button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}

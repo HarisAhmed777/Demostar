@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.logoimg{
+  height: 70px;
+  width: 100px;
+}
+
+.navhome{
+  margin-left: 190px;
+}
+.navb{
+  height: 100px;
+}

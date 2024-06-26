@@ -1,0 +1,19 @@
+.travelprofileimg{
+    height: 50px;
+    width: 70px;
+    text-align: center !important;
+    align-items: center;
+    align-self: center;
+}
+
+
+.wholetravel{
+    width: 95%;
+
+}
+
+
+.paymentimgs{
+    height: 50px;
+    width: 70px;
+}
