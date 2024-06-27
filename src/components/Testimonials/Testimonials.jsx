@@ -38,8 +38,8 @@ function Testimonials(){
     return(
         <>
         <div className="container">
-            <h3 className="fw-bold">Dont take our word for it</h3>
-        </div>
+            <h3 className="fw-bold ms-5">Dont take our word for it</h3>
+        
         <Carousel responsive={responsive} className="container">
         <DataTesti {...testimonials[0]}/>
         <DataTesti {...testimonials[0]}/>
@@ -48,6 +48,7 @@ function Testimonials(){
         <DataTesti {...testimonials[0]}/>
         <DataTesti {...testimonials[0]}/>
         </Carousel>;
+        </div>
 
 
         </>

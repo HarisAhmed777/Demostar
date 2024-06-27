@@ -42,7 +42,7 @@ function FAQ() {
         <>
             <h1 className="text-center fw-light">Frequently Asked Questions</h1>
             <p className="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, pariatur!</p>
-            <div className="container">
+            <div className="container mb-5">
                 {faqData.map((faq, index) => (
                     <div key={index}>
                         <div className="d-flex justify-content-between align-items-center ms-3">
@@ -59,7 +59,7 @@ function FAQ() {
                     
                 ))}
             </div>
-            <div className="text-center rounded-pill">
+            <div className="text-center rounded-pill mb-5">
                 <button className="btn bg-dark text-white rounded-pill">Our support Center</button>
                 <button className="btn fw-bold">Contact us --</button>
 

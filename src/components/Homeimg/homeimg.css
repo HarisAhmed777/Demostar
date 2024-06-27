@@ -34,7 +34,10 @@
 }
 
 .abs{
-    bottom: 60px;
+    position: absolute;
+    width: 75%;
+    padding: 20px;
+    bottom: 40px;
     left: 15%;
     box-shadow: 3px 3px 3px;
     border: 50px !important;
@@ -80,6 +83,13 @@
     .carousel-content button {
         font-size: 14px;
     }
+    .abs{
+        position: static;
+        width: 90%;
+        margin-right: 10%;
+        box-shadow: 0px 0px 0px;
+        display: block;
+    }
 }
 
 @media (max-width: 576px) {
@@ -92,5 +102,11 @@
     }
     .carousel-content button {
         font-size: 12px;
+    }
+    .searchbtndiv{
+        text-align: center;
+    }
+    .entirerowdiv{
+        text-align: center;
     }
 }

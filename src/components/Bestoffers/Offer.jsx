@@ -13,7 +13,7 @@ function Offer({img,title,duration,price}){
                             <p className="card-text">{duration}</p>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{price}</p>
-                                <button className="rounded-pill">Book now</button>
+                                <p className="fw-bold mt-1">Book now</p>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ import './header.css'
 
 function CollapsibleExample() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary pt-5 d-flex justify-content-between position-fixed w-100 z-2 navb">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary d-flex justify-content-between position-fixed w-100 z-2 navb">
       <Container>
      
                 <Navbar.Brand href="#home"><img src={Logo} alt="" className='logoimg' />

@@ -48,28 +48,30 @@ function Homeimg() {
                 </Carousel.Item>
             </Carousel>
         </div>
-        <div className="bg-white container w-75 position-absolute abs p-2">
+        <div className="bg-white container abs">
+            <div className="row text-center ms-3">
             <button
-                    className={` rounded-pill absbtn ${activeButton === 'Picnic' ? 'bg-dark text-white' : ''}`}
+                    className={` rounded-pill col-lg-2 col-3 ms-2 ${activeButton === 'Picnic' ? 'bg-dark text-white' : ''}`}
                     onClick={() => handleButtonClick('Picnic')}
                 >
                     Picnic
             </button>
             <button
-                    className={` rounded-pill  ms-3 absbtn ${activeButton === 'Package' ? 'bg-dark text-white' : ''}`}
+                    className={` rounded-pill  col-lg-2 col-3 ms-2 ${activeButton === 'Package' ? 'bg-dark text-white' : ''}`}
                     onClick={() => handleButtonClick('Package')}
                 >
                     Package
             </button>
             <button
-                    className={` rounded-pill ms-3 absbtn ${activeButton === 'Offer' ? 'bg-dark text-white' : ''}`}
+                    className={` rounded-pill col-lg-2 col-3 ms-2 ${activeButton === 'Offer' ? 'bg-dark text-white' : ''}`}
                     onClick={() => handleButtonClick('Offer')}
                 >
                     Offer
             </button>
+            </div>
 
-            <div className="d-flex justify-content-between mt-2">
-                <div>
+            <div className="row mt-2 entirerowdiv">
+                <div className="col-lg-2 col-md-6 col-12">
                     <label className="fw-light">location</label><br />
                     <select className="rounded-pill">
                         <option>New York,US</option>
@@ -78,15 +80,15 @@ function Homeimg() {
                         <option>New York,USA</option>
                     </select>
                 </div>
-                <div>
+                <div className="col-lg-2 col-md-6 col-12">
                     <label>Start Date</label> <br />
                     <DatePicker className="rounded-pill" selected={startDate} onChange={(date) => setStartDate(date)} />
                 </div>
-                <div>
+                <div className="col-lg-2 ms-2 col-md-6 col-12">
                     <label>End Date</label> <br />
                     <DatePicker selected={endDate} className="rounded-pill" onChange={(date) => setEndDate(date)} />
                 </div>
-                <div>
+                <div  className="col-lg-2 col-md-6 col-12">
                     <label className="fw-light">Guest</label><br />
                     <select className="rounded-pill">
                         <option>1 adult</option>
@@ -105,7 +107,7 @@ function Homeimg() {
                         <option>4 adults ,4 children</option>
                     </select>
                 </div>
-                <div>
+                <div className="col-lg-2 col-md-12 text-center col-12 searchbtndiv">
                     <button className="bg-dark rounded-pill mt-3 sraechbtn"><FontAwesomeIcon icon={faMagnifyingGlass}  className="me-2"/>Search</button>
                 </div>
             </div>

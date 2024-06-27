@@ -36,7 +36,7 @@ const newstips = [
 function Newsandtips(){
     return(
         <>
-            <div className="container mt-5">
+            <div className="container mt-5 mb-5">
                 <div  className="d-flex justify-content-between">
                     <div>
                         <h3 className="fw-bold">News,Tips & Guides</h3>

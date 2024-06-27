@@ -41,7 +41,7 @@ function Travelwithus() {
     ];
 
     return (
-        <div className="wholetravel ms-3">
+        <div className="wholetravel ms-3 mb-5">
             <h1 className="text-center">Why Travel with us</h1>
             <p className="text-center">The best booking platform you can trust</p>
             <div className="container">
