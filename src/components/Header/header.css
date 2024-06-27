@@ -52,3 +52,13 @@
     font-size: 8px;
   }
 }
+@media (max-width:400px) {
+  .topheader{
+    font-size: 7px;
+  }
+}
+@media (max-width:380px) {
+  .topheader{
+    font-size: 6px;
+  }
+}
