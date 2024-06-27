@@ -54,7 +54,7 @@ const offersdata = [
     return(
         <>
         <div className='bestoffbg mb-5'>
-        <div className='container-fluid  pb-4 w-75 '>
+        <div className='container-fluid  pb-4 '>
             <h1 className=''>Best Offers </h1>
             <div className='container bfcont'>
                 <Carousel responsive={responsive}>

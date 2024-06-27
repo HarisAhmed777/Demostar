@@ -30,8 +30,8 @@ const packages = [
 
 function Custompackages(){
     return(
-        <div className="container w-75">
-            <div className="conatinerhead">
+        <div className="container w-100 text-center">
+            <div className="conatinerhead container">
                 <h2 className="text-start">Our Custom Packages</h2>
                 <p className="text-start">Favourite Destinations Based on customer reviews</p>
             </div>
