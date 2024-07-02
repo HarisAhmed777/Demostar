@@ -121,9 +121,7 @@
     .entirerowdiv{
         text-align: center;
     }
-    .caro1{
-        height: 100px !important;
-    }
+
 }
 
 @media (max-width : 500px) {
