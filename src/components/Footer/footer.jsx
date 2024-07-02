@@ -7,19 +7,19 @@ function Footer(){
 
     return(
         <>
-            <div className="bg-dark text-white">
-                <div className="row">
-                    <div className="text-center col-lg-6 mt-5">
+            <div className="bg-dark text-white overflow-hidden">
+                <div className="row overflow-hidden">
+                    <div className="text-center overflow-hidden col-lg-4 mt-5">
                         <h3>Subscibe to see secrtr detail prices <br />drop the moment you sign up</h3>
                     </div>
-                    <div className="col-lg-6 text-center">
+                    <div className="col-lg-4 overflow-hidden text-center">
                         <input type="text" className="bg-dark rounded-pill p-2" placeholder="Enter you email" />
                         <button className="bg-warning p-2 mt-5 border-top rounded-pill ms-3 text-dark">Subscribe</button>
                     </div>
                 </div>
                 <div className="container mt-4">
                 <div className="row">
-                    <div className="col-lg-2">
+                    <div className="col-lg-3 col-md-3 text-center ">
                         <h5 className="fw-bold">Star Holidays</h5>
                         <p className="fw-light">90/7 Chennai 60032</p>
                         <p className="fw-light">working hours :09.00am to 06.30pm</p>
@@ -29,7 +29,7 @@ function Footer(){
                         </p>
                         
                     </div>
-                    <div className="col-lg-2">
+                    <div className="col-lg-3 col-md-3 text-center">
                         <h5 className="fw-bold">Support</h5>
                         <p className="fw-light">Forom Support</p>
                         <p className="fw-light">Live Chat</p>
@@ -39,7 +39,7 @@ function Footer(){
                         <p className="fw-light">Privacy</p>
                         <p className="fw-light">Changes logs</p>
                     </div>
-                    <div className="col-lg-2">
+                    <div className="col-lg-3 col-md-3 text-center">
                         <h5 className="fw-bold">About Us</h5>
                         <p className="fw-light">Community Blog</p>
                         <p className="fw-light">Jobs and carries</p>
@@ -47,7 +47,7 @@ function Footer(){
                         <p className="fw-light">Our Awards</p>
                         <p className="fw-light">Agency</p>
                     </div>
-                    <div className="col-lg-2">
+                    <div className="col-lg-3 col-md-3 text-center">
                         <h5 className="fw-bold">Services</h5>
                         <p className="fw-light">Tour guide</p>
                         <p className="fw-light">Tour Booking</p>
@@ -55,14 +55,7 @@ function Footer(){
                         <p className="fw-light">Ticket Booking</p>
                         <p className="fw-light">Rentel Services</p>
                     </div>
-                    <div className="col-lg-2">
-                        <h5 className="fw-bold">Legal</h5>
-                        <p className="fw-light">Terms and services</p>
-                        <p className="fw-light">Privacy Policy</p>
-                        <p className="fw-light">Data Processing</p>
-                        <p className="fw-light">Data Policy</p>
-                        <p className="fw-light">Refund Policy</p>
-                    </div>
+
 
                 </div>
                 </div>

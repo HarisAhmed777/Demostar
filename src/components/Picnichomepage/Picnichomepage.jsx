@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useContext} from "react";
+import { Context } from '../context';
 import './picnichomepage.css';
 import TCP1 from '../images/TCP1.jpg';
 import TCP2 from '../images/TCP2.jpg';
@@ -10,6 +11,7 @@ import TCP7 from '../images/TCP7.jpg';
 import TCP8 from '../images/TCP8.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 
 const picnicpackages = [
     {
@@ -55,7 +57,9 @@ const picnicpackages = [
 ];
 
 function Picnicpackages() {
+    const {theme} = useContext(Context);
     return (
+        <div className={`container-fluid  ${theme?"bg-dark text-white":null}`} >
         <div className="picnic-container w-100">
             <div className="picnic-container-head">
                 <h2 className="text-start">Top Picnic spots</h2>
@@ -64,8 +68,8 @@ function Picnicpackages() {
             <div className="picnic-cards-container">
                 {picnicpackages.map((pkg, index) => (
                     <div key={index} className="picnic-card ">
-                        <div className="d-flex"><img className="picnic-card-img " src={pkg.img} alt="Card image cap" /></div>
-                        <div className="picnic-card-body">
+                        <div className="d-flex w-100"><img className="picnic-card-img " src={pkg.img} alt="Card image cap" /></div>
+                        <div className={`picnic-card-body ${theme?"bg-dark text-white":null}`}>
                             <h5 className="picnic-card-title">{pkg.title}</h5>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{pkg.para}</p>
@@ -75,6 +79,7 @@ function Picnicpackages() {
                     </div>
                 ))}
             </div>
+        </div>
         </div>
 
         

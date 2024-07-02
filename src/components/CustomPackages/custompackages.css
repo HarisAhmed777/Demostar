@@ -10,7 +10,7 @@
 }
 
 .card {
-    border-radius: 20px;
+    border-radius:10px 10px 0px 0px;
     width: 18rem;
     margin-top: 10px; 
 }
@@ -18,13 +18,13 @@
 .cardimg {
     height: 250px;
     width: 100%;
-    border-radius: 20px 20px 0 0; 
+    border-radius: 10px 10px 0 0; 
 }
 
 .card-body {
-    z-index: 2;
+    z-index: 1 ;
     background-color: whitesmoke;
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0;
     padding: 15px;
     box-sizing: border-box;
     margin-top: -40px; 

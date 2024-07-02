@@ -14,7 +14,7 @@ function DataTesti({ heading, comment, img, name }) {
                         <div className="d-flex justify-content-between align-items-center">
                             <div>
                                 <img src={img} alt="" className="testiimg" />
-                                <p className="mt-3 d-inline">{name}</p>
+                                <p className="mt-3 d-inline">Haris</p>
                             </div>
                             <div className="rating">
                                 {[...Array(5)].map((star, index) => (

@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useContext}from "react";
 import './custompackages.css';
 import cp1 from '../images/cp1.jpg';
 import cp2 from '../images/cp2.avif';
 import cp3 from '../images/cp3.jpg';
-
+import { Context } from "../context";
 const packages = [
     {
         img: cp1,
@@ -29,17 +29,19 @@ const packages = [
 ];
 
 function Custompackages(){
+    const {theme} = useContext(Context);
     return(
-        <div className="container w-100 text-center">
+        <div className={`w-100 container-fluid ${theme?"bg-dark text-white":null}`}>
+        <div className={`container w-100 text-center `}>
             <div className="conatinerhead container">
                 <h2 className="text-start">Our Custom Packages</h2>
                 <p className="text-start">Favourite Destinations Based on customer reviews</p>
             </div>
-            <div className="cards-container">
+            <div className={`cards-container`}>
                 {packages.map((pkg, index) => (
                     <div key={index} className="card ms-3">
                         <img className="cardimg" src={pkg.img} alt="Card image cap"/>
-                        <div className="card-body">
+                        <div className={`card-body ${theme?"bg-dark text-white":null}`}>
                             <h5 className="card-title">{pkg.title}</h5>
                             <div className="d-flex ">
                             <p className="card-text">{pkg.duration}</p>
@@ -53,6 +55,7 @@ function Custompackages(){
                     </div>
                 ))}
             </div>
+        </div>
         </div>
     )
 }

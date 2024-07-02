@@ -15,6 +15,7 @@
     background-image: url('../images/Promotion2.jpg');
     background-position: center;
     background-size: cover;
+    margin-left: 1%;
     height: 200px;
     width: 500px;
 }
@@ -26,10 +27,45 @@
 }
 
 
+
+
+@media (min-width:770px) and (max-width:1024px) {
+    .pro1{
+        width:350px;   
+    }
+    .pro2{
+        margin-left: 1%;
+        width:350px;   
+    }
+
+}
+
+@media (min-width:500px) and (max-width:769px) {
+    .pro1{
+        width:280px;   
+    }
+    .pro2{
+        margin-left: 1%;
+        width:280px;   
+    }
+    .cont{
+        margin-left: 8%;
+    }
+
+}
+
 @media (max-width:500px) {
     .pro1{
-        margin-left: 5%;
+        width:280px;   
     }
+    .pro2{
+        /* margin-left: 1%; */
+        width:280px;   
+    }
+    .cont{
+        margin-left: 8%;
+    }
+
 }
 
 

@@ -1,7 +1,7 @@
 .picnic-card-img{
     height: 120px !important;
-    border-radius: 30px !important;
-    width: 250px !important;
+    /* border-radius: 30px !important; */
+    width: 100%!important;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -35,9 +35,9 @@
 }
 
 .picnic-card-img {
-    width: 100%;
+    width: 20%;
     height: 200px;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .picnic-card-body {

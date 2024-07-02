@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useContext} from "react";
 import './Imggrid.css';
+import {Context} from '../context'
 import cp1 from '../images/cp1.jpg';
 import cp2 from '../images/cp2.avif';
 import cp3 from '../images/cp1.jpg';
@@ -7,9 +8,11 @@ import TCP1 from '../images/cp1.jpg';
 import TCP2 from '../images/cp1.jpg';
 
 function Imggrid(){
+    const {theme} =  useContext(Context);
     return(
         <>
-        <div className="container imggridwhole mb-5">
+        <div className={`container-fluid ${theme?"bg-dark text-white":null}`}>
+        <div className={`container imggridwhole mb-5 ${theme?"bg-dark text-white":"imggridwholeclr"}`}>
         <div className="containerr">
             <div className="row">
             <div className="content  col-6 col-lg-6">
@@ -30,6 +33,7 @@ function Imggrid(){
                 </div>
             </div>
             </div>
+        </div>
         </div>
         </div>
         </>

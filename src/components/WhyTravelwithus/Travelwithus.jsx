@@ -47,7 +47,7 @@ function Travelwithus() {
             <div className="container">
             <div className="row">
                 {Traveldata.map((value, key) => (
-                    <div key={key} className="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div key={key} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div className="card" style={{ backgroundColor: value.bgcolor }}>
                             <div className="text-center p-3">
                                 <img src={value.img} className="travelprofileimg mb-3" alt="profile" />
@@ -60,7 +60,7 @@ function Travelwithus() {
                 ))}
             </div>
             </div>
-            <div className="container">
+            {/* <div className="container">
                 <div className="row d-flex justify-content-between">
                     <img src={paypal} alt="" className="paymentimgs" />
                     <img src={stripe} alt="" className="paymentimgs" />
@@ -73,7 +73,7 @@ function Travelwithus() {
 
                 </div>
 
-            </div>
+            </div> */}
         </div>
     );
 }

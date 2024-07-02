@@ -5,6 +5,18 @@
     justify-content: center;
 }
 
+.comtt{
+    /* width: 1440px; */
+}
+    .stdate{
+        border: none;
+        border-bottom: 2px solid yellow;
+        /* background-color: red; */
+        width: 150px;
+        outline: none;
+        
+    }
+
 .carousel-bg {
     height: 80vh;
     width: 100%;
@@ -36,7 +48,7 @@
 .abs{
     position: absolute;
     width: 75%;
-    padding: 20px;
+    padding: 10px;
     bottom: 40px;
     left: 15%;
     box-shadow: 3px 3px 3px;
@@ -108,5 +120,36 @@
     }
     .entirerowdiv{
         text-align: center;
+    }
+    .caro1{
+        height: 100px !important;
+    }
+}
+
+@media (max-width : 500px) {
+    .btnthree{
+        display: flex !important;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-left: 25px;
+        justify-content: space-between !important;
+    }
+    .btn1{
+        align-self: end !important;
+    }
+}
+
+@media (min-width:501px) and (max-width:769px) {
+    .btnthree{
+        display: flex !important;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-left: 25px;
+        justify-content: space-between !important;
+    }
+    .btn1{
+        align-self: end !important;
     }
 }

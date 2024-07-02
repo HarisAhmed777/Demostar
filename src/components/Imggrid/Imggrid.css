@@ -5,10 +5,12 @@
     align-items: center; 
     justify-content: space-between; 
 }
-
+.imggridwhole{
+background-color:#efefeb;
+}
 .imggridwhole {
     height: 400px; 
-    background-color:#efefeb;
+
     width: 100%; 
     max-width: 800px; 
     padding: 10px; 

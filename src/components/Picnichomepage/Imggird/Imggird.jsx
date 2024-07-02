@@ -1,10 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 import './imggird.css';
+import { Context } from "../../context";
 
 function Imggird(){
+    const {theme} = useContext(Context);
     return(
         <>
-        <div class="container">
+        <div className={`container-fluid ${theme?"bg-dark text-white":null}`}>
+        <div class={`container ${theme?"bg-dark text-white":null}`}>
              <div class="content">
             <h1>Heading</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum velit quis quam fermentum.</p>
@@ -21,6 +24,7 @@ function Imggird(){
         </div>
     </div>
 </div>
+    </div>
         </>
     )
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useContext }from 'react';
+import { Context } from '../context'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Bestoffers.css';
@@ -8,7 +9,7 @@ import cp2 from '../images/cp2.avif';
 import cp3 from '../images/cp3.jpg';
 
 function Bestoffers(){
-
+  const {theme} =  useContext(Context);
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -53,8 +54,9 @@ const offersdata = [
 ];
     return(
         <>
-        <div className='bestoffbg mb-5'>
-        <div className='container-fluid  pb-4 '>
+        <div class={`container-fluid ${theme?"bg-dark text-white":null}`}>
+        <div className={`mb-5 ${theme?"bg-dark text-white":"bestoffbg"}`}>
+        <div className='container pb-4 '>
             <h1 className=''>Best Offers </h1>
             <div className='container bfcont'>
                 <Carousel responsive={responsive}>
@@ -73,6 +75,7 @@ const offersdata = [
                 </Carousel>;
             </div>
         </div>
+      </div>
       </div>
         </>
     )
