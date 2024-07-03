@@ -4,6 +4,7 @@ import cp1 from '../images/cp1.jpg';
 import cp2 from '../images/cp2.avif';
 import cp3 from '../images/cp3.jpg';
 import { Context } from "../context";
+import {Link} from 'react-router-dom'
 const packages = [
     {
         img: cp1,
@@ -49,7 +50,7 @@ function Custompackages(){
                             </div>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{pkg.price}</p>
-                                <button className="pb-2 pe-3 rounded-pill tbnn">Book now</button>
+                               <Link to ='/bookingpage'> <button className="pb-2 pe-3 rounded-pill tbnn">Book now</button></Link>
                             </div>
                         </div>
                     </div>

@@ -63,10 +63,9 @@
     position: absolute;
     width: 75%;
     padding: 10px;
-    bottom: 60px;
+    bottom: 30px;
     left: 15%;
     box-shadow: 3px 3px 3px;
-    /* border: 50px !important; */
 }
 .sraechbtn{
     width: 140px;
@@ -180,7 +179,7 @@
 }
 
 
-@media (orientation: landscape) {
+@media (max-width: 767px) and  (orientation: landscape) {
     .abs{
         position: static;
         width: 100%;

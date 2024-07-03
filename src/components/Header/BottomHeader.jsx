@@ -7,7 +7,8 @@ import Logo from '../images/Logo.png';
 import './header.css';
 import { Context } from '../context';
 import { useContext } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons
+import { FaBars, FaTimes } from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 function CollapsibleExample() {
   const { theme, setTheme } = useContext(Context);
@@ -23,8 +24,8 @@ function CollapsibleExample() {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" className={`d-flex justify-content-between position-fixed w-100 z-2 navb ${theme ? "navbar-dark" : null}`}>
-        <Container>
+      <Navbar collapseOnSelect expand="lg" className={`position-fixed w-100 z-2  ${theme ? "navbar-dark" : null}`}>
+        <Container className = 'navb'>
           <Navbar.Brand href="#home">
             <img src={Logo} alt="" className='logoimg' />
           </Navbar.Brand>
@@ -32,33 +33,31 @@ function CollapsibleExample() {
             {isNavbarCollapsed ? <FaBars /> : <FaTimes />}
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav" className={`justify-content-end ${isNavbarCollapsed ? 'collapse' : ''}`}>
-            <Nav className="me-auto fw-bold navhome">
-              <Nav.Link href="#features">Home</Nav.Link>
+            <Nav className="fw-bold navhome">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
               <NavDropdown title="Packages" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Friends Package</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Honeymoon Package</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Temple Package</NavDropdown.Item>
+                <Link to = '/packagepage'><NavDropdown.Item href="#action/3.1">Friends Package</NavDropdown.Item></Link>
+                <Link to = '/packagepage'><NavDropdown.Item href="#action/3.2">Honeymoon Package</NavDropdown.Item></Link>
+                <Link to = '/packagepage'><NavDropdown.Item href="#action/3.3">Temple Package</NavDropdown.Item></Link>
                 <NavDropdown.Divider />
               </NavDropdown>
               <NavDropdown title="Picnic" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Tamil Nadu</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Kerala</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Goa</NavDropdown.Item>
+                <Link to = '/picnicpage'><NavDropdown.Item href="#action/3.1">Tamil Nadu</NavDropdown.Item></Link>
+                <Link to = '/picnicpage'><NavDropdown.Item href="#action/3.2">Kerala</NavDropdown.Item></Link>
+                <Link to = '/picnicpage'><NavDropdown.Item href="#action/3.3">Goa</NavDropdown.Item></Link>
                 <NavDropdown.Divider />
               </NavDropdown>
               <NavDropdown title="Offers" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Offer 1</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Offer 2</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Offer 3</NavDropdown.Item>
+                <Link to = '/offerpage'><NavDropdown.Item href="#action/3.1">Offer 1</NavDropdown.Item></Link>
+                <Link to = '/offerpage'><NavDropdown.Item href="#action/3.2">Offer 2</NavDropdown.Item></Link>
+                <Link to = '/offerpage'><NavDropdown.Item href="#action/3.3">Offer 3</NavDropdown.Item></Link>
               </NavDropdown>
               <NavDropdown title="Blog" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Blog 1</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Blog 2</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Blog 3</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">Blog 4</NavDropdown.Item>
+                <Link to = '/blogpage'><NavDropdown.Item href="#action/3.1">Blog 1</NavDropdown.Item></Link>
+                <Link to = '/blogpage'><NavDropdown.Item href="#action/3.2">Blog 2</NavDropdown.Item></Link>
+                <Link to = '/blogpage'><NavDropdown.Item href="#action/3.3">Blog 3</NavDropdown.Item></Link>
               </NavDropdown>
-              <Nav.Link>Contact</Nav.Link>
-              {/*   <Nav.Link onClick={handletheme}>themebutton</Nav.Link> */}
+              <Nav.Link as={Link} to="/feedbackpage">Contact</Nav.Link>
             </Nav>
             <Nav className="fw-bold">
               <Nav.Link href="#deets" className="">Login</Nav.Link>
@@ -66,6 +65,7 @@ function CollapsibleExample() {
             </Nav>
           </Navbar.Collapse>
         </Container>
+      
       </Navbar>
     </>
   );

@@ -35,7 +35,7 @@ function Bestoffers(){
 const offersdata = [
     {
         img: cp1,
-        title: "California sunset twilight boat Cruise",
+        title: "California twilight boat Cruise",
         duration: "2 days 3 nights",
         price: "1000rs/person"
     },

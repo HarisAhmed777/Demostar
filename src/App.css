@@ -1,3 +1,39 @@
-*{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Apply different fonts to different elements */
+body {
+    font-family: 'Open Sans', sans-serif; /* Default font for body */
+}
+
+h1{
+    font-family: 'Roboto', sans-serif ,cursive; /* Font for h1 */
+}
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif; /* Font for p */
+}
+
+button {
+    font-family: 'Josefin Sans', sans-serif; /* Font for button */
+}
+
+.custom-button {
+    font-family: 'Poppins', sans-serif; /* Font for specific class */
+}
+
+.headerp {
+    padding-bottom: 60px;
+}
+
+a.no-link-style {
+    text-decoration: none;
+    color: inherit;
 }

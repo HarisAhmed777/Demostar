@@ -21,12 +21,14 @@
 
 .navb{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  justify-content:space-between;
+  align-items: end;
+  padding: 10px;
 }
 
-
+.navhome{
+  margin-right: 23%;
+}
 
 .navbar-toggler {
   border: none !important;
@@ -54,7 +56,10 @@
       height: 60px;
   }
   .navb{
-    margin-top: 10px;
+    /* margin-top: 10px; */
+  }
+  .navhome{
+    margin-right: 0;
   }
 }
 
@@ -68,6 +73,9 @@
       height: auto;
       padding: 10px;
   }
+  .navhome{
+    margin-right: 0;
+  }
   .navbar-collapse {
       flex-grow: 1;
   }
@@ -79,10 +87,16 @@
   .topheader{
     font-size: 7px;
   }
+  .navhome{
+    margin-right: 0;
+  }
 }
 @media (max-width:380px) {
   .topheader{
     font-size: 6px;
+  }
+  .navhome{
+    margin-right: 0;
   }
 }
 
