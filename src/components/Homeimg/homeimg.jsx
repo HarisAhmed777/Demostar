@@ -18,7 +18,7 @@ function Homeimg() {
 
     return (
         <>
-            <div className={`w-100 container-fluid ${theme ? "bg-dark text-white" : null}`}>
+            <div className={`w-100  ${theme ? "bg-dark text-white" : null}`}>
                 <div className={`homeimg position-relative `}>
                     <Carousel className="w-100 pt-5 mb-5">
                         <Carousel.Item className="w-100 caro1">
