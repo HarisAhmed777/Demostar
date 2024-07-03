@@ -34,12 +34,6 @@ function CollapsibleExample() {
           <Navbar.Collapse id="responsive-navbar-nav" className={`justify-content-end ${isNavbarCollapsed ? 'collapse' : ''}`}>
             <Nav className="me-auto fw-bold navhome">
               <Nav.Link href="#features">Home</Nav.Link>
-              <NavDropdown title="About US" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">About our company</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Contact us</NavDropdown.Item>
-                <NavDropdown.Divider />
-              </NavDropdown>
               <NavDropdown title="Packages" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Friends Package</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Honeymoon Package</NavDropdown.Item>
@@ -56,11 +50,6 @@ function CollapsibleExample() {
                 <NavDropdown.Item href="#action/3.1">Offer 1</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Offer 2</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Offer 3</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Trips" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Trip 1</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Trip 2</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Trip 3</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Blog" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Blog 1</NavDropdown.Item>

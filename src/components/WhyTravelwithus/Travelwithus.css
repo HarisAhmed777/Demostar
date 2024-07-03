@@ -1,4 +1,4 @@
-.travelprofileimg{
+.travelprofileimg {
     height: 50px;
     width: 70px;
     text-align: center !important;
@@ -6,21 +6,27 @@
     align-self: center;
 }
 
-
-.wholetravel{
+.wholetravel {
     width: 95%;
-
 }
 
-
-.paymentimgs{
-    height: 50px;
-    width: 70px;
-}
-
-
-@media (min-width:500px) and (max-width: 770px) {
-    .wholetravel{
+@media (min-width: 500px) and (max-width: 770px) {
+    .wholetravel {
         margin-left: 50px !important;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .wholetravel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    .cardi {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-bottom: 1rem;
     }
 }
