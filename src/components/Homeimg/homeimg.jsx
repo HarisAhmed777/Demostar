@@ -15,9 +15,12 @@ function Homeimg() {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [activeButton, setActiveButton] = useState(null);
+    const [animationClass, setAnimationClass] = useState('');
 
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);
+        setAnimationClass('fade-in');
+        setTimeout(() => setAnimationClass(''), 500);
     };
 
     return (
@@ -29,29 +32,30 @@ function Homeimg() {
                             <div className="carousel-bg caro1" style={{ backgroundImage: `url(${cp1})` }}>
                                 <div className="carousel-content caro1">
                                     <button className="rounded-pill p-3 ">Discover The world</button>
-                                    <h1>Unleash Your Wanderlust <br />Book Your Next Journey</h1>
+                                    <h1>Unleash Your Wanderlust <br />Book Your Next Package</h1>
                                 </div>
                             </div>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <div className="carousel-bg" style={{ backgroundImage: `url(${cp2})` }}>
+                            <div className="carousel-bg caro1" style={{ backgroundImage: `url(${cp2})` }}>
                                 <div className="carousel-content">
-                                    <button className="rounded-pill p-3">Discover The world</button>
-                                    <h1>Unleash Your Wanderlust <br />Book Your Next Journey</h1>
+                                    <h1>Unleash Your Wanderlust <br />See your offers</h1>
+                                    <button className=" p-3 rounded-pill">Click to view more</button>
+
                                 </div>
                             </div>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <div className="carousel-bg" style={{ backgroundImage: `url(${cp3})` }}>
+                            <div className="carousel-bg caro1" style={{ backgroundImage: `url(${cp3})` }}>
                                 <div className="carousel-content">
                                     <button className="rounded-pill p-3">Discover The world</button>
-                                    <h1>Unleash Your Wanderlust <br />Book Your Next Journey</h1>
+                                    <h1>Unleash Your Wanderlust <br />where you wanna go for picnic</h1>
                                 </div>
                             </div>
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div className={`container abs ${theme ? "bg-dark text-white" : "bg-white text-dark"}`}>
+                <div className={`container abs ${theme ? "bg-dark text-white" : "bg-white text-dark"} ${animationClass}`}>
                     <div className="row text-center btnthree">
                         <button
                             className={` rounded-pill col-lg-2 col-3 btn1 ms-2 ${activeButton === 'Picnic' ? 'bg-dark text-white' : ''}`}
@@ -73,10 +77,10 @@ function Homeimg() {
                         </button>
                     </div>
                     <div className="container comtt">
-                        <div className={`row mt-2 entirerowdiv comtt`}>
+                        <div className={`row mt-2 entirerowdiv comtt d-flex  justify-content-around`}>
                             <div className="col-lg-2 col-md-5 col-12 mb-2">
                                 <label className="fw-light">Location</label><br />
-                                <select className="stdate ">
+                                <select className="stdate mt-3">
                                     <option>New York, US</option>
                                     <option>Goa, India</option>
                                     <option>New York, USA</option>
@@ -93,7 +97,7 @@ function Homeimg() {
                             </div>
                             <div className="col-lg-2 col-md-5 col-12 mb-2">
                                 <label className="fw-light">Guest</label><br />
-                                <select className="stdate">
+                                <select className="stdate mt-2">
                                     <option>1 adult</option>
                                     <option>2 adults</option>
                                     <option>3 adults</option>
