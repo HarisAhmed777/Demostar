@@ -177,3 +177,14 @@
         bottom: 120px;
     }
 }
+
+
+@media (orientation: landscape) {
+    .abs{
+        position: static;
+        width: 100%;
+        margin-right: 10%;
+        box-shadow: 0px 0px 0px;
+        display: block;
+    }
+  }
