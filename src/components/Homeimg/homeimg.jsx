@@ -2,26 +2,19 @@ import React, { useState, useContext } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Carousel from 'react-bootstrap/Carousel';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
 import './homeimg.css';
 import cp1 from '../images/cp1.jpg';
 import cp2 from '../images/cp2.avif';
 import cp3 from '../images/TCP1.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Context } from "../context";
 
 function Homeimg() {
     const { theme } = useContext(Context);
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
-    const [activeButton, setActiveButton] = useState(null);
-    const [animationClass, setAnimationClass] = useState('');
-
-    const handleButtonClick = (buttonName) => {
-        setActiveButton(buttonName);
-        setAnimationClass('fade-in');
-        setTimeout(() => setAnimationClass(''), 500);
-    };
+    const [key, setKey] = useState('picnic');
 
     return (
         <>
@@ -55,70 +48,150 @@ function Homeimg() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div className={`container abs ${theme ? "bg-dark text-white" : "bg-white text-dark"} ${animationClass}`}>
-                    <div className="row text-center btnthree">
-                        <button
-                            className={` rounded-pill col-lg-2 col-3 btn1 ms-2 ${activeButton === 'Picnic' ? 'bg-dark text-white' : ''}`}
-                            onClick={() => handleButtonClick('Picnic')}
-                        >
-                            Picnic
-                        </button>
-                        <button
-                            className={` rounded-pill col-lg-2 btn1 col-4 ms-2 ${activeButton === 'Package' ? 'bg-dark text-white' : ''}`}
-                            onClick={() => handleButtonClick('Package')}
-                        >
-                            Package
-                        </button>
-                        <button
-                            className={` rounded-pill col-lg-2 col-3 btn1 ms-2 ${activeButton === 'Offer' ? 'bg-dark text-white' : ''}`}
-                            onClick={() => handleButtonClick('Offer')}
-                        >
-                            Offer
-                        </button>
-                    </div>
-                    <div className="container comtt">
-                        <div className={`row mt-2 entirerowdiv comtt d-flex  justify-content-around`}>
-                            <div className="col-lg-2 col-md-5 col-12 mb-2">
-                                <label className="fw-light">Location</label><br />
-                                <select className="stdate mt-3">
-                                    <option>New York, US</option>
-                                    <option>Goa, India</option>
-                                    <option>New York, USA</option>
-                                    <option>New York, USA</option>
-                                </select>
+                <div className={`container abs ${theme ? "bg-dark text-white" : "bg-white text-dark"}`}>
+                    <Tabs
+                        id="controlled-tab-example"
+                        activeKey={key}
+                        onSelect={(k) => setKey(k)}
+                        className="mb-3"
+                    >
+                        <Tab eventKey="picnic" title="Picnic">
+                            <div className="container comtt">
+                                <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label className="fw-light">Location</label><br />
+                                        <select className="stdate mt-3">
+                                            <option>New York, US</option>
+                                            <option>Goa, India</option>
+                                            <option>New York, USA</option>
+                                            <option>New York, USA</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label>Start Date</label> <br />
+                                        <DatePicker className="stdate form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    </div>
+                                    <div className="col-lg-2 ms-2 col-md-5 col-12 mb-2">
+                                        <label>End Date</label> <br />
+                                        <DatePicker selected={endDate} className="stdate form-control" onChange={(date) => setEndDate(date)} />
+                                    </div>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label className="fw-light">Guest</label><br />
+                                        <select className="stdate mt-2">
+                                            <option>1 adult</option>
+                                            <option>2 adults</option>
+                                            <option>3 adults</option>
+                                            <option>4 adults</option>
+                                            <option>5 adults</option>
+                                            <option>2 adults, 1 child</option>
+                                            <option>2 adults, 2 children</option>
+                                            <option>2 adults, 3 children</option>
+                                            <option>2 adults, 4 children</option>
+                                            <option>2 adults, 5 children</option>
+                                            <option>4 adults, 1 child</option>
+                                            <option>4 adults, 2 children</option>
+                                            <option>4 adults, 3 children</option>
+                                            <option>4 adults, 4 children</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-lg-2 col-md-12 text-center col-12 mb-2 searchbtndiv">
+                                        <button className="bg-dark rounded-pill mt-3 sraechbtn">Book</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-lg-2 col-md-5 col-12 mb-2">
-                                <label>Start Date</label> <br />
-                                <DatePicker className="stdate form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
+                        </Tab>
+                        <Tab eventKey="package" title="Package">
+                            <div className="container comtt">
+                                <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label className="fw-light">Location</label><br />
+                                        <select className="stdate mt-3">
+                                            <option>New York, US</option>
+                                            <option>Goa, India</option>
+                                            <option>New York, USA</option>
+                                            <option>New York, USA</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label>Start Date</label> <br />
+                                        <DatePicker className="stdate form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    </div>
+                                    <div className="col-lg-2 ms-2 col-md-5 col-12 mb-2">
+                                        <label>End Date</label> <br />
+                                        <DatePicker selected={endDate} className="stdate form-control" onChange={(date) => setEndDate(date)} />
+                                    </div>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label className="fw-light">Guest</label><br />
+                                        <select className="stdate mt-2">
+                                            <option>1 adult</option>
+                                            <option>2 adults</option>
+                                            <option>3 adults</option>
+                                            <option>4 adults</option>
+                                            <option>5 adults</option>
+                                            <option>2 adults, 1 child</option>
+                                            <option>2 adults, 2 children</option>
+                                            <option>2 adults, 3 children</option>
+                                            <option>2 adults, 4 children</option>
+                                            <option>2 adults, 5 children</option>
+                                            <option>4 adults, 1 child</option>
+                                            <option>4 adults, 2 children</option>
+                                            <option>4 adults, 3 children</option>
+                                            <option>4 adults, 4 children</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-lg-2 col-md-12 text-center col-12 mb-2 searchbtndiv">
+                                        <button className="bg-dark rounded-pill mt-3 sraechbtn">Book</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-lg-2 ms-2 col-md-5 col-12 mb-2">
-                                <label>End Date</label> <br />
-                                <DatePicker selected={endDate} className="stdate form-control" onChange={(date) => setEndDate(date)} />
+                        </Tab>
+        
+                        <Tab eventKey="offer" title="Offer">
+                            <div className="container comtt">
+                                <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label className="fw-light">Location</label><br />
+                                        <select className="stdate mt-3">
+                                            <option>New York, US</option>
+                                            <option>Goa, India</option>
+                                            <option>New York, USA</option>
+                                            <option>New York, USA</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label>Start Date</label> <br />
+                                        <DatePicker className="stdate form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    </div>
+                                    <div className="col-lg-2 ms-2 col-md-5 col-12 mb-2">
+                                        <label>End Date</label> <br />
+                                        <DatePicker selected={endDate} className="stdate form-control" onChange={(date) => setEndDate(date)} />
+                                    </div>
+                                    <div className="col-lg-2 col-md-5 col-12 mb-2">
+                                        <label className="fw-light">Guest</label><br />
+                                        <select className="stdate mt-2">
+                                            <option>1 adult</option>
+                                            <option>2 adults</option>
+                                            <option>3 adults</option>
+                                            <option>4 adults</option>
+                                            <option>5 adults</option>
+                                            <option>2 adults, 1 child</option>
+                                            <option>2 adults, 2 children</option>
+                                            <option>2 adults, 3 children</option>
+                                            <option>2 adults, 4 children</option>
+                                            <option>2 adults, 5 children</option>
+                                            <option>4 adults, 1 child</option>
+                                            <option>4 adults, 2 children</option>
+                                            <option>4 adults, 3 children</option>
+                                            <option>4 adults, 4 children</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-lg-2 col-md-12 text-center col-12 mb-2 searchbtndiv">
+                                        <button className="bg-dark rounded-pill mt-3 sraechbtn">Book</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-lg-2 col-md-5 col-12 mb-2">
-                                <label className="fw-light">Guest</label><br />
-                                <select className="stdate mt-2">
-                                    <option>1 adult</option>
-                                    <option>2 adults</option>
-                                    <option>3 adults</option>
-                                    <option>4 adults</option>
-                                    <option>5 adults</option>
-                                    <option>2 adults, 1 child</option>
-                                    <option>2 adults, 2 children</option>
-                                    <option>2 adults, 3 children</option>
-                                    <option>2 adults, 4 children</option>
-                                    <option>2 adults, 5 children</option>
-                                    <option>4 adults, 1 child</option>
-                                    <option>4 adults, 2 children</option>
-                                    <option>4 adults, 3 children</option>
-                                    <option>4 adults, 4 children</option>
-                                </select>
-                            </div>
-                            <div className="col-lg-2 col-md-12 text-center col-12 mb-2 searchbtndiv">
-                                <button className="bg-dark rounded-pill mt-3 sraechbtn">Book</button>
-                            </div>
-                        </div>
-                    </div>
+                        </Tab>
+                    </Tabs>
                 </div>
             </div>
         </>
