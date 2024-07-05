@@ -30,7 +30,7 @@ const ResetPassword = () => {
         }
 
         try {
-            const response = await axios.post(`https://demostarback.onrender.com/${_id}/${token}`, {
+            const response = await axios.post(`https://demostarback.onrender.com/resetpassword/${_id}/${token}`, {
                 password: password
             });
 
