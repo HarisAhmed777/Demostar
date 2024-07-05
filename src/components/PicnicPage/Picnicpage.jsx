@@ -1,9 +1,11 @@
 import React from 'react'
-
+import ThirdPart from './Thirdpart/Thirdpart'
+import Fourthpart from './Fouthpart/fourthpart';
 function PicnicPage(){
     return(
         <>
-            <h1 className='pt-5'>This is a Picnic page</h1>
+            <ThirdPart/>
+            <Fourthpart/>
         </>
     )
 }

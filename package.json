@@ -15,15 +15,21 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "jwt-decode": "^4.0.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.3",
-    "react-datepicker": "^7.1.0",
+    "react-datepicker": "^7.2.0",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
     "react-multi-carousel": "^2.8.5",
+    "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.4.3",
     "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.24.0"
+    "react-router-dom": "^6.24.0",
+    "react-tabs": "^6.0.2",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

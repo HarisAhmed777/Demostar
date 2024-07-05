@@ -1,0 +1,44 @@
+.packageimg {
+    background-image: url('../images/packagemainimg.avif');
+    /* background-color: rebeccapurple; */
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.packageimg h1{
+    font-style: italic;
+}
+.packagemainbtn{
+    padding: 10px;
+    background-color: purple;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.packagesidebtn{
+    background-color: purple;
+    color: whitesmoke;
+    border-radius: 4px;
+    padding: 2px 2px 2px 2px;
+}
+.package-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px; 
+}
+
+.purple{
+    color: purple;
+}
+
+.packagesecondpageinput{
+    width: 250px;
+    border: 0;
+    border-bottom: 2px solid purple;
+}

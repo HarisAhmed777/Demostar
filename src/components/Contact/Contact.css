@@ -1,0 +1,20 @@
+.contact-conatiner{
+    /* height: 80vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactadress{
+    background-color: black;
+    color:whitesmoke;
+    height: fit-content;
+    padding: 20px;
+    width: fit-content;
+}
+
+@media (max-width:500px) {
+    .contactadress{
+        width: 100%;
+    }
+}
