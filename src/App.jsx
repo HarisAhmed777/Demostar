@@ -25,6 +25,7 @@ import Allusers from './components/admindashboard/allusers';
 import Allbookings from './components/admindashboard/allbookings';
 import Admindashboard from './components/admindashboard/admindashboard';
 import Allforms from './components/admindashboard/allforms';
+import ResetPassword from './components/LoginandSignupapge/ResetPassword';
 
 function App() {
   return (
@@ -50,6 +51,8 @@ function App() {
             <Route path = '/allbookings' element =  {<Allbookings/>}/>
             <Route path = '/admin' element =  {<Admindashboard/>}/>
             <Route path = '/allforms' element =  {<Allforms/>}/>
+            <Route path="/resetpassword/:_id/:token" element={<ResetPassword/>} />
+
 
 
 

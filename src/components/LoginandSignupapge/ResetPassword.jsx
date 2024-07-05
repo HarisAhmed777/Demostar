@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { baseUrl } from '../../../url';
 
 const ResetPassword = () => {
     const { _id, token } = useParams();
@@ -29,14 +30,14 @@ const ResetPassword = () => {
         }
 
         try {
-            const response = await axios.post(`https://hooliback.onrender.com/resetpassword/${_id}/${token}`, {
+            const response = await axios.post(`${baseUrl}/${_id}/${token}`, {
                 password: password
             });
 
             if (response.status === 200) {
                 setSuccess("Password reset successfully!");
                 setTimeout(() => {
-                    navigate('/login'); // Redirect to login page after 2 seconds
+                    navigate('/login'); 
                 }, 2000);
             } else {
                 setError("Failed to reset password.");
