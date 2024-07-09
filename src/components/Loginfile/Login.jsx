@@ -23,8 +23,6 @@ function Login() {
                         console.log(res.data.name);
                         localStorage.setItem('jwtToken', res.data.token);
                         navigate('/');
-                    } else if (res.data.role === "admin") {
-                        navigate('/admin');
                     }
                 }
             })

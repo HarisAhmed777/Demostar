@@ -10,6 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Context } from '../context';
 import { baseUrl } from '../../../url';
+import { format } from 'date-fns';
 // import bookingimg from '../images/bookingpageimg.jpg';
 import cp4 from '../images/cp2.avif';
 
@@ -28,7 +29,7 @@ function Booking() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [city, setCity] = useState("");
-  const [persons, setPersons] = useState("");
+  const [persons, setPersons] = useState(1);
   const [startdate, setStartdate] = useState(new Date());
   const [enddate, setEnddate] = useState(new Date());
   const [mobile, setMobile] = useState("");
@@ -91,14 +92,24 @@ function Booking() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (age < 18 || age > 80) {
+      toast.error("Age must br greater than 18", { autoClose: 3000 });
+      return;
+    }
+    if (persons < 1) {
+      toast.error("Number of persons must be at least 1.", { autoClose: 3000 });
+      return;
+    }
+    const formattedStartDate = format(startdate, 'dd-MM-yyyy');
+    const formattedEndDate = format(enddate, 'dd-MM-yyyy');
     const bookingData = {
       name,
       age,
       email,
       persons,
       city,
-      startdate,
-      enddate,
+      startdate: formattedStartDate,
+      enddate: formattedEndDate,
       mobile,
       totalamount: calculateTotalAmount(),
       promocode, // Add promocode to booking data
@@ -118,6 +129,23 @@ function Booking() {
     }
   };
 
+  const validateName = (value) => /^[A-Za-z\s]+$/.test(value);
+  const validateAge = (value) => /^[0-9]+$/.test(value);
+  const validatePersons = (value) => /^[0-9]+$/.test(value) && value >= 1;
+  const validatePromo = (value) => /^[A-Za-z0-9]+$/.test(value);
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    if (validateName(value) || value === "") {
+      setName(value);
+    }
+  };
+  const handlepromochange = (e) => {
+    const value = e.target.value;
+    if (validatePromo(value) || value === "") {
+      setPromocode(value);
+    }
+  };
+
   const totalamount = calculateTotalAmount();
 
   return (
@@ -129,17 +157,43 @@ function Booking() {
           <div className="row">
             <div className="form-row">
               <div className="form-group">
-                <input type='text' className="bookinginput text-dark" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} required />
+                <input 
+                  type='text' 
+                  className="bookinginput text-dark" 
+                  placeholder="Enter your name" 
+                  value={name} 
+                  onChange={handleNameChange} 
+                  required 
+                />
               </div>
 
               <div className="form-group">
-                <input type='number' className="bookinginput text-dark" placeholder="Enter your age" value={age} onChange={(e) => setAge(e.target.value)} required />
+                <input 
+                  type='number' 
+                  className="bookinginput text-dark" 
+                  placeholder="Enter your age" 
+                  value={age} 
+                  onChange={(e) => setAge(e.target.value)} 
+                  required 
+                  pattern="[0-9]+"
+                  title="Age should be a number."
+                />
               </div>
             </div>
 
             <div className="form-row">
               <div className="form-group">
-                <input type='number' className="bookinginput text-dark" placeholder="Enter number of persons" value={persons} onChange={(e) => setPersons(e.target.value)} required />
+                <input 
+                  type='number' 
+                  className="bookinginput text-dark" 
+                  placeholder="Enter number of persons" 
+                  value={persons} 
+                  onChange={(e) => setPersons(e.target.value)} 
+                  required 
+                  pattern="[0-9]+"
+                  title="Number of persons should be a number."
+                  min="1"
+                />
               </div>
 
               <div className="form-group">
@@ -161,6 +215,7 @@ function Booking() {
                   onChange={handleStartDateChange}
                   className="bookinginput date-picker text-dark"
                   minDate={new Date()}
+                  dateFormat="dd-MM-yyyy"
                   required
                 />
               </div>
@@ -172,6 +227,7 @@ function Booking() {
                   onChange={handleEndDateChange}
                   className="bookinginput date-picker text-dark"
                   minDate={startdate}
+                  dateFormat="dd-MM-yyyy"
                   required
                 />
               </div>
@@ -185,7 +241,7 @@ function Booking() {
                 onChange={setMobile}
                 inputClass="bookinginput phone-input text-dark"
                 specialLabel=""
-                countryCodeEditable={false}
+                countryCodeEditable={true}
               />
             </div>
 
@@ -198,7 +254,7 @@ function Booking() {
                 placeholder="Enter promo code"
                 className="bookinginput text-dark"
                 value={promocode}
-                onChange={(e) => setPromocode(e.target.value)}
+                onChange={handlepromochange}
               />
               <div className="text-center">
                 <button type="button" className="btn-primary bookingbtn" onClick={validatePromoCode}>
