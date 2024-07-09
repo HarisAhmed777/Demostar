@@ -21,10 +21,6 @@ import { jwtDecode } from "jwt-decode";
 import Profile from './components/Dashboard/profile';
 // import Booking from './components/BookingPage/bookingpage';
 import UserBooking from './components/Dashboard/userbooking';
-import Allusers from './components/admindashboard/allusers';
-import Allbookings from './components/admindashboard/allbookings';
-import Admindashboard from './components/admindashboard/admindashboard';
-import Allforms from './components/admindashboard/allforms';
 import ResetPassword from './components/LoginandSignupapge/ResetPassword';
 import Bloging from './components/BlogPage/bloging';
 import PackageSecondPage from './components/PackagePage/Packagesecondpage';
@@ -52,10 +48,6 @@ function App() {
             <Route path="/contactus" element={<Contact/>} />
             <Route path = '/profile' element =  {<Profile/>}/>
             <Route path = '/booking' element =  {<UserBooking/>}/>
-            <Route path = '/allusers' element =  {<Allusers/>}/>
-            <Route path = '/allbookings' element =  {<Allbookings/>}/>
-            <Route path = '/admin' element =  {<Admindashboard/>}/>
-            <Route path = '/allforms' element =  {<Allforms/>}/>
             <Route path="/resetpassword/:_id/:token" element={<ResetPassword/>} />
             <Route path = '/bloging' element =  {<Bloging/>}/>
             <Route path = '/packageenquire' element =  {<PackageSecondPage/>}/>

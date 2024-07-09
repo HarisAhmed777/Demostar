@@ -15,7 +15,6 @@ import cp4 from '../images/cp2.avif';
 
 function Booking() {
   const location = useLocation();
-  const [city, setCity] = useState(location.state?.city || '');
   const { datas } = location.state || {};
   const { pkg } = location.state || {};
 
@@ -28,6 +27,7 @@ function Booking() {
 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
+  const [city, setCity] = useState("");
   const [persons, setPersons] = useState("");
   const [startdate, setStartdate] = useState(new Date());
   const [enddate, setEnddate] = useState(new Date());
@@ -36,12 +36,13 @@ function Booking() {
   const [promocode, setPromocode] = useState("");
   const [discount, setDiscount] = useState(0); // State to store the discount
   const [isPromoValid, setIsPromoValid] = useState(false); // State to store promo validation status
-
+  
   const navigate = useNavigate();
   const { user } = useContext(Context);
 
   useEffect(() => {
     setEmail(user);
+    setCity(getCityValue());
   }, [user]);
 
   const handleStartDateChange = (date) => {

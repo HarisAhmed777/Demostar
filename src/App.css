@@ -14,20 +14,16 @@ h1{
     font-family: 'Roboto', sans-serif ,cursive; /* Font for h1 */
 }
 h2{
-    font-family: '';
+    font-family: 'Roboto';
+    font-weight: 600;
 }
 
-p {
-    font-family: 'Montserrat', sans-serif; /* Font for p */
+p ,button{
+    font-family: 'Roboto'; /* Font for p */
+    font-weight: 300;
 }
 
-button {
-    font-family: 'Josefin Sans', sans-serif; /* Font for button */
-}
 
-.custom-button {
-    font-family: 'Poppins', sans-serif; /* Font for specific class */
-}
 
 .headerp {
     padding-bottom: 60px;

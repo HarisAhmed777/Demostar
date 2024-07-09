@@ -29,7 +29,6 @@ function UserBooking() {
                             <p className='booking-detail'><span className='booking-label'>Age:</span> <span className='booking-value'>{booking.age}</span></p>
                             <p className='booking-detail'><span className='booking-label'>City:</span> <span className='booking-value'>{booking.city}</span></p>
                             <p className='booking-detail'><span className='booking-label'>Persons:</span> <span className='booking-value'>{booking.persons}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>No. of Adults:</span> <span className='booking-value'>{booking.adults}</span></p>
                             <p className='booking-detail'><span className='booking-label'>Start Date:</span> <span className='booking-value'>{new Date(booking.startdate).toLocaleDateString()}</span></p>
                             <p className='booking-detail'><span className='booking-label'>End Date:</span> <span className='booking-value'>{new Date(booking.enddate).toLocaleDateString()}</span></p>
                             <p className='booking-detail'><span className='booking-label'>Total Amount:</span> <span className='booking-value'>{booking.totalamount}</span></p>

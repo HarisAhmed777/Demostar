@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
 import { Context } from '../context';
+import {Link} from 'react-router-dom'
 import './picnichomepage.css';
 import TCP1 from '../images/TCP1.jpg';
 import TCP2 from '../images/TCP2.jpg';
@@ -73,7 +74,7 @@ function Picnicpackages() {
                             <h5 className="picnic-card-title">{pkg.title}</h5>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{pkg.para}</p>
-                                <p><FontAwesomeIcon icon={faArrowRight} /></p>
+                                <Link to = '/picnicpage'><p><FontAwesomeIcon icon={faArrowRight} /></p></Link>
                             </div>
                         </div>
                     </div>
