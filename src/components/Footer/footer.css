@@ -1,0 +1,11 @@
+.footerhover:hover{
+    border-bottom: 1px solid whitesmoke;
+    cursor:pointer;
+}
+.footerhover {
+    margin-bottom: 0.5rem; /* Make the element take only the width of the text */
+}
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}

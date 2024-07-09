@@ -43,26 +43,26 @@ function CollapsibleExample() {
             <Nav className=" navhome">
             {isAuthorized?
                         <NavDropdown title="Dashboard" id="collapsible-nav-dropdown">
-                        <Link to = '/profile'><NavDropdown.Item href="#action/3.1">Myprofile</NavDropdown.Item></Link>
-                        <Link to = '/booking'><NavDropdown.Item href="#action/3.2">Mybookings</NavDropdown.Item></Link>
+                        <Link to = '/profile'><NavDropdown.Item href="#action/1.1">Myprofile</NavDropdown.Item></Link>
+                        <Link to = '/booking'><NavDropdown.Item href="#action/1.2">Mybookings</NavDropdown.Item></Link>
                         </NavDropdown>:null}
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-              <Nav.Link as={Link} to = '/packagepage'>Packages</Nav.Link>
-              <NavDropdown title="Picnic" id="collapsible-nav-dropdown">
-                <Link to = '/picnicpage'><NavDropdown.Item href="#action/3.1">All Picnics</NavDropdown.Item></Link>
-                <Link to = '/tamilnadupicnic'><NavDropdown.Item href="#action/3.2">Tamil Nadu</NavDropdown.Item></Link>
-                <Link to = '/keralapicnic'><NavDropdown.Item href="#action/3.3">Kerala</NavDropdown.Item></Link>
+            <Nav.Link href="#action/2.1" onClick={handleToggle} as={Link} to="/" className='text-dddd'>Home</Nav.Link>
+              <Nav.Link href="#action/2.2" as={Link} to = '/packagepage'onClick={handleToggle} className='text-dddd' id="collapsible-nav-dropdown">Packages</Nav.Link>
+              <NavDropdown href="#action/3.1" title="Picnic" id="collapsible-nav-dropdown" className=''>
+                <Link to = '/picnicpage' onClick={handleToggle}><NavDropdown.Item href="#action/3.1" className='text-dddd'>All Picnics</NavDropdown.Item></Link>
+                <Link to = '/tamilnadupicnic'onClick={handleToggle} ><NavDropdown.Item href="#action/3.2">Tamil Nadu</NavDropdown.Item></Link>
+                <Link to = '/keralapicnic' onClick={handleToggle}   ><NavDropdown.Item href="#action/3.3">Kerala</NavDropdown.Item></Link>
               </NavDropdown>
-              <Nav.Link as={Link} to = '/offerpage'>Offer</Nav.Link>
-              <Nav.Link as={Link} to = '/blogpage'>Blog</Nav.Link>
-              <Nav.Link as={Link} to="/contactus">Contact</Nav.Link>
+              <Nav.Link href="#action/4.1" as={Link} to = '/offerpage'className='text-dddd' id="collapsible-nav-dropdown" onClick={handleToggle}>Offer</Nav.Link>
+              <Nav.Link href="#action/5.1" as={Link} to = '/blogpage' className='text-dddd' onClick={handleToggle}>Blog</Nav.Link>
+              <Nav.Link href="#action/6.1" as={Link} to="/contactus" className='text-dddd' onClick={handleToggle}>Contact</Nav.Link>
             </Nav>
             <Nav className="">
               {
-                !isAuthorized?<Nav.Link as={Link} to="/login">Login</Nav.Link>:
-                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                !isAuthorized?<Nav.Link href="#action/7.1" className='text-dddd' onClick={handleToggle} as={Link} to="/login">Login</Nav.Link>:
+                <Nav.Link href="#action/8.1" className='text-dddd' onClick={handleLogout}>Logout</Nav.Link>
               }
-              <Nav.Link as ={Link} to = '/login' className="">Sign Up</Nav.Link>
+              <Nav.Link href="#action/9.1" as ={Link} to = '/login' className="text-dddd" onClick={handleToggle}>Sign Up</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

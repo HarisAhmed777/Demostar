@@ -7,15 +7,15 @@
 
 /* Apply different fonts to different elements */
 body {
-    font-family: 'Open Sans', sans-serif; /* Default font for body */
+    font-family: 'Roboto'; /* Default font for body */
 }
 
 h1{
-    font-family: 'Roboto', sans-serif ,cursive; /* Font for h1 */
+    font-family: 'Roboto'; /* Font for h1 */
 }
-h2{
+h1,h2,h3,h4{
     font-family: 'Roboto';
-    font-weight: 600;
+    font-weight: 500;
 }
 
 p ,button{

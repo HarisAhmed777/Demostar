@@ -47,7 +47,7 @@ function Testimonials(){
         <DataTesti {...testimonials[0]}/>
         <DataTesti {...testimonials[0]}/>
         <DataTesti {...testimonials[0]}/>
-        </Carousel>;
+        </Carousel>
         </div>
 
 

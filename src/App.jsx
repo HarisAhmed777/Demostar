@@ -27,6 +27,7 @@ import PackageSecondPage from './components/PackagePage/Packagesecondpage';
 import AvailPromo from './components/OfferPage/AvailPromo';
 import TamilNaduPicnic from './components/PicnicPage/TamilNaduPicnic';
 import KeralaPicnic from './components/PicnicPage/Keralapicnic';
+import ScrollToTop from './components/scrollTop';
 
 function App() {
   return (
@@ -35,7 +36,9 @@ function App() {
           <div className='headerp'>
             <Header />
           </div>
+          <ScrollToTop/>
           <Routes>
+            
             <Route path="/" element={<HomePage />} />
             <Route path="/offerpage" element={<OfferPage/>} />
             <Route path="/blogpage" element={<BlogPage/>} />

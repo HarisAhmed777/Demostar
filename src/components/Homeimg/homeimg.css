@@ -17,7 +17,28 @@
     cursor: pointer;
     transition: linear 1s;
     color: #fff;
+    outline: 0 !important;
+    border: 0 !important;
     border-bottom: 2px solid transparent; /* Default state */
+}
+
+#controlled-tab-example{
+    outline: 0;
+    border: 0px !important;
+}
+#controlled-tab-example-tab-picnic{
+    outline: 0 !important;
+    border: 0px !important;  
+}
+#controlled-tab-example-tab-package{
+    outline: 0 !important;
+    border: 0px !important;   
+}
+#controlled-tab-example-tab-package:focus{
+    border-bottom: 3px solid yellow !important;
+}
+#controlled-tab-example-tab-picnic:focus{
+    border-bottom: 3px solid yellow !important;
 }
 
 .custom-tab.active {
@@ -25,19 +46,25 @@
     transition: ease-in 0.5s;
 }
 
-
-
-.comtt{
-    /* width: 1440px; */
+.stdate {
+    border: 0;
+    border-radius: 0px;
+    width: 150px;
 }
-    .stdate{
-        border: none;
-        border-bottom: 2px solid yellow;
-        /* background-color: red; */
-        width: 150px;
-        outline: none;
-        
-    }
+
+/* Focus styles for .stdate */
+.stdate:focus {
+    border-bottom: 2px solid yellow !important;
+    outline: none !important;
+    transition: ease-in 0.5s;
+}
+
+/* Styles for the container of the DatePicker input */
+.react-datepicker__input-container input:focus {
+    border-bottom: 2px solid yellow !important;
+    outline: red !important;
+    border: 0;
+}
 
 .carousel-bg {
     height: 80vh;
@@ -86,8 +113,6 @@
     /* position: absolute; */
     width: 100%;
     padding: 10px;
-    bottom: 30px;
-    left: 15%;
     box-shadow: 1px 1px 2px;
     border: 1px solid gray;
 }

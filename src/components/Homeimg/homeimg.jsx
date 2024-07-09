@@ -95,7 +95,7 @@ function Homeimg() {
                                 </div>
                             </div>
                         </Tab>
-                        <Tab eventKey="package" title="Package" className={`custom-tab ${key === 'package' ? 'active' : ''}`}>
+                        <Tab eventKey="package" title="Packages" className={`custom-tab ${key === 'package' ? 'active' : ''}`}id="controlled-tab-example">
                             <div className="container comtt">
                                 <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
                                     <div className="col-lg-2 col-md-3 col-12 mb-2">

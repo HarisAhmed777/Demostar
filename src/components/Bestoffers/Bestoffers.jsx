@@ -72,7 +72,7 @@ const offersdata = [
                 <Offer {...offersdata[0]}/>
                 <Offer {...offersdata[1]}/>
                 <Offer {...offersdata[2]}/>
-                </Carousel>;
+                </Carousel>
             </div>
         </div>
       </div>
