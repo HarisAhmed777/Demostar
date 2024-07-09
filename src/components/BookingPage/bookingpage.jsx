@@ -31,8 +31,6 @@ function Booking() {
   const [persons, setPersons] = useState("");
   const [startdate, setStartdate] = useState(new Date());
   const [enddate, setEnddate] = useState(new Date());
-  const [adults, setAdults] = useState(0);
-  const [children, setChildren] = useState(0);
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [promocode, setPromocode] = useState("");
@@ -65,9 +63,9 @@ function Booking() {
 
   const calculateTotalAmount = () => {
     const days = parseInt(calculateDays());
-    const totalamountPerDay = adults * 1100 + children * 600;
-    const totalamount = parseInt(totalamountPerDay * days);
-    const discountedAmount = totalamount - (totalamount * discount / 100);
+    const totalAmountPerDay = persons * 1100;
+    const totalAmount = parseInt(totalAmountPerDay * days);
+    const discountedAmount = totalAmount - (totalAmount * discount / 100);
     return parseInt(discountedAmount);
   };
 
@@ -100,8 +98,6 @@ function Booking() {
       city,
       startdate,
       enddate,
-      adults,
-      children,
       mobile,
       totalamount: calculateTotalAmount(),
       promocode, // Add promocode to booking data
@@ -129,93 +125,86 @@ function Booking() {
       <div className="booking-container pt-5 text-dark">
         <h2 className="fw-bold">Book now</h2>
         <form onSubmit={handleSubmit} className="w-100">
-          <div className="form-row">
-            <div className="form-group">
-              <input type='text' className="bookinginput text-dark" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} required />
+          <div className="row">
+            <div className="form-row">
+              <div className="form-group">
+                <input type='text' className="bookinginput text-dark" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} required />
+              </div>
+
+              <div className="form-group">
+                <input type='number' className="bookinginput text-dark" placeholder="Enter your age" value={age} onChange={(e) => setAge(e.target.value)} required />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group">
+                <input type='number' className="bookinginput text-dark" placeholder="Enter number of persons" value={persons} onChange={(e) => setPersons(e.target.value)} required />
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="text"
+                  value={getCityValue()}
+                  placeholder="Enter city name"
+                  className="bookinginput text-dark"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group d-inline">
+                <label>Start Date:</label>
+                <DatePicker
+                  selected={startdate}
+                  onChange={handleStartDateChange}
+                  className="bookinginput date-picker text-dark"
+                  minDate={new Date()}
+                  required
+                />
+              </div>
+
+              <div className="form-group d-inline">
+                <label>End Date:</label>
+                <DatePicker
+                  selected={enddate}
+                  onChange={handleEndDateChange}
+                  className="bookinginput date-picker text-dark"
+                  minDate={startdate}
+                  required
+                />
+              </div>
             </div>
 
             <div className="form-group">
-              <input type='number' className="bookinginput text-dark" placeholder="Enter your age" value={age} onChange={(e) => setAge(e.target.value)} required />
-            </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <input type='number' className="bookinginput text-dark" placeholder="Enter number of persons" value={persons} onChange={(e) => setPersons(e.target.value)} required />
-            </div>
-
-            <div className="form-group">
-              <input
-                type="text"
-                value={getCityValue()}
-                placeholder="Enter city name"
-                className="bookinginput text-dark"
-                required
+              <label>Mobile Number:</label>
+              <PhoneInput
+                country={'in'}
+                value={mobile}
+                onChange={setMobile}
+                inputClass="bookinginput phone-input text-dark"
+                specialLabel=""
+                countryCodeEditable={false}
               />
             </div>
-          </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label>Enter how many adults</label>
-              <select className="bookinginput text-dark" value={adults} onChange={(e) => setAdults(Number(e.target.value))}>
-                {[...Array(11).keys()].map(num => (
-                  <option key={num} value={num}>{num}</option>
-                ))}
-              </select>
+            <div className="text-center">
+              <h5>The total amount will be: {totalamount} Rs</h5>
             </div>
             <div className="form-row">
               <input
                 type="text"
                 placeholder="Enter promo code"
-                className="bookinginput  text-dark"
+                className="bookinginput text-dark"
                 value={promocode}
                 onChange={(e) => setPromocode(e.target.value)}
               />
-              <button type="button" className="btn btn-primary mt-5  bookingbtn" onClick={validatePromoCode}>
-                Apply
-              </button>
+              <div className="text-center">
+                <button type="button" className="btn-primary bookingbtn" onClick={validatePromoCode}>
+                  Apply Promo Code
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label>Start Date:</label>
-              <DatePicker
-                selected={startdate}
-                onChange={handleStartDateChange}
-                className="bookinginput date-picker text-dark"
-                minDate={new Date()}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label>End Date:</label>
-              <DatePicker
-                selected={enddate}
-                onChange={handleEndDateChange}
-                className="bookinginput date-picker text-dark"
-                minDate={startdate}
-                required
-              />
-            </div>
-          </div>
-
-          <div className="form-group">
-            <label>Mobile Number:</label>
-            <PhoneInput
-              country={'in'}
-              value={mobile}
-              onChange={setMobile}
-              inputClass="bookinginput phone-input text-dark"
-              specialLabel=""
-              countryCodeEditable={false}
-            />
-          </div>
-
-          <div className="text-center">
-            <h5>The total amount will be: {totalamount} Rs</h5>
           </div>
 
           <div className="text-center">

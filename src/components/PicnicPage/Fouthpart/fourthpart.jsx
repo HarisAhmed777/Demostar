@@ -118,8 +118,8 @@ function Fourthpart() {
                 <div className='d-flex row justify-content-start'>
 
                     <div className='row'>
-                        <div className='foutheastimg col-12 col-md-4 col-lg-4'>
-                            <div className="container d-flex justify-content-center align-items-center mt-2">
+                        <div className='foutheastimg col-12 col-md-4 col-lg-4 ms-2'>
+                            <div className="container d-flex justify-content-center align-items-center mt-2 ">
                                 <div className="image-container " onClick={() => handleImageClick('Alleppey')}>
                                     <img src={alleppey} alt="Image" className="image" />
                                     <div className="overlay">
@@ -135,7 +135,6 @@ function Fourthpart() {
 
             <div className='fifthpart text-center mt-5'>
                 <Link to='/bookingpage'><button className='btn btnbook text-center'>Book Now</button></Link>
-                <h3 className='mt-3'>To Enjoy a picnic at sterling</h3>
                 <hr></hr>
             </div>
 

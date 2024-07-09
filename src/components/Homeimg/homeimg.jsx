@@ -16,7 +16,7 @@ function Homeimg() {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [key, setKey] = useState('picnic');
-    const [location, setLocation] = useState('New York, US');
+    const [location, setLocation] = useState('Munnar,Kerala');
     const [guests, setGuests] = useState('1 adult');
     const navigate = useNavigate();
 
