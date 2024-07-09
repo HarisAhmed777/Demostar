@@ -1,0 +1,47 @@
+.offerimg {
+    background-image: url('../images/packagemainimg.avif');
+    /* background-color: rebeccapurple; */
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.schimg {
+    height: 300px;
+    width: 350px;
+    background-image: url('../images/TCP8.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Enable absolute positioning within this container */
+    display: flex;
+    margin-left: 40px;
+}
+
+.item1 {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
+
+.item2 {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    color: white; /* Assuming you want the text to be white for better contrast */
+}
+
+
+
+@media (max-width:500px) {
+    .schimg{
+        height: 250px;
+        width: 95%;
+        margin-left: 0px;
+    }
+}

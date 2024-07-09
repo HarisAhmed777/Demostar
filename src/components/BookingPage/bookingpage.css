@@ -1,95 +1,92 @@
-.booking-container {
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: auto;
-}
-
+/* Common Styles */
 .form-group {
-    margin-bottom: 15px;
-    flex: 1;
-    gap: 5;
-    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 15px; */
 }
 
-.bookinginput {
-    border: 0px;
-    border-bottom: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 10px;
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bookinginput, .bookinginput.phone-input {
     width: 100%;
-    background-color: #fff;
-    color: #495057;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: none;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+    /* color: #fff; */
 }
 
-.bookinginput:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+.bookinginput:focus, .bookinginput.phone-input:focus {
+    border-bottom-color: #ffcc00;
+}
+.bookingbtn{
+    width: 50px;
+    height: 30px;
+    padding: 0;
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-booking {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ffcc00;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn-booking:hover {
-    background-color: #0056b3;
+    background-color: #e6b800;
 }
 
-.text-center {
-    text-align: center;
-    margin-top: 20px;
-}
+/* Responsive Styles */
+@media (max-width: 380px) {
+    .booking-container {
+        width: 100%;
+        padding: 10px;
+    }
 
-h1 {
-    color: #343a40;
-    margin-bottom: 20px;
-    text-align: center;
-}
+    .bookinginput {
+        padding: 8px;
+        margin: 8px 0;
+        width: 90%;
+    }
 
-label {
-    color: #495057;
-    font-weight: bold;
-}
+    .btn-booking {
+        padding: 8px;
+        font-size: 14px;
+    }
 
-.date-picker, .phone-input {
-    width: 100%;
-}
-
-.date-picker .react-datepicker__input-container input, 
-.phone-input input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    background-color: #fff;
-    color: #495057;
-}
-
-.date-picker .react-datepicker__input-container input:focus, 
-.phone-input input:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.form-row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
+    h1 {
+        font-size: 20px;
     }
 }

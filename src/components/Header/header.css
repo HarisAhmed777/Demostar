@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,12 @@
 .navbar-dark {
   background-color:black !important;
   color: #fff;
+
+}
+.tabs{
+  background-color: darkblue !important;
+  outline: none !important;
+  border: 0px !important;
 }
 
 .navbar-light {
@@ -25,6 +32,10 @@
   align-items: end;
   /* padding: 10px; */
   font-size: 14px;
+  font-family:'Roboto';
+  font-weight: 800 !important;
+  text-transform: uppercase;
+
 }
 
 .navhome{
@@ -45,13 +56,8 @@
   text-align: center;
 }
 
-@media (max-width: 992px) {
-  .navbar-collapse {
-    justify-content: flex-start;
-  }
-}
 
-/* Adjustments for tablet view */
+
 @media (min-width: 500px) and (max-width: 780px) {
   .logoimg {
       /* height: 60px; */

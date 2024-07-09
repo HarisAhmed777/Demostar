@@ -36,7 +36,29 @@
   .content {
     width: 48%;
   }
+  .custom-tab-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
   
+  .custom-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: linear 1s; /* Animation */
+    color: #fff;
+  }
+  
+  .custom-tab:hover{
+    outline:none;
+  }
+  .custom-tab:focus {
+    outline: none;
+    border-bottom: 2px solid purple; /* Border bottom when selected */
+    transition: ease-in 0.5s ;
+
+  }
   @media (max-width: 768px) {
     .mobile-tabs {
       display: block;

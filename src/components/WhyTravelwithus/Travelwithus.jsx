@@ -18,34 +18,34 @@ function Travelwithus() {
             img: profile,
             heading: "Security Insurance",
             para: "Demonstrates commitment to user data security through encryption and secure payment practices.",
-            bgcolor: "pink",
+            bgcolor: "#e4f9f9",
         },
         {
             img: profile,
             heading: "Security Insurance",
             para: "Demonstrates commitment to user data security through encryption and secure payment practices.",
-            bgcolor: "peach",
+            bgcolor: "#fcf2fa",
         },
         {
             img: profile,
             heading: "Security Insurance",
             para: "Demonstrates commitment to user data security through encryption and secure payment practices.",
-            bgcolor: "lightblue",
+            bgcolor: "#e3f0ff",
         },
         {
             img: profile,
             heading: "Security Insurance",
             para: "Demonstrates commitment to user data security through encryption and secure payment practices.",
-            bgcolor: "pink",
+            bgcolor: "#f6f3fc",
         }
     ];
 
     return (
-        <div className="wholetravel ms-3 mb-5">
-            <h1 className="text-center">Why Travel with us</h1>
-            <p className="text-center">The best booking platform you can trust</p>
-            <div className="container">
-            <div className="row">
+        <div className="container wholetravel mb-5">
+            <h2 className="ms-2">Why Travel with us</h2>
+            <p className=" ms-2">The best booking platform you can trust</p>
+            <div className=" ms-2 ">
+            <div className="row ">
                 {Traveldata.map((value, key) => (
                     <div key={key} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div className="card cardi" style={{ backgroundColor: value.bgcolor }}>

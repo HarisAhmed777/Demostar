@@ -8,15 +8,7 @@ function Footer(){
     return(
         <>
             <div className="bg-dark text-white overflow-hidden">
-                <div className="row overflow-hidden">
-                    <div className="text-center overflow-hidden col-lg-4 mt-5">
-                        <h3>Subscibe to see secrtr detail prices <br />drop the moment you sign up</h3>
-                    </div>
-                    <div className="col-lg-4 overflow-hidden text-center">
-                        <input type="text" className="bg-dark rounded-pill p-2" placeholder="Enter you email" />
-                        <button className="bg-warning p-2 mt-5 border-top rounded-pill ms-3 text-dark">Subscribe</button>
-                    </div>
-                </div>
+
                 <div className="container mt-4">
                 <div className="row">
                     <div className="col-lg-3 col-md-3 text-center ">

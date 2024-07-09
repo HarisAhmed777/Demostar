@@ -40,13 +40,13 @@ function Login() {
 
     return (
         <div className='login-container'>
-            <p>Login</p>
+            <h2 className="text-dark">Login</h2>
             <form onSubmit={handleSubmit}>
                 <input className='form-control-both text-dark' onChange={(e) => setEmail(e.target.value)} placeholder='Email' type='email' />
                 <input className='form-control-both text-dark' onChange={(e) => setPassword(e.target.value)} placeholder='Password' type='password' />
                 {error && <p className="error-messagelogin text-danger">{error}</p>} 
                 <button className='btn-login'>LOGIN</button>
-                <Link to ="/forgotpassword"><span className="text-warning">Forgot Password?</span></Link>
+                <Link to ="/forgotpassword"><span className="">Forgot Password?</span></Link>
             </form>
         </div>
     );

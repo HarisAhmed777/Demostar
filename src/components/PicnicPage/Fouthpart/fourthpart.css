@@ -8,9 +8,6 @@ body {
     padding: 0;
 }
 
-.container {
-    text-align: center;
-}
 
 .image-container {
     position: relative;
@@ -27,7 +24,7 @@ body {
     width: 100%;
     height: auto; 
     transition: transform 0.5s;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .overlay {
@@ -47,7 +44,7 @@ body {
     transition: opacity 0.5s, transform 0.5s;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 .image-container:hover .image {

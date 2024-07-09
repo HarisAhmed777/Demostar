@@ -39,7 +39,7 @@ function Signup() {
 
     return (
         <div className='signup-container text-dark'>
-            <h1>Sign Up</h1>
+            <h2 className="text-dark">Sign Up</h2>
             <form onSubmit={handleSubmit}>
                 <input className='form-control-sign text-dark' onChange={(e) => setFirstname(e.target.value)} placeholder="First Name" type="text" />
                 <input className='form-control-sign text-dark' onChange={(e) => setLastname(e.target.value)} placeholder="Last Name" type="text" />
@@ -47,7 +47,7 @@ function Signup() {
                     country={'us'}
                     value={mobilenumber}
                     onChange={phone => setMobilenumber(phone)}
-                    inputClass='form-control-sign phn text-white bg-dark'
+                    inputClass='form-control-sign phn text-dark border-0 border-bottom border-3 w-100 '
                     placeholder="Mobile number"
                 />
                 <input className='form-control-sign text-dark' onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="email" />

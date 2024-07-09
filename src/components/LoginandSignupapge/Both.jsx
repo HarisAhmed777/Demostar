@@ -11,19 +11,19 @@ function Both() {
       <div className="both-container">
         <div className="content-container">
           <div className="mobile-tabs">
-            <Tabs>
-              <TabList>
-                <Tab>Login</Tab>
-                <Tab>Signup</Tab>
-              </TabList>
+          <Tabs>
+      <TabList className="custom-tab-list text-warning">
+        <Tab className="custom-tab text-dark">Login</Tab>
+        <Tab className="custom-tab text-dark">Signup</Tab>
+      </TabList>
 
-              <TabPanel>
-                <Login />
-              </TabPanel>
-              <TabPanel>
-                <Signup />
-              </TabPanel>
-            </Tabs>
+      <TabPanel>
+        <Login />
+      </TabPanel>
+      <TabPanel>
+        <Signup />
+      </TabPanel>
+    </Tabs>
           </div>
           <div className="desktop-content">
             <div className="content">

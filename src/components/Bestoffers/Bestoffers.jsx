@@ -57,7 +57,7 @@ const offersdata = [
         <div class={`container-fluid ${theme?"bg-dark text-white":null}`}>
         <div className={`mb-5 ${theme?"bg-dark text-white":"bestoffbg"}`}>
         <div className='container pb-4 '>
-            <h1 className=''>Best Offers </h1>
+            <h2 className=''>Best Offers </h2>
             <div className='container bfcont'>
                 <Carousel responsive={responsive}>
                 <Offer {...offersdata[0]}/>

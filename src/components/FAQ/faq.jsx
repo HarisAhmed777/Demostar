@@ -52,7 +52,7 @@ function FAQ() {
                             </button>
                         </div>
                         {visibleIndex === index && (
-                            <p className="ms-5">{faq.answer}</p>
+                            <p className="ms-3">{faq.answer}</p>
                         )}
                         <hr />
                     </div>

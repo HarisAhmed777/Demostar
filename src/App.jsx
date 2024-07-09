@@ -26,6 +26,11 @@ import Allbookings from './components/admindashboard/allbookings';
 import Admindashboard from './components/admindashboard/admindashboard';
 import Allforms from './components/admindashboard/allforms';
 import ResetPassword from './components/LoginandSignupapge/ResetPassword';
+import Bloging from './components/BlogPage/bloging';
+import PackageSecondPage from './components/PackagePage/Packagesecondpage';
+import AvailPromo from './components/OfferPage/AvailPromo';
+import TamilNaduPicnic from './components/PicnicPage/TamilNaduPicnic';
+import KeralaPicnic from './components/PicnicPage/Keralapicnic';
 
 function App() {
   return (
@@ -52,7 +57,16 @@ function App() {
             <Route path = '/admin' element =  {<Admindashboard/>}/>
             <Route path = '/allforms' element =  {<Allforms/>}/>
             <Route path="/resetpassword/:_id/:token" element={<ResetPassword/>} />
+            <Route path = '/bloging' element =  {<Bloging/>}/>
+            <Route path = '/packageenquire' element =  {<PackageSecondPage/>}/>
+            <Route path = '/availpromo' element =  {<AvailPromo/>}/>
+            <Route path = '/tamilnadupicnic' element =  {<TamilNaduPicnic/>}/>
+            <Route path = '/keralapicnic' element =  {<KeralaPicnic/>}/>
 
+            
+
+
+            
 
 
 

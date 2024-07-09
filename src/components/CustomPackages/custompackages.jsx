@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 const packages = [
     {
         img: cp1,
-        title: "California sunset twilight boat Cruise",
+        title: "California sunset  Cruise",
         duration: "2 days 3 nights",
         guest:"4 to 6 guest",
         price: "1000rs/person"
@@ -46,7 +46,6 @@ function Custompackages(){
                             <h5 className="card-title">{pkg.title}</h5>
                             <div className="d-flex ">
                             <p className="card-text">{pkg.duration}</p>
-                            <p className="card-text ms-3">{pkg.guest}</p>
                             </div>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{pkg.price}</p>

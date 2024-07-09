@@ -4,10 +4,11 @@ import cp1 from '../images/cp1.jpg';
 import cp2 from '../images/cp2.avif';
 import cp3 from '../images/cp3.jpg';
 import profile from '../images/profile.avif';
+import {Link} from 'react-router-dom'
 const newstips = [
     {
         img: cp1,
-        title: "Ultimate Travel guide: 10 tips for a seemless journay",
+        title: "Ultimate Travel guide",
         date:"18 sep 2024",
         time:"6mins",
         comments:"38 comments",
@@ -36,14 +37,14 @@ const newstips = [
 function Newsandtips(){
     return(
         <>
-            <div className="container mt-5 mb-5 ">
+            <div className="container mt-5 mb-5">
                 <div  className="d-flex justify-content-between ms-5">
                     <div>
-                        <h3 className="fw-bold">News,Tips & Guides</h3>
+                        <h3 className="fw-bold newsheading ms-0">News,Tips & Guides</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, maxime.</p>
                     </div>
                     <div>
-                    <p className=" mt-3 fw-bold">View More</p>
+                    <Link to= '/blogpage'><p className=" mt-3 fw-bold">View More</p></Link>
                     </div>
                 </div>
                 <div className="cards-container">
@@ -64,7 +65,7 @@ function Newsandtips(){
                                 <p className="d-inline fw-bold">{pkg.name}</p>
                                 </div>
                                 <div>
-                                <p className="txt-dark fw-bold mt-4">Keep Reading</p>
+                                <p className=" fw-bold mt-5">Keep Reading</p>
                                 </div>
                             </div>
 
