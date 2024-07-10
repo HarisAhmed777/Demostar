@@ -18,7 +18,7 @@ function EmailVerification() {
                     if (response.data.success) {
                         setMessage('Email verified successfully!');
                         // Optionally, you can navigate to the signup page or any other page
-                        navigate('/signup');
+                        navigate('/login');
                     } else {
                         setMessage(response.data.message);
                     }
