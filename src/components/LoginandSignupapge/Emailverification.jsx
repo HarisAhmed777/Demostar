@@ -18,7 +18,9 @@ function EmailVerification() {
                     if (response.data.success) {
                         alert('Email verified successfully!');
                         setMessage('Email verified successfully!');
-                        navigate('/login');
+                        setTimeout(() => {
+                            navigate('/signup');
+                        }, 2000); // Redirect to signup after 2 seconds
                     } else {
                         setMessage(response.data.message);
                     }

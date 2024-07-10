@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './signup.css';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { baseUrl } from "../../../url";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -17,6 +17,16 @@ function Signup() {
     const [isEmailVerified, setIsEmailVerified] = useState(false);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const emailVerified = params.get('emailVerified');
+
+        if (emailVerified === 'true') {
+            setIsEmailVerified(true);
+        }
+    }, [location]);
 
     const handleSendOtp = () => {
         axios.post(`${baseUrl}/send-otp`, { mobilenumber })
@@ -85,7 +95,7 @@ function Signup() {
                 <input className='form-control-sign text-dark' onChange={(e) => setFirstname(e.target.value)} placeholder="First Name" type="text" />
                 <input className='form-control-sign text-dark' onChange={(e) => setLastname(e.target.value)} placeholder="Last Name" type="text" />
                 <PhoneInput
-                    country={'us'}
+                    country={'IN'}
                     value={mobilenumber}
                     onChange={phone => setMobilenumber(phone)}
                     inputClass='form-control-sign phn text-dark border-0 border-bottom border-3 w-100'
