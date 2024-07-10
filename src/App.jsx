@@ -28,6 +28,7 @@ import AvailPromo from './components/OfferPage/AvailPromo';
 import TamilNaduPicnic from './components/PicnicPage/TamilNaduPicnic';
 import KeralaPicnic from './components/PicnicPage/Keralapicnic';
 import ScrollToTop from './components/scrollTop';
+import EmailVerification from './components/LoginandSignupapge/Emailverification';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route path="/packagepage" element={<PackagePage/>} />
             <Route path="/bookingpage" element={<Bookingpage/>} />
             <Route path="/login" element={<LoginRedirect/>} />
+            <Route path="/verify-email" element={<EmailVerification />} />
             <Route path="/forgotpassword" element={<ForgotPassword/>} />
             <Route path="/contactus" element={<Contact/>} />
             <Route path = '/profile' element =  {<Profile/>}/>
