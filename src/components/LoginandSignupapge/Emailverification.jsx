@@ -16,8 +16,8 @@ function EmailVerification() {
             axios.get(`${baseUrl}/verify-email`, { params: { token } })
                 .then(response => {
                     if (response.data.success) {
+                        alert('Email verified successfully!');
                         setMessage('Email verified successfully!');
-                        // Optionally, you can navigate to the signup page or any other page
                         navigate('/login');
                     } else {
                         setMessage(response.data.message);
