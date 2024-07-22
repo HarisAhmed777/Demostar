@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import eastimg from '../images/picnics-goa.jpg';
 import goa from '../images/picnics-goa.jpg';
 import lonavala from '../images/picnics-lonavala.jpg';
@@ -13,14 +13,32 @@ import cp1 from '../images/cp1.jpg';
 
 function KeralaPicnic(){
     const navigate = useNavigate();
+    const packageImgRef = useRef(null);
+
 
     const handleImageClick = (heading) => {
         navigate('/bookingpage', { state: { city: heading } });
     };
+    useEffect(() => {
+        function setWindowHeight() {
+          var windowHeight = window.innerHeight;
+          if (packageImgRef.current) {
+            packageImgRef.current.style.height = windowHeight -35+ "px";
+          }
+        }
+      
+        window.addEventListener('resize', setWindowHeight);
+      
+        // Initial call to set the height when the page loads
+        setWindowHeight();
+      
+        // Cleanup the event listener on component unmount
+        return () => window.removeEventListener('resize', setWindowHeight);
+      }, []);
     return(
         <>
         <div className="thirdimg">
-            <img src={cp1} className="picnicmainimg"/>
+            <img src={cp1} ref={packageImgRef}/>
         </div>
         <div className="thirdpart container">
             <h3 className="text-center mt-4">Break Free from the monotony of city life</h3>

@@ -1,8 +1,11 @@
 .homeimg {
     width: 100% !important;
     display: flex;
+    /* height: 100dvh; */
     align-items: center;
     justify-content: center;
+    margin-top: 0 !important;
+    padding:0 !important;
 }
 
 .custom-tab-list {

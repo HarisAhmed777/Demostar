@@ -1,7 +1,7 @@
 .packageimg {
     background-image: url('../images/packagemainimg.avif');
     /* background-color: rebeccapurple; */
-    height: 80vh;
+    /* height: 100dvh !important; */
     width: 100%;
     background-size: cover;
     background-position: center;

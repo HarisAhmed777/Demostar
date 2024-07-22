@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect ,useRef} from "react";
 import './bookingpage.css';
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -37,6 +37,7 @@ function Booking() {
   const [promocode, setPromocode] = useState("");
   const [discount, setDiscount] = useState(0); // State to store the discount
   const [isPromoValid, setIsPromoValid] = useState(false); // State to store promo validation status
+  const packageImgRef = useRef(null);
   
   const navigate = useNavigate();
   const { user } = useContext(Context);
@@ -148,9 +149,26 @@ function Booking() {
 
   const totalamount = calculateTotalAmount();
 
+  useEffect(() => {
+    function setWindowHeight() {
+      var windowHeight = window.innerHeight;
+      if (packageImgRef.current) {
+        packageImgRef.current.style.height = windowHeight -35+ "px";
+      }
+    }
+  
+    window.addEventListener('resize', setWindowHeight);
+  
+    // Initial call to set the height when the page loads
+    setWindowHeight();
+  
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', setWindowHeight);
+  }, []);
+
   return (
     <>
-      <img src={cp4} alt="" className="packageimg" />
+      <img src={cp4} alt="" ref={packageImgRef} className="bookingimg" />
       <div className="booking-container pt-5 text-dark">
         <h2 className="fw-bold">Book now</h2>
         <form onSubmit={handleSubmit} className="w-100">

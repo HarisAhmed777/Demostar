@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext,useRef,useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Carousel from 'react-bootstrap/Carousel';
@@ -19,6 +19,8 @@ function Homeimg() {
     const [location, setLocation] = useState('Munnar,Kerala');
     const [guests, setGuests] = useState('1 adult');
     const navigate = useNavigate();
+  const packageImgRef = useRef(null);
+
 
     const handleBookClick = () => {
         const datas = {
@@ -29,14 +31,30 @@ function Homeimg() {
         };
         navigate('/bookingpage', { state: {datas} });
     };
-
+    useEffect(() => {
+        function setWindowHeight() {
+          var windowHeight = window.innerHeight;
+          if (packageImgRef.current) {
+            packageImgRef.current.style.height = windowHeight -35+ "px";
+          }
+        }
+      
+        window.addEventListener('resize', setWindowHeight);
+      
+        // Initial call to set the height when the page loads
+        setWindowHeight();
+      
+        // Cleanup the event listener on component unmount
+        return () => window.removeEventListener('resize', setWindowHeight);
+      }, []);
     return (
         <>
             <div className={`w-100 ${theme ? "bg-dark text-white" : null}`}>
-                <div className={`homeimg position-relative`}>
+                <div className={`homeimg`}>
                     <Carousel className="w-100  mb-5">
                         <Carousel.Item className="w-100 caro1">
-                            <div className="carousel-bg caro1" style={{ backgroundImage: `url(${cp1})` }}>
+                            <div className="carousel-bg caro1" ref = {packageImgRef}
+                             style={{ backgroundImage: `url(${cp1})` }}>
                                 <div className="carousel-content caro1">
                                    <Link to='/packagepage'><button className="rounded-pill p-3 ">Discover The world</button></Link>
                                     <h1>Unleash Your Wanderlust <br />Book Your Next Package</h1>
@@ -44,7 +62,7 @@ function Homeimg() {
                             </div>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <div className="carousel-bg caro1" style={{ backgroundImage: `url(${cp2})` }}>
+                            <div className="carousel-bg caro1"  ref = {packageImgRef} style={{ backgroundImage: `url(${cp2})` }}>
                                 <div className="carousel-content">
                                     <h1>Unleash Your Wanderlust <br />See your offers</h1>
                                     <Link to='/offerpage'><button className="p-3 rounded-pill">Click to view more</button></Link>
@@ -52,7 +70,7 @@ function Homeimg() {
                             </div>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <div className="carousel-bg caro1" style={{ backgroundImage: `url(${cp3})` }}>
+                            <div className="carousel-bg caro1"ref = {packageImgRef} style={{ backgroundImage: `url(${cp3})` }}>
                                 <div className="carousel-content">
                                     <Link to='/picnicpage'><button className="rounded-pill p-3">Discover The world</button></Link>
                                     <h1>Unleash Your Wanderlust <br />where you wanna go for picnic</h1>
