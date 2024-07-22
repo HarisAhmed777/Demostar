@@ -35,6 +35,7 @@ function KeralaPicnic(){
             <p className="text-center">Either way we are sure you’ll go back home in the evening with a carload of lovely memories.</p>
 
         </div>
+        <div className="over">
         <div className='fourtheast text-center mt-5'>
                 <h1 className='textcenter clr'>Kerala South</h1>
                 <div className='foutheastimg'>
@@ -140,6 +141,7 @@ function KeralaPicnic(){
                     </div>
                    
                 </div>
+            </div>
             </div>
 
            

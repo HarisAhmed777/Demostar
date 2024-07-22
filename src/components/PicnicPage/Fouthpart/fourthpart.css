@@ -1,13 +1,12 @@
 .fourtheast {
     color: #922b93;
+    overflow-x: hidden;
+
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.over{
+    overflow-x: hidden !important;
 }
-
 
 .image-container {
     position: relative;

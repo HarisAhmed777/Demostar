@@ -8,7 +8,7 @@ import Signup from "../Loginfile/signuppage";
 function Both() {
   return (
     <>
-      <div className="both-container">
+      <div className="both-container pt-5 mb-4">
         <div className="content-container">
           <div className="mobile-tabs">
           <Tabs>

@@ -7,11 +7,7 @@ import mountabu from '../../images/picnics-mount-abu.jpg';
 import wayanad from '../../images/picnics-wayanad.jpg';
 import gpdavari from '../../images/picnics-godavari.jpg';
 import anaikatti from '../../images/picnics-anaikatti.jpg';
-import ooty from '../../images/picnics-ooty.jpg';
 import alleppey from '../../images/picnics-alleppey.jpg';
-import sajan from '../../images/picnics-sajan.jpg';
-import durshet from '../../images/picnics-durshet.jpg';
-import kundalika from '../../images/picnics-kundalika.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Fourthpart() {
@@ -23,7 +19,8 @@ function Fourthpart() {
 
     return (
         <>
-            <div className='fourtheast text-center mt-5'>
+        <div className='overflow-hidden'>
+            <div className='fourtheast text-center mt-5 '>
                 <h1 className='textcenter clr'>Goa</h1>
                 <div className='foutheastimg'>
                     <div className="container d-flex justify-content-center align-items-center mt-2">
@@ -39,10 +36,10 @@ function Fourthpart() {
                 </div>
             </div>
 
-            <div className='fourthwestmt-5'>
+            <div className='fourthwest mt-5'>
                 <h1 className='text-center clr'>TamilNadu</h1>
                 <div className='d-flex justify-content-center row'>
-                    <div className='foutheastimg col-12 col-md-4'>
+                    <div className='foutheastimg  col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
                             <div className="image-container " onClick={() => handleImageClick('Goa')}>
                                 <img src={goa} alt="Image" className="image" />
@@ -137,7 +134,7 @@ function Fourthpart() {
                 <Link to='/bookingpage'><button className='btn btnbook text-center'>Book Now</button></Link>
                 <hr></hr>
             </div>
-
+            </div>
         </>
     );
 }

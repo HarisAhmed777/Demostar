@@ -35,7 +35,8 @@ function TamilNaduPicnic(){
             <p className="text-center">Either way we are sure you’ll go back home in the evening with a carload of lovely memories.</p>
 
         </div>
-        <div className='fourtheast text-center mt-5'>
+        <div className="over">
+        <div className='fourtheast overflow-hidden text-center mt-5'>
                 <h1 className='textcenter clr'>Tamil Nadu South</h1>
                 <div className='foutheastimg'>
                     <div className="container d-flex justify-content-center align-items-center mt-2">
@@ -140,6 +141,7 @@ function TamilNaduPicnic(){
                     </div>
                    
                 </div>
+            </div>
             </div>
 
            
