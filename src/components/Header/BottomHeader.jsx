@@ -31,7 +31,7 @@ function CollapsibleExample() {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" className={`position-fixed w-100 z-2  ${theme ? "navbar-dark" : null}`}>
+      <Navbar collapseOnSelect expand="lg" className={`position-fixed w-100 zz ${theme ? "navbar-dark" : null}`}>
         <Container className = 'navb'>
           <Navbar.Brand href="/">
             <img src={Logo} alt="" className='logoimg' />

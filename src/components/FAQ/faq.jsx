@@ -59,11 +59,7 @@ function FAQ() {
                     
                 ))}
             </div>
-            <div className="text-center rounded-pill mb-5">
-                <button className="btn bg-dark text-white rounded-pill">Our support Center</button>
-                <button className="btn fw-bold">Contact us --</button>
-
-            </div>
+            
         </>
     );
 }

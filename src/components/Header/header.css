@@ -52,12 +52,11 @@
   font-family:'Roboto';
   font-weight: 800 !important;
   text-transform: uppercase;
-
+}
+.zz{
+  z-index: 2000 !important;
 }
 
-.navhome{
-  /* margin-right: 23%; */
-}
 
 .navbar-toggler {
   border: none !important;

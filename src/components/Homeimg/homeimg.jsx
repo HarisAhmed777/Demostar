@@ -114,7 +114,7 @@ function Homeimg() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div className={`container abs ${theme ? "bg-dark text-white" : "bg-white "}`}>
+                <div className={`container  mb-4 abs ${theme ? "bg-dark text-white" : "bg-white "}`}>
                     <Tabs
                         id="controlled-tab-example"
                         activeKey={key}

@@ -6,9 +6,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 function DataTesti({ heading, comment, img, name }) {
     return (
         <>
-            <div className="container ">
+            <div className="ms-4 ">
                 <div className="row">
-                    <div className="col ms-5">
+                    <div className="col">
                         <h5>{heading}</h5>
                         <p>{comment}</p>
                         <div className="d-flex justify-content-between align-items-center">

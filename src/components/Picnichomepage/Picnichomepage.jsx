@@ -60,9 +60,9 @@ const picnicpackages = [
 function Picnicpackages() {
     const {theme} = useContext(Context);
     return (
-        <div className={`container-fluid  ${theme?"bg-dark text-white":null}`} >
-        <div className="picnic-container w-100">
-            <div className="picnic-container-head">
+        <div className={`container  ${theme?"bg-dark text-white":null}`} >
+        <div className="ms-3 mb-4 w-100">
+            <div className="">
                 <h2 className="text-start">Top Picnic spots</h2>
                 <p className="text-start">Favourite Destinations Based on customer reviews</p>
             </div>

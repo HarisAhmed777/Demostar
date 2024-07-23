@@ -37,11 +37,11 @@ const newstips = [
 function Newsandtips(){
     return(
         <>
-            <div className="container mt-5 mb-5">
-                <div  className="d-flex justify-content-between ms-5">
+            <div className="container  mt-5 mb-5">
+                <div  className="d-flex ms-4 justify-content-between">
                     <div>
-                        <h3 className="fw-bold newsheading ms-0">News,Tips & Guides</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, maxime.</p>
+                        <h3 className="fw-bold newsheading mb-3">News,Tips & Guides</h3>
+                        <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, maxime.</p>
                     </div>
                     <div>
                     <Link to= '/blogpage'><p className=" mt-3 fw-bold">View More</p></Link>

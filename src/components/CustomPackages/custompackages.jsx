@@ -32,11 +32,11 @@ const packages = [
 function Custompackages(){
     const {theme} = useContext(Context);
     return(
-        <div className={`w-100 container-fluid ${theme?"bg-dark text-white":null}`}>
-        <div className={`container w-100 text-center `}>
-            <div className="conatinerhead container">
-                <h2 className="text-start">Our Custom Packages</h2>
-                <p className="text-start">Favourite Destinations Based on customer reviews</p>
+        <div className={`w-100 container mb-4 ${theme?"bg-dark text-white":null}`}>
+        <div className={` w-100 text-center `}>
+            <div className="conatinerhead container ">
+                <h2 className="text-start mb-3">Our Custom Packages</h2>
+                <p className="text-start mb-4">Favourite Destinations Based on customer reviews</p>
             </div>
             <div className={`cards-container`}>
                 {packages.map((pkg, index) => (

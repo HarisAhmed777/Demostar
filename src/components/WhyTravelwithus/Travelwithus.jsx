@@ -1,12 +1,6 @@
 import React from "react";
 import './Travelwithus.css'
 import profile from '../images/profile.avif';
-import visa from '../images/visa.png';
-import paypal from '../images/Paypal.png';
-import panoerr from '../images/payneer.png';
-import discover from '../images/Dsicover.png';
-import bitcoin from '../images/Bitcoin.png';
-import stripe from '../images/stripe.png';
 
 
 
