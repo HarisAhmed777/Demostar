@@ -7,3 +7,7 @@
 
     text-align: start;
 }
+.hoverpointer:hover{
+    cursor: pointer;
+    color: purple;
+}

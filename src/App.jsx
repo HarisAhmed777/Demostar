@@ -29,6 +29,7 @@ import TamilNaduPicnic from './components/PicnicPage/TamilNaduPicnic';
 import KeralaPicnic from './components/PicnicPage/Keralapicnic';
 import ScrollToTop from './components/scrollTop';
 import EmailVerification from './components/LoginandSignupapge/Emailverification';
+import SeperateNews from './components/NewsandTips/newssperate';
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
             <Route path = '/availpromo' element =  {<AvailPromo/>}/>
             <Route path = '/tamilnadupicnic' element =  {<TamilNaduPicnic/>}/>
             <Route path = '/keralapicnic' element =  {<KeralaPicnic/>}/>
+            <Route path = '/seperatenews' element =  {<SeperateNews/>}/>
+
 
             
 

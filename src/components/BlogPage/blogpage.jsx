@@ -100,7 +100,6 @@ function BlogPage(){
         }
     ]
     function handleblog(blog){
-        console.log(blog);
         navigate('/bloging',{state:{blog}})
     }
     return(
