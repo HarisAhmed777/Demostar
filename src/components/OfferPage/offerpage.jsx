@@ -4,32 +4,16 @@ import { useNavigate } from 'react-router-dom';
 
 function OfferPage() {
   const navigate = useNavigate();
-  const packageImgRef = useRef(null);
 
 
   const handlePromoClick = (promoType) => {
     navigate('/availpromo', { state: { promoType } });
   };
-  useEffect(() => {
-    function setWindowHeight() {
-      var windowHeight = window.innerHeight;
-      if (packageImgRef.current) {
-        packageImgRef.current.style.height = windowHeight -35+ "px";
-      }
-    }
-  
-    window.addEventListener('resize', setWindowHeight);
-  
-    // Initial call to set the height when the page loads
-    setWindowHeight();
-  
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener('resize', setWindowHeight);
-  }, []);
+
 
   return (
     <>
-      <div ref={packageImgRef} className="packageimg pt-5 mb-4">
+      <div className=" offerimg pt-5 mb-4">
         <h1 className="text-white">
           Exclusive offers <br />
           Of the month

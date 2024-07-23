@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom';
 function PackagePage() {
   const navigate = useNavigate();
   const packagesecondpageref = useRef(null);
-  const packageImgRef = useRef(null);
   const custompackages = [
     {
       img: cp1,
@@ -43,26 +42,11 @@ function PackagePage() {
   function scrollToPackageSecondPage() {
     packagesecondpageref.current.scrollIntoView({ behavior: 'smooth' });
 }
-useEffect(() => {
-  function setWindowHeight() {
-    var windowHeight = window.innerHeight;
-    if (packageImgRef.current) {
-      packageImgRef.current.style.height = windowHeight -35+ "px";
-    }
-  }
 
-  window.addEventListener('resize', setWindowHeight);
-
-  // Initial call to set the height when the page loads
-  setWindowHeight();
-
-  // Cleanup the event listener on component unmount
-  return () => window.removeEventListener('resize', setWindowHeight);
-}, []);
 
   return (
     <>
-      <div  ref = {packageImgRef} className="packageimg pt-5 ">
+      <div   className="packageimg pt-5 ">
         <h1 className="text-white">
           Trek, Chill, Repeat <br />
           Book Your Escape

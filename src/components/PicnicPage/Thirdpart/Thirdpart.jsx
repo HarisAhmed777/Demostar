@@ -3,29 +3,10 @@ import './Thirdpart.css';
 import picnic from '../../images/picnicmain.jpg';
 
 function Thirdpart(){
-    const picnicImgRef = useRef(null);
-
-
-    useEffect(() => {
-        function setWindowHeight() {
-          var windowHeight = window.innerHeight;
-          if (picnicImgRef.current) {
-            picnicImgRef.current.style.height = windowHeight -35+ "px";
-          }
-        }
-      
-        window.addEventListener('resize', setWindowHeight);
-      
-        // Initial call to set the height when the page loads
-        setWindowHeight();
-      
-        // Cleanup the event listener on component unmount
-        return () => window.removeEventListener('resize', setWindowHeight);
-      }, []);
     return(
         <>
         <div className="thirdimg">
-            <img src={picnic} ref={picnicImgRef}   />
+            <img src={picnic} className="picnicmainimg"  />
         </div>
         <div className="thirdpart container">
             <h3 className="text-center mt-4">Break Free from the monotony of city life</h3>
