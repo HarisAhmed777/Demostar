@@ -51,8 +51,8 @@ function Homeimg() {
         <>
             <div className={`w-100 ${theme ? "bg-dark text-white" : null}`}>
                 <div className={`homeimg`}>
-                    <Carousel className="w-100  mb-5">
-                        <Carousel.Item className="w-100 caro1">
+                    <Carousel className="w-100  mb-5" >
+                        <Carousel.Item className="w-100 caro1"  >
                             <div className="carousel-bg caro1" ref = {packageImgRef}
                              style={{ backgroundImage: `url(${cp1})` }}>
                                 <div className="carousel-content caro1">
@@ -61,8 +61,8 @@ function Homeimg() {
                                 </div>
                             </div>
                         </Carousel.Item>
-                        <Carousel.Item>
-                            <div className="carousel-bg caro1"  ref = {packageImgRef} style={{ backgroundImage: `url(${cp2})` }}>
+                        <Carousel.Item >
+                            <div className="carousel-bg caro1"ref = {packageImgRef}   style={{ backgroundImage: `url(${cp2})` }}>
                                 <div className="carousel-content">
                                     <h1>Unleash Your Wanderlust <br />See your offers</h1>
                                     <Link to='/offerpage'><button className="p-3 rounded-pill">Click to view more</button></Link>
