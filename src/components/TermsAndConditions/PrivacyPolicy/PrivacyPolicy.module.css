@@ -1,0 +1,21 @@
+.clr{
+    color: blue;
+}
+.ull{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        margin-left: 20px;
+        padding: 0;
+        display: inline-block !important;
+    
+}
+.cursor{
+    cursor:auto;
+}
+@media (max-width:600px) {
+    .med{
+        margin-left: 2px  !important;
+        /* color: aqua; */
+    }
+}

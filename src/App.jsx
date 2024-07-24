@@ -30,6 +30,10 @@ import KeralaPicnic from './components/PicnicPage/Keralapicnic';
 import ScrollToTop from './components/scrollTop';
 import EmailVerification from './components/LoginandSignupapge/Emailverification';
 import SeperateNews from './components/NewsandTips/newssperate';
+import PrivacyPolicy from './components/TermsAndConditions/PrivacyPolicy/PrivacyPolicy';
+import ServiceProviders from './components/TermsAndConditions/ServiceProviders/ServiceProviders';
+import ThirdPartyInformation from './components/TermsAndConditions/ThirdPartyInformation/ThirdPartyInformation';
+import LegalDisclaimer from './components/TermsAndConditions/LegalDisclaimer/LegalDisclaimer';
 
 function App() {
   return (
@@ -61,7 +65,12 @@ function App() {
             <Route path = '/tamilnadupicnic' element =  {<TamilNaduPicnic/>}/>
             <Route path = '/keralapicnic' element =  {<KeralaPicnic/>}/>
             <Route path = '/seperatenews' element =  {<SeperateNews/>}/>
+            <Route path = '/PrivacyPolicy' element =  {<PrivacyPolicy/>}/>
+            <Route path = '/ServiceProviders' element =  {<ServiceProviders/>}/>
+            <Route path = '/ThirdpartyInformation' element =  {<ThirdPartyInformation/>}/>
+            <Route path = '/legalDisclaimer' element =  {<LegalDisclaimer/>}/>
 
+        
 
             
 

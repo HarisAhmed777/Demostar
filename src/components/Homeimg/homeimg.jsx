@@ -115,13 +115,19 @@ function Homeimg() {
                     </Carousel>
                 </div>
                 <div className={`container  mb-4 abs ${theme ? "bg-dark text-white" : "bg-white "}`}>
+                    <div className="">
+                    <div>
+                        <h2>About US</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, ipsam! Rem, eum magni itaque qui corrupti ea harum totam laborum incidunt, mollitia repudiandae doloremque pariatur voluptatem illo voluptates perferendis, est nostrum quisquam animi quos. Unde doloremque illum enim molestiae, commodi ullam reprehenderit fugit est voluptas excepturi dolor nesciunt quibusdam ipsa!</p>
+                    </div>
+                    <div className="">
                     <Tabs
                         id="controlled-tab-example"
                         activeKey={key}
                         onSelect={(k) => setKey(k)}
-                        className="mb-3 custom-tab-list"
+                        className="mb-3 custom-tab-list  "
                     >
-                        <Tab eventKey="picnic" title="Picnic" className={`custom-tab ${key === 'picnic' ? 'active' : ''}`}>
+                        <Tab eventKey="picnic" title="Picnic" className={` custom-tab ${key === 'picnic' ? 'active' : ''}`}>
                             <div className="container comtt">
                                 <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
                                     <div className="col-lg-2 col-md-2 col-12 mb-2">
@@ -175,6 +181,8 @@ function Homeimg() {
                             </div>
                         </Tab>
                     </Tabs>
+                    </div>
+                    </div>
                 </div>
             </div>
         </>

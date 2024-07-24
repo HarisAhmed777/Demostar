@@ -11,6 +11,13 @@
 .custom-tab-list {
     display: flex;
     list-style-type: none;
+    justify-items: end;
+    width: 100%;
+    /* background-color: purple; */
+    /* align-items: end; */
+    /* align-self: flex-end; */
+    /* align-content: end; */
+    justify-content: right;
     padding: 0;
     margin: 0;
 }
