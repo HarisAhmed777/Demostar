@@ -19,14 +19,14 @@ function Footer() {
                             </li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-3 text-start ms-3">
+                        <div className="col-lg-3 col-md-3 text-start ">
                             <ul>
                             <h5 className="fw-bold">Support</h5>
                             <Link to = '/blogpage'><li className="fw-light footerhover lii">Blog</li></Link>
                             <Link to = '/contactus'><li  className="fw-light footerhover lii">Contact Us</li></Link>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-3 text-start ms-3">
+                        <div className="col-lg-3 col-md-3 text-start ">
                             <h5 className="fw-bold">People Also Visit</h5>
                             <ul>
                             <Link to = '/offerpage'><li className="fw-light footerhover lii">Offers</li></Link>
@@ -34,7 +34,7 @@ function Footer() {
                             <Link to = '/packagepage'><li className="fw-light footerhover lii">Packages</li></Link>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-3 text-start ms-3">
+                        <div className="col-lg-3 col-md-3 text-start ">
                             <h5 className="fw-bold">Privacy Policy</h5>
                             <ul>
                             <Link to = '/PrivacyPolicy'><li className="fw-light footerhover lii">Privacy Policy</li></Link>

@@ -55,10 +55,10 @@ const offersdata = [
     return(
         <>
         <div class={`container ${theme?"bg-dark text-white":null}`}>
-        <div className={`mb-5 ${theme?"bg-dark text-white":"bestoffbg"}`}>
+        <div className={`mb-5`}>
         <div className='container mb-4 '>
-            <h2 className='mb-4'>Best Offers </h2>
-            <div className='container bfcont'>
+            <h2 className='mb-4 conatinerheading'>Best Offers </h2>
+            <div className=''>
                 <Carousel responsive={responsive}>
                 <Offer {...offersdata[0]}/>
                 <Offer {...offersdata[1]}/>

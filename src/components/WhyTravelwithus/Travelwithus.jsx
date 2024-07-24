@@ -36,8 +36,8 @@ function Travelwithus() {
 
     return (
         <div className="container wholetravel mb-5">
-            <h2 className="ms-2">Why Travel with us</h2>
-            <p className=" ms-2">The best booking platform you can trust</p>
+            <h2 className="ms-2 conatinerheading">Why Travel with us</h2>
+            <p className=" ms-2 conatinerpara">The best booking platform you can trust</p>
             <div className=" ms-2 ">
             <div className="row ">
                 {Traveldata.map((value, key) => (

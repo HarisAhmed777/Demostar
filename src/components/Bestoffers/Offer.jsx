@@ -6,7 +6,7 @@ function Offer({img,title,duration,price}){
     return(
         <>
         <div className={`cards-container`}>
-                    <div className="card ms-3">
+                    <div className="card bestofferborderradius">
                         <img className="cardimg bfcardimg" src={img} alt="Card image cap"/>
                         <div className={`card-body`}>
                             <h5 className="card-title">{title}</h5>

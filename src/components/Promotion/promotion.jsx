@@ -16,12 +16,12 @@ function Promotion() {
         <>
         <div className={`container-fluid mb-4 ${theme ? "bg-dark text-white" : null}`}>
             <div className="container">
-                <div className={`container row cont d-flex ${isMobilePortrait ? 'flex-column' : 'flex-row'}`}>
-                    <div className="col-lg-3 pro1 col-12 col-md-5 mb-3">
+                <div className={`container row ${isMobilePortrait ? 'flex-column' : 'flex-row'}`}>
+                    <div className="col-lg-5 pro1 ms-3 me-2 col-12 col-md-5 mb-3">
                         <h4 className="mt-3">20% off<br />for School Trips</h4>
                         <Link to = '/offerpage'><button className="btnpro p-2 rounded-pill fw-bold">View More<FontAwesomeIcon icon={faArrowRight} /></button></Link>
                     </div>
-                    <div className="col-lg-3 pro2 col-12 col-md-5">
+                    <div className="col-lg-5 pro2 col-12 col-md-5">
                         <h4 className="mt-3 text-white">30% off <br />for <br />College Trips</h4>
                         <Link to = '/offerpage'><button className="btnpro p-2 rounded-pill fw-bold">View More<FontAwesomeIcon icon={faArrowRight} /></button></Link>
                     </div>

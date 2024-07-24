@@ -23,8 +23,8 @@
   color: #000;
 }
 .text-dddd:focus{
-  border-bottom: 2px solid purple!important;
-  transition: ease-out 0.5s;
+  color: orangered !important;
+  /* transition: ease-out 0.5s; */
 }
 .logoimg {
   /* height: 70px; */
@@ -71,6 +71,9 @@
 .nav-link {
   text-align: center;
 }
+.nav-link:hover{
+  border-bottom: 2px solid orangered !important;
+}
 
 
 
@@ -84,6 +87,7 @@
   .navhome{
     margin-right: 0;
   }
+
 }
 
 /* Adjustments for mobile view */
@@ -104,6 +108,9 @@
   }
   .topheader{
     font-size: 8px;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    display: none !important;
   }
 }
 @media (max-width:400px) {

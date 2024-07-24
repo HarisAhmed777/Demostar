@@ -30,7 +30,7 @@
 .picnic-card {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
     background-color: whitesmoke;
 }
 
@@ -83,6 +83,7 @@
 @media (max-width: 576px) {
     .picnic-cards-container {
         grid-template-columns: 1fr;
+        width: 96%;
     }
 
     .picnic-card-img {

@@ -7,17 +7,28 @@
     margin-top: 0 !important;
     padding:0 !important;
 }
+.sraechbtn{
+    width: 250px;
+    height: 50px;
+    background-color: orangered;
+
+}
+
+.sraechbtn:hover{
+    background-color: orange;
+}
 
 .custom-tab-list {
     display: flex;
+    flex-direction: row;
     list-style-type: none;
-    justify-items: end;
-    width: 100%;
+    /* justify-items: end; */
+    width: 100% !important;
     /* background-color: purple; */
     /* align-items: end; */
     /* align-self: flex-end; */
     /* align-content: end; */
-    justify-content: right;
+    /* justify-content: right; */
     padding: 0;
     margin: 0;
 }
@@ -121,10 +132,16 @@
 
 .abs{
     /* position: absolute; */
-    width: 100%;
+    width: 40%;
+    /* text-align: center; */
     padding: 10px;
     box-shadow: 1px 1px 2px;
     border: 1px solid gray;
+    border-radius: 10px;
+}
+.stt{
+    width: 100%;
+    border-bottom: 1px solid gray;
 }
 .sraechbtn{
     width: 140px;
@@ -134,6 +151,27 @@
 }
 .absbtn{
     width: 90px;
+}
+
+@media (min-width:1201px) {
+    .pp{
+        position: relative;
+    }
+    .sraechbtn{
+        width: 250px;
+        height: 50px;
+        position: absolute;
+        background-color: orangered;
+        bottom: -47%;
+        /* left: 0; */
+        right: 20.3%;
+        border-radius: 20px;
+        /* top: 200px; */
+        text-transform: uppercase;
+    }
+    .sraechbtn:hover{
+        background-color: orange;
+    }
 }
 /* Media Queries */
 @media (max-width: 1200px) {

@@ -5,19 +5,26 @@
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px; 
+    /* justify-content: center; */
+    gap: 20px; 
     padding: 0px !important;
     margin: 0px !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 0px !important;    
+
+
 
 }
 
 .card {
     border-radius:10px 10px 0px 0px;
-    width: 18rem;
+    width: 19.3rem;
     /* margin-top: 10px;  */
     padding-bottom: 0px !important;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+
+
 }
 
 .cardimg {
@@ -26,13 +33,15 @@
     border-radius: 10px 10px 0 0; 
 }
 
-.card-body {
+.card-bbody {
     z-index: 1 ;
     background-color: whitesmoke;
     border-radius: 0px 0px 0 0;
-    /* padding: 15px; */
+    padding: 15px;
+    outline:none;
     box-sizing: border-box;
     /* margin-top: -40px;  */
+    ;
 }
 
 .card-title {
@@ -45,10 +54,11 @@
 }
 
 .tbnn {
-    border: none;
+    border: none !important;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    outline: none !important;
     border: 2px solid black;
 }
 
@@ -89,9 +99,16 @@
         margin-left: 0px !important;
         padding-left: 0px !important;
     }
+    .conatinerheading{
+        margin-left: 1rem !important;
+    }
+    .conatinerpara{
+        margin-left: 1rem !important;
+    }
 
     .card {
         width: 100%; 
+        margin-left: 1rem;
     }
 
     .cardimg {

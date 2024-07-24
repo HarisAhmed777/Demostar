@@ -91,8 +91,8 @@ function Homeimg() {
                             <div className="carousel-bg caro1" ref = {home1ImgRef}
                              style={{ backgroundImage: `url(${cp1})` }}>
                                 <div className="carousel-content caro1">
-                                   <Link to='/packagepage'><button className="rounded-pill p-3 ">Discover The world</button></Link>
                                     <h1>Unleash Your Wanderlust <br />Book Your Next Package</h1>
+                                    <Link to='/packagepage'><button className="rounded-pill p-3 ">Discover The world</button></Link>
                                 </div>
                             </div>
                         </Carousel.Item>
@@ -107,19 +107,25 @@ function Homeimg() {
                         <Carousel.Item>
                             <div className="carousel-bg caro1"ref = {home3ImgRef} style={{ backgroundImage: `url(${cp3})` }}>
                                 <div className="carousel-content">
-                                    <Link to='/picnicpage'><button className="rounded-pill p-3">Discover The world</button></Link>
+
                                     <h1>Unleash Your Wanderlust <br />where you wanna go for picnic</h1>
+                                    <Link to='/picnicpage'><button className="rounded-pill p-3">Discover The world</button></Link>
                                 </div>
                             </div>
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div className={`container  mb-4 abs ${theme ? "bg-dark text-white" : "bg-white "}`}>
-                    <div className="">
-                    <div>
-                        <h2>About US</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, ipsam! Rem, eum magni itaque qui corrupti ea harum totam laborum incidunt, mollitia repudiandae doloremque pariatur voluptatem illo voluptates perferendis, est nostrum quisquam animi quos. Unde doloremque illum enim molestiae, commodi ullam reprehenderit fugit est voluptas excepturi dolor nesciunt quibusdam ipsa!</p>
+                <div className="container">
+                <div className="row mb-5">
+                     <div className="col-lg-6">
+                        <h2 className="ms-3">About US</h2>
+                        <p className="ms-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, ipsam! Rem, eum magni itaque qui corrupti ea harum totam laborum incidunt, mollitia repudiandae doloremque pariatur voluptatem illo voluptates perferendis, est nostrum quisquam animi quos. Unde doloremque illum enim molestiae, commodi ullam reprehenderit fugit est voluptas excepturi dolor nesciunt quibusdam ipsa!
+                      </p>
+                      <p className="ms-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero minima enim velit, dolore, voluptas possimus consequuntur adipisci, recusandae aperiam veritatis porro. Aperiam vel aut iste cum. Provident neque recusandae voluptates eaque voluptatum tenetur laborum est alias illo excepturi. Provident blanditiis quis minima omnis amet voluptatum laboriosam quaerat, dolores sapiente quasi doloremque officiis id</p>
                     </div>
+                    <div className={`container col-lg-6   mb-4 abs ${theme ? "bg-dark text-white" : "bg-white "}`}>
+                        <div className="ms-3">
+
                     <div className="">
                     <Tabs
                         id="controlled-tab-example"
@@ -129,27 +135,27 @@ function Homeimg() {
                     >
                         <Tab eventKey="picnic" title="Picnic" className={` custom-tab ${key === 'picnic' ? 'active' : ''}`}>
                             <div className="container comtt">
-                                <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
-                                    <div className="col-lg-2 col-md-2 col-12 mb-2">
-                                        <label className="fw-light text-dark">Location</label><br />
-                                        <select className="stdate mt-3" value={location} onChange={(e) => setLocation(e.target.value)}>
+                                <div className={`row mt-2 entirerowdiv comtt `}>
+                                    <div className="col-lg-12 col-md-2 col-12 mb-2 pp">
+                                        <label className="fw-light text-dark w-100">Location</label>
+                                        <select className="stdate mt-3 stt" value={location} onChange={(e) => setLocation(e.target.value)}>
                                             <option>Munnar,Kerala</option>
                                             <option>Kodaikanal,Tamil Nadu</option>
                                             <option>Tada,Andhra </option>
                                             <option>Yelagiri,TamilNadu</option>
                                         </select>
                                     </div>
-                                    <div className="col-lg-2 col-md-2 col-12 mb-2">
-                                        <label className="text-dark">Start Date</label> <br />
-                                        <DatePicker className="stdate form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    <div className="col-lg-5 col-md-2 col-12 mb-2">
+                                        <label className="text-dark mt-3 ">Start Date</label>
+                                        <DatePicker className="stdate form-control fw-bold" selected={startDate} onChange={(date) => setStartDate(date)} />
                                     </div>
-                                    <div className="col-lg-2 ms-2 col-md-2 col-12 mb-2">
-                                        <label className="text-dark">End Date</label> <br />
-                                        <DatePicker selected={endDate} className="stdate form-control" onChange={(date) => setEndDate(date)} />
+                                    <div className="col-lg-5 ms-2 col-md-2 col-12 mb-2">
+                                        <label className="text-dark mt-3">End Date</label>
+                                        <DatePicker selected={endDate} className="stdate form-control fw-bold" onChange={(date) => setEndDate(date)} />
                                     </div>
 
-                                    <div className="col-lg-2 col-md-2 text-center col-12 mb-2 searchbtndiv">
-                                        <button className="bg-dark rounded-pill mt-3 sraechbtn" onClick={handleBookClick}>Book</button>
+                                    <div className="col-lg-12 col-md-2 text-center col-12 mb-2 mt-3 searchbtndiv">
+                                        <button className=" mt-3 sraechbtn" onClick={handleBookClick}>Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -157,25 +163,25 @@ function Homeimg() {
                         <Tab eventKey="package" title="Packages" className={`custom-tab ${key === 'package' ? 'active' : ''}`}id="controlled-tab-example">
                             <div className="container comtt">
                                 <div className={`row mt-2 entirerowdiv comtt d-flex justify-content-around`}>
-                                    <div className="col-lg-2 col-md-3 col-12 mb-2">
-                                        <label className="fw-light text-dark">Select Package</label><br />
-                                        <select className="stdate mt-3" value={location} onChange={(e) => setLocation(e.target.value)}>
+                                    <div className="col-lg-12 col-md-3 col-12 mb-2">
+                                        <label className="fw-light text-dark ">Select Package</label><br />
+                                        <select className="stdate mt-3 stt mb-4" value={location} onChange={(e) => setLocation(e.target.value)}>
                                             <option>School Package</option>
                                             <option>College Package</option>
                                             <option>Industiral visit</option>
                                         </select>
                                     </div>
-                                    <div className="col-lg-2 col-md-2 col-12 mb-2">
-                                        <label className="text-dark">Start Date</label> <br />
+                                    <div className="col-lg-5 col-md-2 col-12 mb-2">
+                                        <label className="text-dark">Start Date</label> 
                                         <DatePicker className="stdate form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
                                     </div>
-                                    <div className="col-lg-2 ms-2 col-md-2 col-12 mb-2">
-                                        <label className="text-dark">End Date</label> <br />
+                                    <div className="col-lg-5  col-md-2 col-12 mb-2">
+                                        <label className="text-dark">End Date</label> 
                                         <DatePicker selected={endDate} className="stdate form-control" onChange={(date) => setEndDate(date)} />
                                     </div>
                                     
-                                    <div className="col-lg-2 col-md-2 text-center col-12 mb-2 searchbtndiv">
-                                        <button className="bg-dark rounded-pill mt-3 sraechbtn" onClick={handleBookClick}>Book</button>
+                                    <div className="col-lg-12 col-md-2 text-center col-12 mb-2 mt-3 searchbtndiv">
+                                        <button className=" mt-3 sraechbtn" onClick={handleBookClick}>Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -183,6 +189,8 @@ function Homeimg() {
                     </Tabs>
                     </div>
                     </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </>

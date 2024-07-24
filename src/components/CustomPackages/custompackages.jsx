@@ -26,23 +26,30 @@ const packages = [
         duration: "3 days 2 nights",
         guest:"4 to 6 guest",
         price: "3000rs/person"
+    },
+    {
+        img: cp3,
+        title: "Desert Safari and Camping",
+        duration: "3 days 2 nights",
+        guest:"4 to 6 guest",
+        price: "3000rs/person"
     }
 ];
 
 function Custompackages(){
     const {theme} = useContext(Context);
     return(
-        <div className={`w-100 container mb-4 ${theme?"bg-dark text-white":null}`}>
+        <div className={`w-100 container mb-5 ${theme?"bg-dark text-white":null}`}>
         <div className={` w-100 text-center `}>
-            <div className="conatinerhead container ">
-                <h2 className="text-start mb-3">Our Custom Packages</h2>
-                <p className="text-start mb-4">Favourite Destinations Based on customer reviews</p>
+            <div className="conatinerhead  ">
+                <h2 className="text-start conatinerheading mb-3">Our Custom Packages</h2>
+                <p className="text-start  conatinerpara mb-4">Favourite Destinations Based on customer reviews</p>
             </div>
             <div className={`cards-container`}>
                 {packages.map((pkg, index) => (
-                    <div key={index} className="card ms-3">
+                    <div key={index} className="card ">
                         <img className="cardimg" src={pkg.img} alt="Card image cap"/>
-                        <div className={`card-body ${theme?"bg-dark text-white":null}`}>
+                        <div className={`card-bbody ${theme?"bg-dark text-white":null}`}>
                             <h5 className="card-title">{pkg.title}</h5>
                             <div className="d-flex ">
                             <p className="card-text">{pkg.duration}</p>
