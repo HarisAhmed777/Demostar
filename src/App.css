@@ -22,7 +22,12 @@ p ,button{
     font-family: 'Roboto'; /* Font for p */
     font-weight: 300;
 }
-
+.bgc{
+    background-color: darkorange !important;
+}
+.cllr{
+    color: darkorange;
+}
 
 
 .headerp {

@@ -64,7 +64,7 @@ function PackageSecondPage() {
                     <form onSubmit={handleSubmit}>
                         <div className="d-flex flex-wrap justify-content-evenly mb-4">
                             <div>
-                                <label className="purple">Name</label><br />
+                                <label className="purple cllr">Name</label><br />
                                 <input
                                     name="name"
                                     value={formData.name}
@@ -128,8 +128,8 @@ function PackageSecondPage() {
                                 />
                             </div>
                         </div>
-                        <div className="d-flex flex-wrap justify-content-evenly mb-4">
-                            <div>
+                        <div className="d-flex flex-wrap  mb-4">
+                            <div className="ms-5">
                                 <label className="purple">Interested in</label><br />
                                 <select
                                     name="interest"
@@ -163,7 +163,7 @@ function PackageSecondPage() {
                             </div>
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="packagesidebtn p-2 mb-4 text-center">Submit</button>
+                            <button type="submit" className="packagesidebtn p-1 bgc mb-4 text-center">Submit</button>
                         </div>
                     </form>
                 </div>

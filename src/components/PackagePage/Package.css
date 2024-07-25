@@ -16,7 +16,7 @@
 }
 .packagemainbtn{
     padding: 10px;
-    background-color: purple;
+    background-color: darkorange;
     color: whitesmoke;
     border-radius: 10px;
 }
@@ -24,8 +24,9 @@
     background-color: purple;
     color: whitesmoke;
     border-radius: 4px;
-    height: 27px;
-    padding: 2px 2px 2px 2px;
+    height: 35px;
+    width: 100px;
+    /* padding: 2px 2px 2px 2px; */
 }
 .package-container {
     display: flex;
@@ -41,5 +42,12 @@
 .packagesecondpageinput{
     width: 250px;
     border: 0;
-    border-bottom: 2px solid purple;
+    border-bottom: 2px solid gainsboro;
+}
+.packagesecondpageinput:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid darkorange;
+    
+
 }

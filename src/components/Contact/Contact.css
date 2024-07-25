@@ -13,8 +13,22 @@
     width: fit-content;
 }
 
+.input{
+ width: 90%;
+ border: none;
+ border-bottom: 2px solid gainsboro ;
+}
+
+.input:focus{
+    border-bottom: 2px solid darkorange ;
+    outline: none;
+
+}
 @media (max-width:500px) {
     .contactadress{
         width: 100%;
+    }
+    .feedbackform{
+        margin-left: 4% !important;
     }
 }

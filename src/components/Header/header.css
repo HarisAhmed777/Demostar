@@ -110,8 +110,7 @@
     font-size: 8px;
   }
   .carousel-control-next-icon, .carousel-control-prev-icon{
-    display: none !important;
-  }
+    display: none !important;  }
 }
 @media (max-width:400px) {
   .topheader{

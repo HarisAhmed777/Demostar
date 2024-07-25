@@ -54,7 +54,7 @@ function PackagePage() {
         <p className="text-white">
           Himachal Holiday Starting at <span className="text-warning">Rs:17000/</span>
         </p>
-        <button className="packagemainbtn" onClick={scrollToPackageSecondPage}>Enquire Now</button>
+        <button className="packagemainbtn bgc" onClick={scrollToPackageSecondPage}>Enquire Now</button>
       </div>
 
       <div className="container mt-5 mb-5">
@@ -83,7 +83,7 @@ function PackagePage() {
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
                   </div>
                   <div className="d-flex justify-content-between"></div>
                 </div>
@@ -116,7 +116,7 @@ function PackagePage() {
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
             
                   </div>
                   <div className="d-flex justify-content-between"></div>
@@ -150,7 +150,7 @@ function PackagePage() {
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
                   </div>
                   <div className="d-flex justify-content-between"></div>
                 </div>
