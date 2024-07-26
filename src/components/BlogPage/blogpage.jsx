@@ -104,9 +104,10 @@ function BlogPage(){
     }
     return(
         <>
-        <div className='pt-5 mt-5 container'>
+        <div className='paddingtop'>
+        <div className=' container '>
             
-            <h4 className='text-center mb-4 fw-bold'>The Recent Blogs are </h4>
+            <h4 className='text-center mt-3 mb-4 fw-bold'>The Recent Blogs are </h4>
             <div className='row'>
             {
                 blogs.map((value,blog)=>(
@@ -127,6 +128,7 @@ function BlogPage(){
                 ))
             }
             </div>
+        </div>
         </div>
            
         </>

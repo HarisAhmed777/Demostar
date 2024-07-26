@@ -46,7 +46,8 @@ function PackagePage() {
 
   return (
     <>
-      <div   className="packageimg pt-5 ">
+    <div className='paddingtop'>
+      <div   className="packageimg">
         <h1 className="text-white">
           Trek, Chill, Repeat <br />
           Book Your Escape
@@ -56,11 +57,16 @@ function PackagePage() {
         </p>
         <button className="packagemainbtn bgc" onClick={scrollToPackageSecondPage}>Enquire Now</button>
       </div>
+    </div>
 
       <div className="container mt-5 mb-5">
-        <h2>
-          <span className="purple">Explore</span> more vacations tailored to your wanderlust
-        </h2>
+        <h2 className='mb-2'>Discover Star Holidays' Exclusive Holiday Packages </h2>
+        <p>
+          <span className="purple fw-bold">Explore</span>  our meticulously crafted holiday packages that cater to every traveller's unique 
+preferences. From luxurious retreats to adventurous expeditions, each package promises 
+unparalleled experiences that capture the essence of travel. Begin your journey with Star Holidays 
+and unlock extraordinary destinations and memories. 
+        </p>
         <div className="row">
           <h2>School Packaes</h2>
           {custompackages.map((pkg, index) => (

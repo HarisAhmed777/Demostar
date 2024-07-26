@@ -42,8 +42,9 @@ function Custompackages(){
         <div className={`w-100 container mb-5 ${theme?"bg-dark text-white":null}`}>
         <div className={` w-100 text-center `}>
             <div className="conatinerhead  ">
-                <h2 className="text-start conatinerheading mb-3">Our Custom Packages</h2>
-                <p className="text-start  conatinerpara mb-4">Favourite Destinations Based on customer reviews</p>
+                <h2 className="text-start conatinerheading mb-3">Custom Holiday Packages </h2>
+                <p className="text-start  conatinerpara mb-4">Explore personalised holiday packages tailored to your unique preferences at Star Holidays, where 
+every detail is crafted to exceed your expectations. </p>
             </div>
             <div className={`cards-container`}>
                 {packages.map((pkg, index) => (

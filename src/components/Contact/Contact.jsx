@@ -34,8 +34,8 @@ function Contact(){
     
  return(
     <>
-        <div className=" pt-5 container mt-5 ">
-            <div className="row ms-2">
+        <div className=" paddingtop container  ">
+            <div className="row ms-2 mt-4">
                 <div className="col-lg-9 col-md-8 col-12 ">
                     <h2 className="">Contact Us</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis! Nihil impedit nemo deserunt, temporibus porro labore optio quia itaque!</p>

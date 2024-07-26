@@ -84,23 +84,24 @@ function Homeimg() {
       }, []);
     return (
         <>
-            <div className={`w-100 ${theme ? "bg-dark text-white" : null}`}>
-                <div className={`homeimg`}>
-                    <Carousel className="w-100  mb-5" >
+            <div className={`w-100  ${theme ? "bg-dark text-white" : null}`}>
+                <div className={`homeimg `}>
+                    <Carousel className="w-100 paddingtop  mb-5" >
                         <Carousel.Item className="w-100 caro1"  >
                             <div className="carousel-bg caro1" ref = {home1ImgRef}
                              style={{ backgroundImage: `url(${cp1})` }}>
                                 <div className="carousel-content caro1">
-                                    <h1>Unleash Your Wanderlust <br />Book Your Next Package</h1>
-                                    <Link to='/packagepage'><button className="rounded-pill p-3 ">Discover The world</button></Link>
+                                    <h1>"Discover Your Perfect Holiday: <br />Unwrap Unforgettable Adventures!" </h1>
+                                    <Link to='/packagepage'><button className="rounded-pill p-3 bgc text-white "> Enter the world of Packages</button></Link>
                                 </div>
                             </div>
                         </Carousel.Item>
                         <Carousel.Item >
                             <div className="carousel-bg caro1"ref = {home2ImgRef}   style={{ backgroundImage: `url(${cp2})` }}>
                                 <div className="carousel-content">
-                                    <h1>Unleash Your Wanderlust <br />See your offers</h1>
-                                    <Link to='/offerpage'><button className="p-3 rounded-pill">Click to view more</button></Link>
+                                
+                                    <h1>"Unlock Exclusive Offers: <br /> Your Dream Holiday Awaits!"</h1>
+                                    <Link to='/offerpage'><button className="p-3 rounded-pill bgc text-white fw-bold">Enjoy Your Holidays with OFFERS</button></Link>
                                 </div>
                             </div>
                         </Carousel.Item>
@@ -108,8 +109,8 @@ function Homeimg() {
                             <div className="carousel-bg caro1"ref = {home3ImgRef} style={{ backgroundImage: `url(${cp3})` }}>
                                 <div className="carousel-content">
 
-                                    <h1>Unleash Your Wanderlust <br />where you wanna go for picnic</h1>
-                                    <Link to='/picnicpage'><button className="rounded-pill p-3">Discover The world</button></Link>
+                                    <h1>"Plan Your Perfect Picnic: <br/> Where Memories Blossom! </h1>
+                                    <Link to='/picnicpage'><button className="rounded-pill p-3 bgc text-white">Discover The world of Picnic</button></Link>
                                 </div>
                             </div>
                         </Carousel.Item>
@@ -119,12 +120,15 @@ function Homeimg() {
                 <div className="row mb-5">
                      <div className="col-lg-6">
                         <h2 className="ms-3">About US</h2>
-                        <p className="ms-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, ipsam! Rem, eum magni itaque qui corrupti ea harum totam laborum incidunt, mollitia repudiandae doloremque pariatur voluptatem illo voluptates perferendis, est nostrum quisquam animi quos. Unde doloremque illum enim molestiae, commodi ullam reprehenderit fugit est voluptas excepturi dolor nesciunt quibusdam ipsa!
+                        <p className="ms-3">
+                        Welcome to Star Holidays, your premier destination for booking unforgettable holidays in Ranipet, Tamil Nadu. We specialise in crafting personalised travel experiences that highlight the beauty and culture of our vibrant region. Whether you dream of serene nature retreats, immersive cultural tours, or thrilling adventures, our expert team is here to design the perfect itinerary for you. 
                       </p>
-                      <p className="ms-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero minima enim velit, dolore, voluptas possimus consequuntur adipisci, recusandae aperiam veritatis porro. Aperiam vel aut iste cum. Provident neque recusandae voluptates eaque voluptatum tenetur laborum est alias illo excepturi. Provident blanditiis quis minima omnis amet voluptatum laboriosam quaerat, dolores sapiente quasi doloremque officiis id</p>
+                      <p className="ms-3">As a locally owned business, we take pride in our deep knowledge of Ranipet and Tamil Nadu, ensuring you receive insider insights and authentic experiences. From luxurious accommodations to off-the-beaten-path discoveries, we're committed to making every aspect of your journey seamless and memorable. Explore Ranipet and beyond with Star Holidays and embark on a trip filled with lasting memories and enriching experiences. 
+
+                      </p>
                     </div>
                     <div className={`container col-lg-6   mb-4 abs ${theme ? "bg-dark text-white" : "bg-white "}`}>
-                        <div className="ms-3">
+                    <div className="ms-3">
 
                     <div className="">
                     <Tabs

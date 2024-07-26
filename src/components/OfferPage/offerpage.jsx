@@ -13,7 +13,8 @@ function OfferPage() {
 
   return (
     <>
-      <div className=" offerimg pt-5 mb-4">
+    <div className='paddingtop'>
+      <div className=" offerimg  mb-4">
         <h1 className="text-white">
           Exclusive offers <br />
           Of the month
@@ -24,6 +25,10 @@ function OfferPage() {
       </div>
       <div className='container'>
         <div className=''>
+          <h2>Exclusive Holiday Deals: Unlock Your Perfect Getaway </h2>
+          <p className='mb-5'>Discover our latest exclusive holiday deals and special offers curated just for you. Whether you're dreaming of a relaxing beach retreat, an adventurous mountain expedition, or a cultural 
+            exploration, explore unbeatable packages and discounts to make your next trip unforgettable. 
+            Start planning your getaway with Star Holidays today! </p>
         <div className='row ms-3 mb-5'>
           <div className=' col-lg-3  schimg mb-4'>
             <button className='bg-warning item1 text-dark' onClick={() => handlePromoClick('school')}>AvailPromo</button>
@@ -39,6 +44,7 @@ function OfferPage() {
           </div>
         </div>
         </div>
+      </div>
       </div>
     </>
   );

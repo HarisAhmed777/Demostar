@@ -29,9 +29,8 @@ p ,button{
     color: darkorange;
 }
 
-
-.headerp {
-    padding-bottom: 31px;
+.paddingtop{
+    padding-top: 86px !important;
 }
 
 a.no-link-style {

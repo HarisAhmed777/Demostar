@@ -152,6 +152,7 @@ function Booking() {
 
   return (
     <>
+    <div className="paddingtop">
       <img src={cp4} alt=""  className="bookingimg" />
       <div className="booking-container pt-5 text-dark">
         <h2 className="fw-bold">Book now</h2>
@@ -272,6 +273,7 @@ function Booking() {
         </form>
       </div>
       <ToastContainer />
+      </div>
     </>
   );
 }

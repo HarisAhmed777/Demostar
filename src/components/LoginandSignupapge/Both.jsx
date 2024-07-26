@@ -8,7 +8,8 @@ import Signup from "../Loginfile/signuppage";
 function Both() {
   return (
     <>
-      <div className="both-container pt-5 mb-4">
+    <div className="paddingtop">
+      <div className="both-container mb-4">
         <div className="content-container">
           <div className="mobile-tabs">
           <Tabs>
@@ -25,8 +26,8 @@ function Both() {
       </TabPanel>
     </Tabs>
           </div>
-          <div className="desktop-content">
-            <div className="content">
+          <div className="desktop-content ">
+            <div className="content paddingtop">
               <Login />
             </div>
             <div className="content">
@@ -34,6 +35,7 @@ function Both() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

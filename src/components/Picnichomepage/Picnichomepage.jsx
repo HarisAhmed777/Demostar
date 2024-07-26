@@ -63,8 +63,8 @@ function Picnicpackages() {
         <div className={`container  ${theme?"bg-dark text-white":null}`} >
         <div className="ms-3 mb-4 w-100">
             <div className="">
-                <h2 className="text-start">Top Picnic spots</h2>
-                <p className="text-start">Favourite Destinations Based on customer reviews</p>
+                <h2 className="text-start">Picnic Paradise </h2>
+                <p className="text-start">Discover picturesque picnic spots tailored for unforgettable outdoor experiences. </p>
             </div>
             <div className="picnic-cards-container">
                 {picnicpackages.map((pkg, index) => (
