@@ -5,9 +5,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import './homeimg.css';
-import cp1 from '../images/cp1.jpg';
-import cp2 from '../images/cp2.avif';
-import cp3 from '../images/TCP1.jpg';
+import cp11 from '../images/Picnic.webp';
+import cp22 from '../images/Offers.webp';
+import cp33 from '../images/Picnic.webp';
 import { Context } from "../context";
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -89,7 +89,7 @@ function Homeimg() {
                     <Carousel className="w-100 paddingtop  mb-5" >
                         <Carousel.Item className="w-100 caro1"  >
                             <div className="carousel-bg caro1" ref = {home1ImgRef}
-                             style={{ backgroundImage: `url(${cp1})` }}>
+                             style={{ backgroundImage: `url(${cp11})` }}>
                                 <div className="carousel-content caro1">
                                     <h1>"Discover Your Perfect Holiday: <br />Unwrap Unforgettable Adventures!" </h1>
                                     <Link to='/packagepage'><button className="rounded-pill p-3 bgc text-white "> Enter the world of Packages</button></Link>
@@ -97,7 +97,7 @@ function Homeimg() {
                             </div>
                         </Carousel.Item>
                         <Carousel.Item >
-                            <div className="carousel-bg caro1"ref = {home2ImgRef}   style={{ backgroundImage: `url(${cp2})` }}>
+                            <div className="carousel-bg caro1"ref = {home2ImgRef}   style={{ backgroundImage: `url(${cp22})` }}>
                                 <div className="carousel-content">
                                 
                                     <h1>"Unlock Exclusive Offers: <br /> Your Dream Holiday Awaits!"</h1>
@@ -106,7 +106,7 @@ function Homeimg() {
                             </div>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <div className="carousel-bg caro1"ref = {home3ImgRef} style={{ backgroundImage: `url(${cp3})` }}>
+                            <div className="carousel-bg caro1"ref = {home3ImgRef} style={{ backgroundImage: `url(${cp33})` }}>
                                 <div className="carousel-content">
 
                                     <h1>"Plan Your Perfect Picnic: <br/> Where Memories Blossom! </h1>
