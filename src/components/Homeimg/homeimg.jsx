@@ -5,9 +5,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import './homeimg.css';
-import cp11 from '../images/Picnic.webp';
-import cp22 from '../images/Offers.webp';
-import cp33 from '../images/Picnic.webp';
+import cp11 from '../images/Package.webp';
+import cp22 from '../images/Picnic.webp';
+import cp33 from '../images/Offer.webp';
 import { Context } from "../context";
 import { Link, useNavigate } from 'react-router-dom';
 
