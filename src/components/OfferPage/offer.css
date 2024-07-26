@@ -1,6 +1,7 @@
 .offerimg {
-    background-image: url('../images/packagemainimg.avif');
+    background-image: url('../images/Offers.webp');
     /* background-color: rebeccapurple; */
+    /* background-size:contain; */
     height: 80vh;
     width: 100%;
     background-size: cover;

@@ -48,11 +48,11 @@ function PackagePage() {
     <>
     <div className='paddingtop'>
       <div   className="packageimg">
-        <h1 className="text-white">
+        <h1 className="text-white mb-5">
           Trek, Chill, Repeat <br />
           Book Your Escape
         </h1>
-        <p className="text-white">
+        <p className="text-warning fw-bold">
           Himachal Holiday Starting at <span className="text-warning">Rs:17000/</span>
         </p>
         <button className="packagemainbtn bgc" onClick={scrollToPackageSecondPage}>Enquire Now</button>

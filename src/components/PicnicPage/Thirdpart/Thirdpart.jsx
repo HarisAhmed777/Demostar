@@ -1,6 +1,6 @@
 import React,{useEffect,useRef}from "react";
 import './Thirdpart.css';
-import picnic from '../../images/picnicmain.jpg';
+import picnic from '../../images/Picnic.webp';
 
 function Thirdpart(){
     return(
