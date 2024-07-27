@@ -14,12 +14,23 @@
 }
 
 .input{
- width: 90%;
+ width: 100%;
  border: none;
  border-bottom: 2px solid gainsboro ;
 }
+.inp{
+    width: 47%;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 2px solid gainsboro ;
+   }
 
 .input:focus{
+    border-bottom: 2px solid darkorange ;
+    outline: none;
+
+}
+.inp:focus{
     border-bottom: 2px solid darkorange ;
     outline: none;
 

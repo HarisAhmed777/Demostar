@@ -2,20 +2,23 @@ import React, { useState } from "react";
 import './Contact.css';
 import {baseUrl} from '../../../url'
 import axios from 'axios'
+import SimpleMap from "./SImpleMap";
 
 
 function Contact(){
-    const [name,setName] =  useState('');
+    const [firstname,setFirstName] =  useState('');
+    const [secondname,setSecondname] =  useState('');
     const [email,setemail] =  useState('');
+    const [phonenumber,setPhonenumber] =  useState('');
     const [feedback,setfeedback] =  useState('');
-
-
     async function handleFeedback() {
-        if (name && email && feedback) {
+        if (firstname &&secondname && email && phonenumber && feedback) {
             try {
                 const response = await axios.post(`${baseUrl}/feedback`, {
-                    name,
+                    firstname,
+                    secondname,
                     email,
+                    phonenumber,
                     feedback
                 });
                 if (response.status === 200) {
@@ -35,39 +38,42 @@ function Contact(){
  return(
     <>
         <div className=" paddingtop container  ">
-            <div className="row ms-2 mt-4">
-                <div className="col-lg-9 col-md-8 col-12 ">
-                    <h2 className="">Contact Us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis! Nihil impedit nemo deserunt, temporibus porro labore optio quia itaque!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis! Nihil impedit nemo deserunt, temporibus porro labore optio quia itaque!</p>
-                    <h5>For futher assistance</h5>
-                    <p>Call us on <span className="text-primary fw-bold">+919876543210</span></p>
-                    <p>Call us on <span className="text-primary fw-bold">+919876543210</span></p>
-
-                    <p>Monday to Saturday(9.30am to 7.00pm)
-                        and on public holidays (9.30am to 5.00pm)
-                    </p>
-                    <div className="d-flex flex-wrap justify-content-around">
-                            <p>Feeback <br /><span className="fw-bold text-primary">startholidays@gemail.com</span></p>
-                            <p>Feeback <br /><span className="fw-bold text-primary">startholidays@gemail.com</span></p>
-
+            <div className="continer">
+                <h2>Get in Touch</h2>
+                <div className="row">
+                    <div className="col-lg-4 text-center">
+                        <p>Call Us <br /><span className="cllr fw-bold">+919876543210</span></p>
                     </div>
-                </div>
-                <div className="col-lg-2 col-md-2 col-12 mb-4 bg-dark contactadress">
-                    <h5>Our Office Address</h5>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <p>Lorem, ipsum dolor.</p>
-                    <p>Chennai,TamilNadu</p>
-                    <p>+919876543210</p>
-
+                    <div className="col-lg-4 text-center">
+                        <p>Email <br /><span className="cllr fw-bold">info@starholiday.com</span></p>
+                    </div>
+                    <div className="col-lg-4 text-center">
+                        <p>Office<br /><span className="cllr fw-bold">Navalpur Mosque Street <br />Ranipet-632401</span></p>
+                    </div>
                 </div>
             </div>
             <div className="container feedbackform mt-4 mb-4">
-                <h2 className="">Feedback form</h2>
-                <input className="input p-2" placeholder="Enter your Name" onChange={(e)=>setName(e.target.value)}/>
-                <input className="input p-2" placeholder="Enter Your email id " onChange={(e)=>setemail(e.target.value)}/>
-                <textarea className="input p-2" placeholder="Enter Your feedback " rows={5} onChange={(e)=>setfeedback(e.target.value)} />
-                <button onClick={handleFeedback} className="d-block bgc">Submit</button>
+                <h2 className="">Send a message or Come Visit Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam voluptate voluptates doloribus rem minus ducimus at quasi nostrum veritatis?</p>
+                <div className="row">
+                    <div className="col-lg-6">
+                        <label htmlFor="">Name</label><br />
+                        <div className="row mb-3">
+                        <input className="inp p-2 col-lg-1" placeholder="Enter your First Name" onChange={(e)=>setFirstName(e.target.value)}/>
+                        <input className="inp p-2 col-lg-1" placeholder="Enter your Last Name" onChange={(e)=>setSecondname(e.target.value)}/>
+                     </div>
+                    <label htmlFor="">Email</label><br />
+                    <input className="input p-2 mb-3" placeholder="Enter Your email id " onChange={(e)=>setemail(e.target.value)}/>
+                    <label htmlFor="">Phone Number</label><br />
+                    <input className="input p-2 mb-3" placeholder="Enter Your phone number" onChange={(e)=>setPhonenumber(e.target.value)}/>
+                    <label htmlFor=""></label>Message<br />
+                    <textarea className="input p-2 mb-3" placeholder="Enter Your feedback " rows={5} onChange={(e)=>setfeedback(e.target.value)} />
+                    <button onClick={handleFeedback} className="d-block bgc">Submit</button>
+                    </div>
+                    <div className="col-lg-6">
+                        <SimpleMap/>
+                    </div>
+                </div>
 
             </div>
         </div>

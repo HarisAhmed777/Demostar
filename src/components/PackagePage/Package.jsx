@@ -68,7 +68,7 @@ unparalleled experiences that capture the essence of travel. Begin your journey 
 and unlock extraordinary destinations and memories. 
         </p>
         <div className="row">
-          <h2>School Packaes</h2>
+          <h2>School Package</h2>
           {custompackages.map((pkg, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
               <div className="card h-100">
@@ -101,7 +101,7 @@ and unlock extraordinary destinations and memories.
       <div className="container mt-5 mb-5">
 
         <div className="row">
-          <h2>College Packaes</h2>
+          <h2>College Package</h2>
           {custompackages.map((pkg, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
               <div className="card h-100">
@@ -135,7 +135,7 @@ and unlock extraordinary destinations and memories.
       <div className="container mt-5 mb-5">
 
         <div className="row">
-          <h2>Indutrial Visit Packaes</h2>
+          <h2>Indutrial Visit Package</h2>
           {custompackages.map((pkg, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
               <div className="card h-100">
