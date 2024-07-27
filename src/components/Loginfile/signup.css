@@ -23,6 +23,21 @@
     align-items: end !important;
 }
 
+.otpnum{
+    height: 50px;
+    width: 50px;
+}
+.otpnum:focus{
+    outline:0.5px solid darkorange;
+    border: 0;
+}
+.verifyotpbutton{
+ display: inline-block !important;
+ width: 250px !important;
+}
+.verifyotpheight{
+    height: 52vh;
+}
 
 .login-container p, .signup-container h1 {
     font-size: 24px;
