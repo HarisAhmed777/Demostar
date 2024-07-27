@@ -4,8 +4,8 @@ import styles from '../PrivacyPolicy/PrivacyPolicy.module.css';
 function LegalDisclaimer(){
     return(
         <>
-        <div className={`mt-3 pt-5 mb-4 container`}>
-        <h2 className='fw-light ms-3'>Legal Disclaimer</h2>
+        <div className={`paddingtop  mb-4 container`}>
+        <h2 className='fw-light ms-3 mt-2'>Legal Disclaimer</h2>
         <h2 className='fw-light ms-3'>I. PREAMBLE:</h2>
         <p className='ms-4'>
         Use of this site constitutes agreement with the following terms and conditions:

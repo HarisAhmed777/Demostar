@@ -1,5 +1,5 @@
 .footerhover:hover{
-    border-bottom: 1px solid whitesmoke;
+    /* border-bottom: 1px solid whitesmoke; */
     cursor:pointer;
 }
 .footerhover {

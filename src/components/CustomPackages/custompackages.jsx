@@ -57,7 +57,7 @@ every detail is crafted to exceed your expectations. </p>
                             </div>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{pkg.price}</p>
-                               <Link to ='/bookingpage'> <button className="pb-2 pe-3 rounded-pill tbnn">Book now</button></Link>
+                               <Link to ='/bookingpage'> <button className="pb-2 pe-3 rounded-pill  bgc tbnn">Book now</button></Link>
                             </div>
                         </div>
                     </div>

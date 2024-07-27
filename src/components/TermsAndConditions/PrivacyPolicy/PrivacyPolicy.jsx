@@ -4,13 +4,12 @@ import styles from './PrivacyPolicy.module.css'
 function PrivacyPolicy(){
     return(
         <>
-        <div className={`mt-3 pt-5 container ${styles.cursor}`}>
-            <h2 className="fw-light mb-2 ms-2">Privacy Policy</h2>
+        <div className={`paddingtop container ${styles.cursor}`}>
+            <h2 className="fw-light  mt-2 mb-2 ms-2">Privacy Policy</h2>
             <p className="ms-4 mb-4">This site is owned and operated by Star Holidays.
                 This Privacy Policy applies to the activities of Star Holidays and its affiliates (referred to as "SH", “We”, “Us”, or “Our” in this policy).
                 Because we gather certain types of information about our users, we feel you should fully understand the terms and conditions surrounding the capture and use of that information. The privacy statement discloses what information we gather and how we use it.
                 It explains how SH handles personal information that users provide through voluntary submissions and complies with the requirements of the applicable laws in India.
-                If you have further questions relating to this policy please contact our Privacy Officer by mail at Purva Primus, 4th floor, No. 236, Okhiyampettai, Old Mahabalipuram Road, Thoraipakkam, Chennai - 600097. Board line: +91 44 3357 3300 or e-mail feedback@sterlingholidays.com.
             </p>
             <h2 className="fw-light mb-2 ms-2">Collection Information About You(Purpose)</h2>
             <p className="ms-4">By submitting your personal data on SH's website, you explicitly consent to SH’s use or disclosure of such personal data and information by SH for the purposes mentioned in this policy document in compliance with applicable laws in India. SH only collects personal information that is necessary for business purposes. We constantly endeavour to collect personal information fairly and lawfully and to meet our users' expectations, and we will respect their right to control how their personal information is collected and used. SH collects personal information in many parts of its business.</p>

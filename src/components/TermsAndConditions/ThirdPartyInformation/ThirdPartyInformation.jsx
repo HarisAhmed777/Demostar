@@ -4,8 +4,8 @@ import React from "react";
 function ThirdPartyInformation(){
     return(
         <>
-        <div className={`mt-3 pt-5 container`}>
-        <h2 className="fw-light ms-3">Third-Party Information:</h2>
+        <div className={`paddingtop container`}>
+        <h2 className="fw-light mt-2 ms-3">Third-Party Information:</h2>
             <p className="ms-4">To optimise the information we provide, you will also find links on our website that refer to third-party websites. Where this is not recognisable, we point out that this is an external link.  SHRL does not influence the measures taken thereon to protect your data. SHRL asks that you refer to the respective privacy policies there. Consequently, the warranties of this privacy policy naturally do not apply to these third-party sites.</p>
             <p className="ms-4">From time to time, SHRL may offer a feature that allows you to send an electronic postcard or otherwise share a message with a friend, relative or any other person known to you, whether via the Internet, a stand-alone kiosk or a mobile device. If you choose to use this feature, we may ask you for the recipient’s name, email address, and text of any message you choose to include. By using this feature, you represent that you are entitled to use it. Please provide us with the recipient’s name and email address.</p>
             <p className="ms-4">Further, we may receive your personal information from other sources, such as public databases, joint marketing partners, data firms, and social media platforms, from people with whom you are friends or otherwise connected on social media platforms, as well as from other third parties. For example, suppose you elect to connect your social media account to your website account. In that case, certain personal information from your social media account will be shared with us, including personal information that is part of your public profile or your friends' public profiles.</p>

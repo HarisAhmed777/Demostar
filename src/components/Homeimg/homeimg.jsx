@@ -88,11 +88,13 @@ function Homeimg() {
                 <div className={`homeimg `}>
                     <Carousel className="w-100 paddingtop  mb-5" >
                         <Carousel.Item className="w-100 caro1"  >
-                            <div className="carousel-bg caro1" ref = {home1ImgRef}
-                             style={{ backgroundImage: `url(${cp11})` }}>
+                        <div className="carousel-bg caro1" ref={home1ImgRef} style={{ backgroundImage: `url(${cp11})` }}>
+                            <div className="overlay"></div>
                                 <div className="carousel-content caro1">
-                                    <h1>"Discover Your Perfect Holiday: <br />Unwrap Unforgettable Adventures!" </h1>
-                                    <Link to='/packagepage'><button className="rounded-pill p-3 bgc text-white "> Enter the world of Packages</button></Link>
+                                    <h1>Discover Your Perfect Holiday: <br />Unwrap Unforgettable Adventures!</h1>
+                                    <Link to='/packagepage'>
+                                        <button className="rounded-pill p-3 bgc text-white"> Enter the world of Packages</button>
+                                    </Link>
                                 </div>
                             </div>
                         </Carousel.Item>
@@ -100,7 +102,7 @@ function Homeimg() {
                             <div className="carousel-bg caro1"ref = {home2ImgRef}   style={{ backgroundImage: `url(${cp22})` }}>
                                 <div className="carousel-content">
                                 
-                                    <h1>"Unlock Exclusive Offers: <br /> Your Dream Holiday Awaits!"</h1>
+                                    <h1>Unlock Exclusive Offers: <br /> Your Dream Holiday Awaits!</h1>
                                     <Link to='/offerpage'><button className="p-3 rounded-pill bgc text-white fw-bold">Enjoy Your Holidays with OFFERS</button></Link>
                                 </div>
                             </div>
@@ -109,7 +111,7 @@ function Homeimg() {
                             <div className="carousel-bg caro1"ref = {home3ImgRef} style={{ backgroundImage: `url(${cp33})` }}>
                                 <div className="carousel-content">
 
-                                    <h1>"Plan Your Perfect Picnic: <br/> Where Memories Blossom! </h1>
+                                    <h1>Plan Your Perfect Picnic: <br/> Where Memories Blossom! </h1>
                                     <Link to='/picnicpage'><button className="rounded-pill p-3 bgc text-white">Discover The world of Picnic</button></Link>
                                 </div>
                             </div>

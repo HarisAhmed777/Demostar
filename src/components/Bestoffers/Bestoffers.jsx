@@ -57,7 +57,8 @@ const offersdata = [
         <div class={`container ${theme?"bg-dark text-white":null}`}>
         <div className={`mb-5`}>
         <div className='container mb-4 '>
-            <h2 className='mb-4 conatinerheading'>Best Offers </h2>
+            <h2 className='mb-2conatinerheading'>Exclusive Holiday Deals </h2>
+            <p className='mb-4 '>Explore exclusive holiday deals crafted to make your dream vacation a reality. </p>
             <div className=''>
                 <Carousel responsive={responsive}>
                 <Offer {...offersdata[0]}/>

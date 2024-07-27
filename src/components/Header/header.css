@@ -26,6 +26,7 @@
   color: orangered !important;
   /* transition: ease-out 0.5s; */
 }
+
 .logoimg {
   /* height: 70px; */
   width: 120px;
@@ -73,6 +74,9 @@
 }
 .nav-link:hover{
   border-bottom: 2px solid orangered !important;
+}
+.nav-link{
+  border-bottom: 2px solid  #f8f9fa !important;
 }
 
 

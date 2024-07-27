@@ -4,8 +4,8 @@ import styles from './ServiceProviders.module.css'
 function ServiceProviders(){
     return(
         <>
-        <div className={`mt-3 pt-5 container ${styles.cursor}`}>
-            <h2 className="fw-light ms-3">SERVICE PROVIDERS</h2>
+        <div className={`paddingtop container ${styles.cursor}`}>
+            <h2 className="fw-light mt-2 ms-3">SERVICE PROVIDERS</h2>
             <p className="ms-4">Like many businesses, SH uses a range of service providers to help us maximise the quality and efficiency of our services and business operations. This means that individuals and organisations outside of SH, such as mail houses, will sometimes have access to personal information held by SH and may use it on behalf of SH. We require our service providers to adhere to strict privacy guidelines and not to keep this information or use it for unauthorised purposes.</p>
             <h2 className="fw-light ms-3">SH and Marketing Activities</h2>
             <p>SH manages communications with members, prospective members and customers according to its privacy policy. We respect individuals' choices when contacting us for marketing purposes. We may occasionally contact you by the email, by WhatsApp, on-call / SMS or at other address that you provide to us to:</p>

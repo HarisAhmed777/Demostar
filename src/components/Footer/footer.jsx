@@ -11,11 +11,11 @@ function Footer() {
                         <div className="col-lg-3 col-md-3 text-start">
                             <ul>
                             <h5 className="fw-bold lii">Star Holidays</h5>
-                            <li className="fw-light lii">90/7 Chennai 60032</li>
+                            <li className="fw-light lii">90/7 Navalpur 632401</li>
                             <li className="fw-light lii">working hours :09.00am to 06.30pm</li>
                             <li className="fw-light lii">starholidays@gmail.com</li>
                             <li className="fw-light lii">need help call us on <br />
-                                <span className="fw-bold text-warning lii">1800-222-3333</span>
+                                <span className="fw-bold text-warning lii">9876543210</span>
                             </li>
                             </ul>
                         </div>
