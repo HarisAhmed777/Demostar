@@ -34,6 +34,7 @@ import PrivacyPolicy from './components/TermsAndConditions/PrivacyPolicy/Privacy
 import ServiceProviders from './components/TermsAndConditions/ServiceProviders/ServiceProviders';
 import ThirdPartyInformation from './components/TermsAndConditions/ThirdPartyInformation/ThirdPartyInformation';
 import LegalDisclaimer from './components/TermsAndConditions/LegalDisclaimer/LegalDisclaimer';
+import SignupStep2 from './components/Loginfile/Signup2page';
 
 function App() {
   return (
@@ -44,7 +45,6 @@ function App() {
           </div>
           <ScrollToTop/>
           <Routes>
-            
             <Route path="/" element={<HomePage />} />
             <Route path="/offerpage" element={<OfferPage/>} />
             <Route path="/blogpage" element={<BlogPage/>} />
@@ -53,6 +53,7 @@ function App() {
             <Route path="/packagepage" element={<PackagePage/>} />
             <Route path="/bookingpage" element={<Bookingpage/>} />
             <Route path="/login" element={<LoginRedirect/>} />
+            <Route path="/verify-otp" element={<SignupStep2/>} />
             <Route path="/verify-email" element={<EmailVerification />} />
             <Route path="/forgotpassword" element={<ForgotPassword/>} />
             <Route path="/contactus" element={<Contact/>} />
@@ -69,20 +70,6 @@ function App() {
             <Route path = '/ServiceProviders' element =  {<ServiceProviders/>}/>
             <Route path = '/ThirdpartyInformation' element =  {<ThirdPartyInformation/>}/>
             <Route path = '/legalDisclaimer' element =  {<LegalDisclaimer/>}/>
-
-        
-
-            
-
-
-            
-
-
-
-
-
-
-
           </Routes>
           <Footer />
       </ContextProvider>

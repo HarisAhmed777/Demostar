@@ -16,6 +16,13 @@
 }
 
 
+.signup2{
+    height: 75vh;
+    display: flex;
+    justify-content: end !important;
+    align-items: end !important;
+}
+
 
 .login-container p, .signup-container h1 {
     font-size: 24px;
