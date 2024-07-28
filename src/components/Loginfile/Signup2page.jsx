@@ -102,9 +102,9 @@ function SignupStep2() {
     };
 
     return (
-        <div className="paddingtop container">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel autem consequuntur explicabo sapiente totam cumque accusantium hic ut laboriosam perferendis.</p>
+        <div className="paddingtop  container">
+            <h2 className="fw-light mt-3 ">Verify otp for creating your account</h2>
+            <p className="fw-light">SH verifies the email of the user by an OTP method .Please check your email for otp ,if you didnt receive any otp ,kindly check that the given mail id is correct</p>
             <div className="text-center verifyotpheight">
                 <form action="" className="d-flex gap-3 justify-content-center" onSubmit={handleVerifyEmailOtp}>
                     <input type="text" className="otpnum text-center" maxLength="1" onInput={(e) => handleInputChange(setFirstnum, e)} value={firstnum} />

@@ -38,7 +38,7 @@ function Homeimg() {
         function setWindowHeight() {
           var windowHeight = window.innerHeight;
           if (home1ImgRef.current) {
-            home1ImgRef.current.style.height = windowHeight -35+ "px";
+            home1ImgRef.current.style.height = windowHeight -90+ "px";
           }
         }
       
@@ -54,7 +54,7 @@ function Homeimg() {
         function setWindowHeight() {
           var windowHeight = window.innerHeight;
           if (home2ImgRef.current) {
-            home2ImgRef.current.style.height = windowHeight -35+ "px";
+            home2ImgRef.current.style.height = windowHeight -90+ "px";
           }
         }
       
@@ -70,7 +70,7 @@ function Homeimg() {
         function setWindowHeight() {
           var windowHeight = window.innerHeight;
           if (home3ImgRef.current) {
-            home3ImgRef.current.style.height = windowHeight -35+ "px";
+            home3ImgRef.current.style.height = windowHeight -90 + "px";
           }
         }
       
@@ -84,40 +84,51 @@ function Homeimg() {
       }, []);
     return (
         <>
-            <div className={`w-100  ${theme ? "bg-dark text-white" : null}`}>
-                <div className={`homeimg `}>
-                    <Carousel className="w-100 paddingtop  mb-5" >
-                        <Carousel.Item className="w-100 caro1"  >
-                        <div className="carousel-bg caro1" ref={home1ImgRef} style={{ backgroundImage: `url(${cp11})` }}>
-                            <div className="overlay"></div>
-                                <div className="carousel-content caro1">
-                                    <h1>Discover Your Perfect Holiday: <br />Unwrap Unforgettable Adventures!</h1>
-                                    <Link to='/packagepage'>
-                                        <button className="rounded-pill p-3 bgc text-white"> Enter the world of Packages</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </Carousel.Item>
-                        <Carousel.Item >
-                            <div className="carousel-bg caro1"ref = {home2ImgRef}   style={{ backgroundImage: `url(${cp22})` }}>
-                                <div className="carousel-content">
-                                
-                                    <h1>Unlock Exclusive Offers: <br /> Your Dream Holiday Awaits!</h1>
-                                    <Link to='/offerpage'><button className="p-3 rounded-pill bgc text-white fw-bold">Enjoy Your Holidays with OFFERS</button></Link>
-                                </div>
-                            </div>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <div className="carousel-bg caro1"ref = {home3ImgRef} style={{ backgroundImage: `url(${cp33})` }}>
-                                <div className="carousel-content">
-
-                                    <h1>Plan Your Perfect Picnic: <br/> Where Memories Blossom! </h1>
-                                    <Link to='/picnicpage'><button className="rounded-pill p-3 bgc text-white">Discover The world of Picnic</button></Link>
-                                </div>
-                            </div>
-                        </Carousel.Item>
-                    </Carousel>
+<div className={`w-100 ${theme ? "bg-dark text-white" : null}`}>
+    <div className={`homeimg`}>
+        <Carousel className="w-100 paddingtop mb-5">
+            <Carousel.Item className="w-100 caro1">
+                <div className="carousel-bg caro1" ref={home1ImgRef} style={{ backgroundImage: `url(${cp11})` }}>
+                    <div className="overlay"></div>
+                    <div className="carousel-content caro1">
+                        <div className="text-overlay">
+                            <h1>Discover Your Perfect Holiday: <br />Unwrap Unforgettable Adventures!</h1>
+                            <Link to='/packagepage'>
+                                <button className="rounded-pill p-3 bgc text-white">Enter the world of Packages</button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
+            </Carousel.Item>
+            <Carousel.Item>
+                <div className="carousel-bg caro1" ref={home2ImgRef} style={{ backgroundImage: `url(${cp22})` }}>
+                    <div className="overlay"></div>
+                    <div className="carousel-content">
+                        <div className="text-overlay">
+                            <h1>Unlock Exclusive Offers: <br />Your Dream Holiday Awaits!</h1>
+                            <Link to='/offerpage'>
+                                <button className="p-3 rounded-pill bgc text-white fw-bold">Enjoy Your Holidays with OFFERS</button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item>
+                <div className="carousel-bg caro1" ref={home3ImgRef} style={{ backgroundImage: `url(${cp33})` }}>
+                    <div className="overlay"></div>
+                    <div className="carousel-content">
+                        <div className="text-overlay">
+                            <h1>Plan Your Perfect Picnic: <br />Where Memories Blossom!</h1>
+                            <Link to='/picnicpage'>
+                                <button className="rounded-pill p-3 bgc text-white">Discover The world of Picnic</button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+        </Carousel>
+    </div>
+
                 <div className="container">
                 <div className="row mb-5">
                      <div className="col-lg-6">
@@ -142,8 +153,8 @@ function Homeimg() {
                         <Tab eventKey="picnic" title="Picnic" className={` custom-tab ${key === 'picnic' ? 'active' : ''}`}>
                             <div className="container comtt">
                                 <div className={`row mt-2 entirerowdiv comtt `}>
-                                    <div className="col-lg-12 col-md-2 col-12 mb-2 pp">
-                                        <label className="fw-light text-dark w-100">Location</label>
+                                    <div className="col-lg-12 col-md-3 col-12 mb-2 pp">
+                                        <label className="fw-light text-dark text-start w-100">Location</label>
                                         <select className="stdate mt-3 stt" value={location} onChange={(e) => setLocation(e.target.value)}>
                                             <option>Munnar,Kerala</option>
                                             <option>Kodaikanal,Tamil Nadu</option>
@@ -151,11 +162,11 @@ function Homeimg() {
                                             <option>Yelagiri,TamilNadu</option>
                                         </select>
                                     </div>
-                                    <div className="col-lg-5 col-md-2 col-12 mb-2">
+                                    <div className="col-lg-5 col-md-3 col-12 mb-2">
                                         <label className="text-dark mt-3 ">Start Date</label>
                                         <DatePicker className="stdate form-control fw-bold" selected={startDate} onChange={(date) => setStartDate(date)} />
                                     </div>
-                                    <div className="col-lg-5 ms-2 col-md-2 col-12 mb-2">
+                                    <div className="col-lg-5 ms-2 col-md-3 col-12 mb-2">
                                         <label className="text-dark mt-3">End Date</label>
                                         <DatePicker selected={endDate} className="stdate form-control fw-bold" onChange={(date) => setEndDate(date)} />
                                     </div>

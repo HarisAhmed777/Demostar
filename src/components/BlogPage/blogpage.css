@@ -11,3 +11,10 @@
     width: 100%;
 }
 
+@media (max-width:600px) {
+    .bloggcard{
+        width: 95% !important;
+        padding: 15px;
+    }
+}
+

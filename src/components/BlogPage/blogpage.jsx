@@ -112,7 +112,7 @@ function BlogPage(){
             {
                 blogs.map((value,blog)=>(
                     <div key={blog} className='col-lg-4 col-12 col-md-6 mb-4'>
-                        <div className='card'>
+                        <div className='card bloggcard'>
                             <img src={value.img} alt="" className='card-img' />
                             <p className='fw-bold'>{value.heading}</p>
                             <p>{value.para}</p>

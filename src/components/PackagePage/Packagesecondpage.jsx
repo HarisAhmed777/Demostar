@@ -57,8 +57,8 @@ function PackageSecondPage() {
         <div className="container">
             <div className="row">
                 <div className="col-lg-5 col-md-6">
-                    <h1 className="purple">Found Your Perfect Package? We will Take it forward!</h1>
-                    <p>Want to customize your dreams instead? Let us help curate a holiday package that perfectly matches your travel plan.</p>
+                    <h1 className="purple ml1">Found Your Perfect Package? We will Take it forward!</h1>
+                    <p className="ml1">Want to customize your dreams instead? Let us help curate a holiday package that perfectly matches your travel plan.</p>
                 </div>
                 <div className="col-lg-6 col-md-6">
                     <form onSubmit={handleSubmit}>
@@ -129,7 +129,7 @@ function PackageSecondPage() {
                             </div>
                         </div>
                         <div className="d-flex flex-wrap  mb-4">
-                            <div className="ms-5">
+                            <div className="ms-4">
                                 <label className="purple">Interested in</label><br />
                                 <select
                                     name="interest"

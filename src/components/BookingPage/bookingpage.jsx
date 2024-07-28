@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect ,useRef} from "react";
+import React, { useState, useContext, useEffect } from "react";
 import './bookingpage.css';
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -11,18 +11,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Context } from '../context';
 import { baseUrl } from '../../../url';
 import { format } from 'date-fns';
-// import bookingimg from '../images/bookingpageimg.jpg';
 import cp4 from '../images/cp2.avif';
 
 function Booking() {
   const location = useLocation();
-  const { datas } = location.state || {};
-  const { pkg } = location.state || {};
+  const pkg = location.state || {};
+  console.log(pkg);
 
   const getCityValue = () => {
     if (city) return city;
-    if (datas?.location) return datas.location;
-    if (pkg?.loc) return pkg.loc;
+    if (pkg.loc) return pkg.loc;
+    if (pkg.title) return pkg.title;
     return '';
   };
 
@@ -35,9 +34,9 @@ function Booking() {
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [promocode, setPromocode] = useState("");
-  const [discount, setDiscount] = useState(0); // State to store the discount
-  const [isPromoValid, setIsPromoValid] = useState(false); // State to store promo validation status
-  
+  const [discount, setDiscount] = useState(0);
+  const [isPromoValid, setIsPromoValid] = useState(false);
+
   const navigate = useNavigate();
   const { user } = useContext(Context);
 
@@ -93,7 +92,7 @@ function Booking() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (age < 18 || age > 80) {
-      toast.error("Age must br greater than 18", { autoClose: 3000 });
+      toast.error("Age must be between 18 and 80", { autoClose: 3000 });
       return;
     }
     if (persons < 1) {
@@ -112,7 +111,7 @@ function Booking() {
       enddate: formattedEndDate,
       mobile,
       totalamount: calculateTotalAmount(),
-      promocode, // Add promocode to booking data
+      promocode,
     };
     try {
       const response = await axios.post(`${baseUrl}/booking`, bookingData);
@@ -148,131 +147,129 @@ function Booking() {
 
   const totalamount = calculateTotalAmount();
 
-
-
   return (
     <>
-    <div className="paddingtop">
-      <img src={cp4} alt=""  className="bookingimg" />
-      <div className="booking-container pt-5 text-dark">
-        <h2 className="fw-bold">Book now</h2>
-        <form onSubmit={handleSubmit} className="w-100">
-          <div className="row">
-            <div className="form-row">
-              <div className="form-group">
-                <input 
-                  type='text' 
-                  className="bookinginput text-dark" 
-                  placeholder="Enter your name" 
-                  value={name} 
-                  onChange={handleNameChange} 
-                  required 
-                />
+      <div className="paddingtop">
+        <img src={cp4} alt="" className="bookingimg" />
+        <div className="booking-container pt-5 text-dark">
+          <h2 className="fw-bold">Book now</h2>
+          <form onSubmit={handleSubmit} className="w-100">
+            <div className="row">
+              <div className="form-row">
+                <div className="form-group">
+                  <input 
+                    type='text' 
+                    className="bookinginput text-dark" 
+                    placeholder="Enter your name" 
+                    value={name} 
+                    onChange={handleNameChange} 
+                    required 
+                  />
+                </div>
+
+                <div className="form-group">
+                  <input 
+                    type='number' 
+                    className="bookinginput text-dark" 
+                    placeholder="Enter your age" 
+                    value={age} 
+                    onChange={(e) => setAge(e.target.value)} 
+                    required 
+                    pattern="[0-9]+"
+                    title="Age should be a number."
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <input 
+                    type='number' 
+                    className="bookinginput text-dark" 
+                    placeholder="Enter number of persons" 
+                    value={persons} 
+                    onChange={(e) => setPersons(e.target.value)} 
+                    required 
+                    pattern="[0-9]+"
+                    title="Number of persons should be a number."
+                    min="1"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <input
+                    type="text"
+                    value={getCityValue()}
+                    placeholder="Enter city name"
+                    className="bookinginput text-dark"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group d-inline">
+                  <label>Start Date:</label>
+                  <DatePicker
+                    selected={startdate}
+                    onChange={handleStartDateChange}
+                    className="bookinginput date-picker text-dark"
+                    minDate={new Date()}
+                    dateFormat="dd-MM-yyyy"
+                    required
+                  />
+                </div>
+
+                <div className="form-group d-inline">
+                  <label>End Date:</label>
+                  <DatePicker
+                    selected={enddate}
+                    onChange={handleEndDateChange}
+                    className="bookinginput date-picker text-dark"
+                    minDate={startdate}
+                    dateFormat="dd-MM-yyyy"
+                    required
+                  />
+                </div>
               </div>
 
               <div className="form-group">
-                <input 
-                  type='number' 
-                  className="bookinginput text-dark" 
-                  placeholder="Enter your age" 
-                  value={age} 
-                  onChange={(e) => setAge(e.target.value)} 
-                  required 
-                  pattern="[0-9]+"
-                  title="Age should be a number."
-                />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <input 
-                  type='number' 
-                  className="bookinginput text-dark" 
-                  placeholder="Enter number of persons" 
-                  value={persons} 
-                  onChange={(e) => setPersons(e.target.value)} 
-                  required 
-                  pattern="[0-9]+"
-                  title="Number of persons should be a number."
-                  min="1"
+                <label>Mobile Number:</label>
+                <PhoneInput
+                  country={'in'}
+                  value={mobile}
+                  onChange={setMobile}
+                  inputClass="bookinginput phone-input text-dark"
+                  specialLabel=""
+                  countryCodeEditable={true}
                 />
               </div>
 
-              <div className="form-group">
+              <div className="text-center">
+                <h5>The total amount will be: {totalamount} Rs</h5>
+              </div>
+              <div className="form-row">
                 <input
                   type="text"
-                  value={getCityValue()}
-                  placeholder="Enter city name"
+                  placeholder="Enter promo code"
                   className="bookinginput text-dark"
-                  required
+                  value={promocode}
+                  onChange={handlepromochange}
                 />
+                <div className="text-center">
+                  <button type="button" className="btn-primary bookingbtn" onClick={validatePromoCode}>
+                    Apply Promo Code
+                  </button>
+                </div>
               </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group d-inline">
-                <label>Start Date:</label>
-                <DatePicker
-                  selected={startdate}
-                  onChange={handleStartDateChange}
-                  className="bookinginput date-picker text-dark"
-                  minDate={new Date()}
-                  dateFormat="dd-MM-yyyy"
-                  required
-                />
-              </div>
-
-              <div className="form-group d-inline">
-                <label>End Date:</label>
-                <DatePicker
-                  selected={enddate}
-                  onChange={handleEndDateChange}
-                  className="bookinginput date-picker text-dark"
-                  minDate={startdate}
-                  dateFormat="dd-MM-yyyy"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label>Mobile Number:</label>
-              <PhoneInput
-                country={'in'}
-                value={mobile}
-                onChange={setMobile}
-                inputClass="bookinginput phone-input text-dark"
-                specialLabel=""
-                countryCodeEditable={true}
-              />
             </div>
 
             <div className="text-center">
-              <h5>The total amount will be: {totalamount} Rs</h5>
+              <button type="submit" className="btn-booking">Book Now</button>
             </div>
-            <div className="form-row">
-              <input
-                type="text"
-                placeholder="Enter promo code"
-                className="bookinginput text-dark"
-                value={promocode}
-                onChange={handlepromochange}
-              />
-              <div className="text-center">
-                <button type="button" className="btn-primary bookingbtn" onClick={validatePromoCode}>
-                  Apply Promo Code
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button type="submit" className="btn-booking">Book Now</button>
-          </div>
-        </form>
-      </div>
-      <ToastContainer />
+          </form>
+        </div>
+        <ToastContainer />
       </div>
     </>
   );

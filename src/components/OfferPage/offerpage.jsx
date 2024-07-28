@@ -24,7 +24,7 @@ function OfferPage() {
         </p>
       </div>
       <div className='container'>
-        <div className=''>
+        <div className='ml1'>
           <h2>Exclusive Holiday Deals: Unlock Your Perfect Getaway </h2>
           <p className='mb-5'>Discover our latest exclusive holiday deals and special offers curated just for you. Whether you're dreaming of a relaxing beach retreat, an adventurous mountain expedition, or a cultural 
             exploration, explore unbeatable packages and discounts to make your next trip unforgettable. 

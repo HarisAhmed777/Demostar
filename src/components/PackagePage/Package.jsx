@@ -60,18 +60,18 @@ function PackagePage() {
     </div>
 
       <div className="container mt-5 mb-5">
-        <h2 className='mb-2'>Discover Star Holidays' Exclusive Holiday Packages </h2>
-        <p>
-          <span className="purple fw-bold">Explore</span>  our meticulously crafted holiday packages that cater to every traveller's unique 
+        <h2 className='mb-2 ml1'>Discover Star Holidays' Exclusive Holiday Packages </h2>
+        <p className='ml1'>
+          <span className="purple  fw-bold">Explore</span>  our meticulously crafted holiday packages that cater to every traveller's unique 
 preferences. From luxurious retreats to adventurous expeditions, each package promises 
 unparalleled experiences that capture the essence of travel. Begin your journey with Star Holidays 
 and unlock extraordinary destinations and memories. 
         </p>
         <div className="row">
-          <h2>School Package</h2>
+          <h2 className='ml1'>School Package</h2>
           {custompackages.map((pkg, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100">
+              <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
                   <p className="card-title fw-bold">{pkg.title}</p>
@@ -101,10 +101,10 @@ and unlock extraordinary destinations and memories.
       <div className="container mt-5 mb-5">
 
         <div className="row">
-          <h2>College Package</h2>
+          <h2 className='ml1'>College Package</h2>
           {custompackages.map((pkg, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100">
+              <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
                   <p className="card-title fw-bold">{pkg.title}</p>
@@ -135,10 +135,10 @@ and unlock extraordinary destinations and memories.
       <div className="container mt-5 mb-5">
 
         <div className="row">
-          <h2>Indutrial Visit Package</h2>
+          <h2 className='ml1'>Indutrial Visit Package</h2>
           {custompackages.map((pkg, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100">
+              <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
                   <p className="card-title fw-bold">{pkg.title}</p>

@@ -3,7 +3,7 @@
    }
    
 .picnicmainimg{
-    height: 80vh;
+    height: 80vh !important;
 }
    .thirdimg {
        display: block;
@@ -17,7 +17,7 @@
 
    @media (max-width:500px) {
     .thirdimg img{
-        height: 169px;
+        /* height: 169px; */
         width: 100%;
     }
       
