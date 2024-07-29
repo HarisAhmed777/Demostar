@@ -14,10 +14,17 @@ ul{
     display: flex;
     flex-direction: column;
     gap:10px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     padding: 0;
     display: inline-block
 }
 .lii{
     list-style: none;
+}
+
+
+@media (max-width:600px) {
+    .conn{
+        margin-left: 3% !important;
+    }
 }

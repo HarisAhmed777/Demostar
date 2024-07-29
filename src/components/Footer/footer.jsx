@@ -6,8 +6,8 @@ function Footer() {
     return (
         <>
             <div className="bg-dark text-white overflow-hidden">
-                <div className="container mt-4">
-                    <div className="row">
+                <div className="container mt-4 ">
+                    <div className="row conn">
                         <div className="col-lg-3 col-md-3 text-start">
                             <ul>
                             <h5 className="fw-bold lii">Star Holidays</h5>
