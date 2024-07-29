@@ -15,6 +15,25 @@ function SignupStep1() {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
+    const handleFirstnameChange = (e)=>{
+        const value = e.target.value;
+        if (/^[a-zA-Z0-9\s]*$/.test(value)) {
+            setFirstname(value);
+        }
+    }
+    const handlelastnamechnage = (e)=>{
+        const value = e.target.value;
+        if (/^[a-zA-Z0-9\s]*$/.test(value)) {
+            setLastname(value);
+        }        
+    }
+    const handleemailchnage = (e)=>{
+        const value = e.target.value;
+        if (/^[a-zA-Z0-9@]*$/.test(value)) {
+            setEmail(value);
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const passwordRegex = /^(?=.*\d).{6,}$/;
@@ -39,8 +58,16 @@ function SignupStep1() {
         <div className='signup-container text-dark'>
             <h2 className="text-dark">Sign Up</h2>
             <form onSubmit={handleSubmit}>
-                <input className='form-control-sign text-dark' onChange={(e) => setFirstname(e.target.value)} placeholder="First Name" type="text" />
-                <input className='form-control-sign text-dark' onChange={(e) => setLastname(e.target.value)} placeholder="Last Name" type="text" />
+                <input className='form-control-sign text-dark' 
+                onChange={handleFirstnameChange}
+                value={firstname} 
+                placeholder="First Name" 
+                type="text" />
+                <input className='form-control-sign text-dark' 
+                onChange={handlelastnamechnage}
+                value = {lastname} 
+                placeholder="Last Name" 
+                type="text" />
                 <PhoneInput
                     country={'in'}
                     value={mobilenumber}
@@ -48,8 +75,15 @@ function SignupStep1() {
                     inputClass='form-control-sign phn text-dark border-0 border-bottom border-3 w-100'
                     placeholder="Mobile number"
                 />
-                <input className='form-control-sign text-dark' onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="email" />
-                <input className='form-control-sign text-dark' onChange={(e) => setPassword(e.target.value)} placeholder="Password" type="password" />
+                <input className='form-control-sign text-dark' 
+                onChange={handleemailchnage}
+                value = {email} 
+                placeholder="Email" 
+                type="email" />
+                <input className='form-control-sign text-dark' 
+                onChange={(e) => setPassword(e.target.value)} 
+                placeholder="Password" 
+                type="password" />
                 {error && <p className="error-message text-danger">{error}</p>}
                 <button className='btn-login' type="submit">Proceed to Step 2</button>
             </form>

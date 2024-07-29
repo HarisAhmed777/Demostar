@@ -1,7 +1,12 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function Offer({img,title,duration,price}){
+    const navigate = useNavigate();
+    function handlebookclick(title){
+        navigate('/bookingpage',{state:{title}});
+        console.log(title);
+    }
     
     return(
         <>
@@ -13,7 +18,7 @@ function Offer({img,title,duration,price}){
                             <p className="card-text">{duration}</p>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{price}</p>
-                                <Link to ='/bookingpage'><p className="fw-bold mt-1 no-link-style">Book now</p></Link>
+                                <p className="fw-bold mt-1 no-link-style" onClick={()=>handlebookclick(title)}>Book now</p>
                             </div>
                         </div>
                     </div>

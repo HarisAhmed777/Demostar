@@ -47,6 +47,24 @@ function Bestoffers() {
       title: "Desert Safari and Camping",
       duration: "3 days 2 nights",
       price: "3000rs/person"
+    },
+    {
+      img: cp1,
+      title: "California Twilight Boat Cruise",
+      duration: "2 days 3 nights",
+      price: "1000rs/person"
+    },
+    {
+      img: cp2,
+      title: "Mountain Adventure Retreat",
+      duration: "5 days 4 nights",
+      price: "5000rs/person"
+    },
+    {
+      img: cp3,
+      title: "Desert Safari and Camping",
+      duration: "3 days 2 nights",
+      price: "3000rs/person"
     }
   ];
 
@@ -57,7 +75,7 @@ function Bestoffers() {
           <h2 className='mb-2 container-heading'>Exclusive Holiday Deals</h2>
           <p className='mb-4 ms-3'>Explore exclusive holiday deals crafted to make your dream vacation a reality.</p>
           <div>
-            <Carousel responsive={responsive}  infinite={true} autoPlay={true} autoPlaySpeed={3000} keyBoardControl={true} containerClass="carousel-container" dotListClass="custom-dot-list-style" itemClass="carousel-item-padding-40-px">
+            <Carousel responsive={responsive}>
               {offersData.map((offer, index) => (
                 <Offer key={index} {...offer} />
               ))}

@@ -16,7 +16,8 @@ function KeralaPicnic(){
 
 
     const handleImageClick = (heading) => {
-        navigate('/bookingpage', { state: { city: heading } });
+        const title = heading
+        navigate('/bookingpage', { state: {title} });
     };
 
     return(

@@ -15,13 +15,15 @@ import cp4 from '../images/cp2.avif';
 
 function Booking() {
   const location = useLocation();
-  const pkg = location.state || {};
-  console.log(pkg);
-
+  const state = location.state || {};
+  console.log(state)
+  const title = location.state ||{};
   const getCityValue = () => {
-    if (city) return city;
-    if (pkg.loc) return pkg.loc;
-    if (pkg.title) return pkg.title;
+    // if (pkg.title) return pkg.title;
+    if(state.title) return state.title;
+    // if(title) return(title)
+    // if (pkglocation) return pkg.pkg.location;
+
     return '';
   };
 
@@ -53,6 +55,17 @@ function Booking() {
   const handleEndDateChange = (date) => {
     setEnddate(date);
   };
+
+  const handlevalidateperson =  (e)=>{
+    const value = e.target.value
+    if (/^\d{1,5}$/.test(value))
+    setPersons(value);
+  }
+  const handleagechange = (e)=>{
+    const value =e.target.value
+    if (/^\d{0,2}$/.test(value))
+    setAge(value);
+  }
 
   const calculateDays = () => {
     const start = new Date(startdate);
@@ -169,11 +182,11 @@ function Booking() {
 
                 <div className="form-group">
                   <input 
-                    type='number' 
+                    type='text' 
                     className="bookinginput text-dark" 
                     placeholder="Enter your age" 
                     value={age} 
-                    onChange={(e) => setAge(e.target.value)} 
+                    onChange={handleagechange} 
                     required 
                     pattern="[0-9]+"
                     title="Age should be a number."
@@ -184,11 +197,11 @@ function Booking() {
               <div className="form-row">
                 <div className="form-group">
                   <input 
-                    type='number' 
+                    type='text' 
                     className="bookinginput text-dark" 
                     placeholder="Enter number of persons" 
                     value={persons} 
-                    onChange={(e) => setPersons(e.target.value)} 
+                    onChange={handlevalidateperson} 
                     required 
                     pattern="[0-9]+"
                     title="Number of persons should be a number."

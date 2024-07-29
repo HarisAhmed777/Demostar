@@ -40,7 +40,10 @@ function Custompackages(){
     const {theme} = useContext(Context);
     const navigate = useNavigate();
 
-    function handlebooking(pkg){
+
+
+    const handlebooking= (pkg)=>{
+        console.log(pkg);
         navigate('/bookingpage', { state:pkg });
 
     }

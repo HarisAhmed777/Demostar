@@ -22,9 +22,72 @@ function PackageSecondPage() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+
+        // Validate input based on field type
+        let validValue = value;
+
+        switch (name) {
+            case "name":
+                // Allow only alphabets
+                if (/^[a-zA-Z\s]*$/.test(value)) {
+                    validValue = value;
+                } else {
+                    return; // Don't update state if invalid
+                }
+                break;
+
+            case "email":
+                // Allow only alphabets, numbers, and '@'
+                if (/^[a-zA-Z0-9@.]*$/.test(value)) {
+                    validValue = value;
+                } else {
+                    return; // Don't update state if invalid
+                }
+                break;
+
+            case "mobile":
+                // Allow only numbers and restrict to 10 digits
+                if (/^\d{0,10}$/.test(value)) {
+                    validValue = value;
+                } else {
+                    return; // Don't update state if invalid
+                }
+                break;
+
+            case "budget":
+                // Allow only up to 5 digits
+                if (/^\d{0,5}$/.test(value)) {
+                    validValue = value;
+                } else {
+                    return; // Don't update state if invalid
+                }
+                break;
+
+            case "travelDate":
+                // Allow only alphabets and numbers
+                if (/^[a-zA-Z0-9\s]*$/.test(value)) {
+                    validValue = value;
+                } else {
+                    return; // Don't update state if invalid
+                }
+                break;
+
+            case "numberOfPeople":
+                // Allow only up to 3 digits
+                if (/^\d{0,3}$/.test(value)) {
+                    validValue = value;
+                } else {
+                    return; // Don't update state if invalid
+                }
+                break;
+
+            default:
+                break;
+        }
+
         setFormData(prevState => ({
             ...prevState,
-            [name]: value
+            [name]: validValue
         }));
     };
 
@@ -46,7 +109,6 @@ function PackageSecondPage() {
         axios.post(`${baseUrl}/submit-form`, formData)
             .then(response => {
                 console.log('Form submitted successfully:', response.data);
-                
             })
             .catch(error => {
                 console.error('Error submitting form:', error);
@@ -96,7 +158,7 @@ function PackageSecondPage() {
                                 />
                             </div>
                             <div>
-                                <label className="purple">Budget Per person</label><br />
+                                <label className="purple">Budget Per Person</label><br />
                                 <input
                                     name="budget"
                                     value={formData.budget}
@@ -108,7 +170,7 @@ function PackageSecondPage() {
                         </div>
                         <div className="d-flex flex-wrap justify-content-evenly mb-4">
                             <div>
-                                <label className="purple">When are You travelling</label><br />
+                                <label className="purple">When are You Travelling</label><br />
                                 <input
                                     name="travelDate"
                                     value={formData.travelDate}
@@ -118,7 +180,7 @@ function PackageSecondPage() {
                                 />
                             </div>
                             <div>
-                                <label className="purple">Number of people</label><br />
+                                <label className="purple">Number of People</label><br />
                                 <input
                                     name="numberOfPeople"
                                     value={formData.numberOfPeople}
@@ -128,7 +190,7 @@ function PackageSecondPage() {
                                 />
                             </div>
                         </div>
-                        <div className="d-flex flex-wrap  mb-4">
+                        <div className="d-flex flex-wrap mb-4">
                             <div className="ms-4">
                                 <label className="purple">Interested in</label><br />
                                 <select
@@ -138,13 +200,13 @@ function PackageSecondPage() {
                                     className="packagesecondpageinput purple"
                                 >
                                     <option className="purple">Customizing Package</option>
-                                    <option className="purple">Customizing Package</option>
-                                    <option className="purple">Customizing Package</option>
-                                    <option className="purple">Customizing Package</option>
+                                    <option className="purple">Picnic Package</option>
+                                    <option className="purple">Tour Package</option>
+                                    <option className="purple">College Package</option>
                                 </select>
                             </div>
                             <div className="ms-5">
-                                <label className="purple">Desired location</label><br />
+                                <label className="purple">Desired Location</label><br />
                                 <div className="d-flex flex-wrap">
                                     {locations.map((location, index) => (
                                         <div key={index} className="col-6 d-flex flex-wrap align-items-center">

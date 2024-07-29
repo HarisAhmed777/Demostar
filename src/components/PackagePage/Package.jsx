@@ -36,7 +36,8 @@ function PackagePage() {
     }
   ];
   function handlepackagebooking(pkg){
-    navigate('/bookingpage',{state:{pkg}})
+    const title = pkg.loc;
+    navigate('/bookingpage',{state:{title}})
   }
 
   function scrollToPackageSecondPage() {

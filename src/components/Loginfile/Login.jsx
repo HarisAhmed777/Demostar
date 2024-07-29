@@ -11,6 +11,12 @@ function Login() {
     const { setIsAuthorized, setUser } = useContext(Context);
 
     axios.defaults.withCredentials = true;
+    const handleemailfieldchange = (e)=>{
+    const value = e.target.value;
+    if (/^[a-zA-Z0-9@]*$/.test(value)) {
+        setEmail(value);
+    }
+}
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -40,8 +46,14 @@ function Login() {
         <div className='login-container'>
             <h2 className="text-dark">Login</h2>
             <form onSubmit={handleSubmit}>
-                <input className='form-control-both text-dark' onChange={(e) => setEmail(e.target.value)} placeholder='Email' type='email' />
-                <input className='form-control-both text-dark' onChange={(e) => setPassword(e.target.value)} placeholder='Password' type='password' />
+                <input className='form-control-both text-dark'
+                 onChange={handleemailfieldchange} 
+                 value = {email} 
+                 placeholder='Email' 
+                 type='email' />
+                <input className='form-control-both text-dark'  
+                placeholder='Password' 
+                type='password' />
                 {error && <p className="error-messagelogin text-danger">{error}</p>} 
                 <button className='btn-login'>LOGIN</button>
                 <Link to ="/forgotpassword"><span className="">Forgot Password?</span></Link>

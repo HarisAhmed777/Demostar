@@ -16,8 +16,7 @@ function Homeimg() {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [key, setKey] = useState('picnic');
-    const [location, setLocation] = useState('Munnar,Kerala');
-    const [guests, setGuests] = useState('1 adult');
+    const [location, setLocation] = useState('Munnar,Kerala'); 
     const navigate = useNavigate();
     const home1ImgRef = useRef(null);
     const home2ImgRef = useRef(null);
@@ -26,13 +25,8 @@ function Homeimg() {
 
 
     const handleBookClick = () => {
-        const datas = {
-            startDate,
-            endDate,
-            location,
-            tab:key
-        };
-        navigate('/bookingpage', { state: {datas} });
+        const title= location
+        navigate('/bookingpage', { state: {title} });
     };
     useEffect(() => {
         function setWindowHeight() {
@@ -44,10 +38,8 @@ function Homeimg() {
       
         window.addEventListener('resize', setWindowHeight);
       
-        // Initial call to set the height when the page loads
         setWindowHeight();
       
-        // Cleanup the event listener on component unmount
         return () => window.removeEventListener('resize', setWindowHeight);
       }, []);
       useEffect(() => {
@@ -60,10 +52,8 @@ function Homeimg() {
       
         window.addEventListener('resize', setWindowHeight);
       
-        // Initial call to set the height when the page loads
         setWindowHeight();
       
-        // Cleanup the event listener on component unmount
         return () => window.removeEventListener('resize', setWindowHeight);
       }, []);
       useEffect(() => {
@@ -76,10 +66,8 @@ function Homeimg() {
       
         window.addEventListener('resize', setWindowHeight);
       
-        // Initial call to set the height when the page loads
         setWindowHeight();
       
-        // Cleanup the event listener on component unmount
         return () => window.removeEventListener('resize', setWindowHeight);
       }, []);
     return (
