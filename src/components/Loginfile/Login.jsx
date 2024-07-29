@@ -19,6 +19,7 @@ function Login() {
 }
 
     const handleSubmit = (e) => {
+        console.log(password);
         e.preventDefault();
         axios.post(`${baseUrl}/login`, { email, password }, { headers: { 'Content-Type': 'application/json' } })
             .then(res => {
@@ -53,6 +54,7 @@ function Login() {
                  type='email' />
                 <input className='form-control-both text-dark'  
                 placeholder='Password' 
+                onChange={(e)=>setPassword(e.target.value)}
                 type='password' />
                 {error && <p className="error-messagelogin text-danger">{error}</p>} 
                 <button className='btn-login'>LOGIN</button>
