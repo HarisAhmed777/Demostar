@@ -13,7 +13,7 @@ function Login() {
     axios.defaults.withCredentials = true;
     const handleemailfieldchange = (e)=>{
     const value = e.target.value;
-    if (/^[a-zA-Z0-9@]*$/.test(value)) {
+    if (/^[a-zA-Z0-9@.]*$/.test(value)) {
         setEmail(value);
     }
 }

@@ -23,6 +23,12 @@
     align-items: end !important;
 }
 
+.country-list{
+    text-align: start;
+    border: 0px !important;
+}
+
+
 .otpnum{
     height: 50px;
     width: 50px;
@@ -48,20 +54,45 @@
 }
 
 .form-control-both, .form-control-sign {
-    width: 100%;
+    width: 100% ;
     padding: 10px;
     margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background: none;
-    outline: none;
-    transition: border-bottom-color 0.3s ease;
-    color: #fff;
+    border: none ;
+    border-bottom: 2px solid #ccc !important;
+    background: none ;
+    outline: none ;
+    transition: border-bottom-color 0.3s ease-in #ffcc00
 }
 
 .form-control-both:focus, .form-control-sign:focus {
     border-bottom-color: #ffcc00;  
 }
+.mobilestyle{
+    outline: none !important;
+    border: none !important;
+}
+.mobilestyle:focus{
+    outline: none !important;
+}
+.flag-dropdown {
+    border: 0 !important;
+    background-color: inherit !important;
+    /* border: 2px solid #ccc; */
+    outline: none;
+
+}
+
+.react-tel-input{
+    outline: none !important;
+    border-bottom: 2px solid #ccc !important;
+}
+
+.react-tel-input:focus{
+    outline: none !important;
+    border-bottom: 2px solid #ffcc00;
+
+}
+
 
 .btn-login, .btn-signup {
     width: 100%;

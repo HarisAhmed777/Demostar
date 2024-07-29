@@ -29,7 +29,7 @@ function SignupStep1() {
     }
     const handleemailchnage = (e)=>{
         const value = e.target.value;
-        if (/^[a-zA-Z0-9@]*$/.test(value)) {
+        if (/^[a-zA-Z0-9@.]*$/.test(value)) {
             setEmail(value);
         }
     }
@@ -72,7 +72,7 @@ function SignupStep1() {
                     country={'in'}
                     value={mobilenumber}
                     onChange={phone => setMobilenumber(phone)}
-                    inputClass='form-control-sign phn text-dark border-0 border-bottom border-3 w-100'
+                    inputClass='form-control-sign mobilestyle text-start phn text-dark  w-100'
                     placeholder="Mobile number"
                 />
                 <input className='form-control-sign text-dark' 
