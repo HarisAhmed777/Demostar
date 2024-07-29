@@ -73,7 +73,7 @@ function Homeimg() {
     return (
         <>
 <div className={`w-100 ${theme ? "bg-dark text-white" : null}`}>
-    <div className={`homeimg`}>
+    <div className={`homeimg text-overlay`}>
         <Carousel className="w-100 paddingtop mb-5">
             <Carousel.Item className="w-100 caro1">
                 <div className="carousel-bg caro1" ref={home1ImgRef} style={{ backgroundImage: `url(${cp11})` }}>

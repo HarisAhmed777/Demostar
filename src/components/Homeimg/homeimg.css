@@ -40,7 +40,7 @@
     background: rgba(0, 0, 0, 0.3) !important; /* Semi-transparent black background for text */
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .text-overlay h1 {
@@ -149,6 +149,7 @@
 .carousel-content button {
     background-color: yellow;
     text-decoration: solid;
+    text-align: start !important;
     font-weight: bolder;
     color: black;
 }
@@ -169,6 +170,7 @@
 .carousel-content h1 {
     text-decoration: solid;
     font-weight: bolder;
+    text-align: start !important;
     font-size: 60px;
     color: whitesmoke;
     /* font-style: italic; */

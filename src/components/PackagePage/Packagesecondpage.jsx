@@ -126,7 +126,7 @@ function PackageSecondPage() {
                     <form onSubmit={handleSubmit}>
                         <div className="d-flex flex-wrap justify-content-evenly mb-4">
                             <div>
-                                <label className="purple cllr">Name</label><br />
+                                <label>Name</label><br />
                                 <input
                                     name="name"
                                     value={formData.name}
@@ -136,7 +136,7 @@ function PackageSecondPage() {
                                 />
                             </div>
                             <div>
-                                <label className="purple">Email Address</label><br />
+                                <label>Email Address</label><br />
                                 <input
                                     name="email"
                                     value={formData.email}
@@ -148,7 +148,7 @@ function PackageSecondPage() {
                         </div>
                         <div className="d-flex flex-wrap justify-content-evenly mb-4">
                             <div>
-                                <label className="purple">Mobile Number</label><br />
+                                <label>Mobile Number</label><br />
                                 <input
                                     name="mobile"
                                     value={formData.mobile}
@@ -158,7 +158,7 @@ function PackageSecondPage() {
                                 />
                             </div>
                             <div>
-                                <label className="purple">Budget Per Person</label><br />
+                                <label>Budget Per Person</label><br />
                                 <input
                                     name="budget"
                                     value={formData.budget}
@@ -170,7 +170,7 @@ function PackageSecondPage() {
                         </div>
                         <div className="d-flex flex-wrap justify-content-evenly mb-4">
                             <div>
-                                <label className="purple">When are You Travelling</label><br />
+                                <label>When are You Travelling</label><br />
                                 <input
                                     name="travelDate"
                                     value={formData.travelDate}
@@ -180,7 +180,7 @@ function PackageSecondPage() {
                                 />
                             </div>
                             <div>
-                                <label className="purple">Number of People</label><br />
+                                <label>Number of People</label><br />
                                 <input
                                     name="numberOfPeople"
                                     value={formData.numberOfPeople}
@@ -191,8 +191,8 @@ function PackageSecondPage() {
                             </div>
                         </div>
                         <div className="d-flex flex-wrap mb-4">
-                            <div className="ms-4">
-                                <label className="purple">Interested in</label><br />
+                            <div className="ms-5">
+                                <label>Interested in</label><br />
                                 <select
                                     name="interest"
                                     value={formData.interest}
@@ -206,7 +206,7 @@ function PackageSecondPage() {
                                 </select>
                             </div>
                             <div className="ms-5">
-                                <label className="purple">Desired Location</label><br />
+                                <label>Desired Location</label><br />
                                 <div className="d-flex flex-wrap">
                                     {locations.map((location, index) => (
                                         <div key={index} className="col-6 d-flex flex-wrap align-items-center">
@@ -218,7 +218,7 @@ function PackageSecondPage() {
                                                 checked={formData.desiredLocations.includes(location)}
                                                 onChange={handleCheckboxChange}
                                             />
-                                            <label className="purple ms-2" htmlFor={`location${index}`}>{location}</label>
+                                            <label className="ms-2" htmlFor={`location${index}`}>{location}</label>
                                         </div>
                                     ))}
                                 </div>
