@@ -1,14 +1,14 @@
 import React,{useRef,useEffect} from "react";
-import eastimg from '../images/picnics-goa.jpg';
-import goa from '../images/picnics-goa.jpg';
-import lonavala from '../images/picnics-lonavala.jpg';
-import mountabu from '../images/picnics-mount-abu.jpg';
-import wayanad from '../images/picnics-wayanad.jpg';
-import gpdavari from '../images/picnics-godavari.jpg';
-import anaikatti from '../images/picnics-anaikatti.jpg';
-import ooty from '../images/picnics-ooty.jpg';
 import {useNavigate } from 'react-router-dom';
 import cp1 from '../images/cp1.jpg';
+import TamilNaduMountains from "../Picnichomepage/Mountains/TamilNaduMountains";
+import TamilNaduTemples from "../Picnichomepage/Temples/TamilNaduTemples";
+import TamilNaduTeaEstate from "../Picnichomepage/TeaEstate/TamilNaduTeaEstate";
+import TamilNaduZoo from "../Picnichomepage/Zoo/TamilNaduZoo";
+import TamilNaduHillStations from "../Picnichomepage/HillStation/TamilNaduHillStation";
+import TamilNaduForest from "../Picnichomepage/Forest/TamilNaduForest";
+import TamilNaduFalls from "../Picnichomepage/Falls/TamilNaduFalls";
+import TamilNaduBeaches from "../Picnichomepage/Beaches/TamilNaduBeaches";
 
 
 function TamilNaduPicnic(){
@@ -42,113 +42,16 @@ function TamilNaduPicnic(){
 
         </div>
         <div className="over">
-        <div className='fourtheast overflow-hidden text-center mt-5'>
-                <h1 className='textcenter clr'>Tamil Nadu South</h1>
-                <div className='foutheastimg'>
-                    <div className="container d-flex justify-content-center align-items-center mt-2">
-                        <div className="image-container " onClick={() => handleImageClick('Puri',eastimg)}>
-                            <img src={eastimg} alt="Image" className="image" />
-                            <div className="overlay">
-                                <h2 className="heading">Mahaballipuram</h2>
-                                <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <TamilNaduMountains/>
+        <TamilNaduTemples/>
+        <TamilNaduTeaEstate/>
+        <TamilNaduZoo/>
+        <TamilNaduHillStations/>
+        <TamilNaduForest/>
+        <TamilNaduFalls/>
+        <TamilNaduBeaches/>
 
-            <div className='fourthwestmt-5'>
-                <h1 className='text-center clr'>TamilNAdu West</h1>
-                <div className='d-flex justify-content-center row'>
-                    <div className='foutheastimg col-12 col-md-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Goa',goa)}>
-                                <img src={goa} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">Rameshwaram</h2>
-                                    <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='foutheastimg col-12 col-md-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Lonavala',lonavala)}>
-                                <img src={lonavala} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">Kanchipuram</h2>
-                                    <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='foutheastimg col-12 col-md-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Mount Abu',mountabu)}>
-                                <img src={mountabu} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">Vellore</h2>
-                                    <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className='fourthwestmt-5'>
-                <h1 className='text-center clr'>TamilNadu South</h1>
-                <div className='d-flex justify-content-center row'>
-                    <div className='foutheastimg col-12 col-md-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Wayanad',wayanad)}>
-                                <img src={wayanad} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">KanyaKumari</h2>
-                                    <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='foutheastimg col-12 col-md-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Godavari',gpdavari)}>
-                                <img src={gpdavari} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">OOTY</h2>
-                                    <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='foutheastimg col-12 col-md-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Anaikatti',anaikatti)}>
-                                <img src={anaikatti} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">Kodaikanal</h2>
-                                    <p className="contentp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nobis nisi laudantium dolorum reiciendis maiores rerum deleniti qui excepturi molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='d-flex row justify-content-start'>
-                    <div className='foutheastimg col-12 col-md-4 col-lg-4'>
-                        <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Ooty',ooty)}>
-                                <img src={ooty} alt="Image" className="image" />
-                                <div className="overlay">
-                                    <h2 className="heading">Star Holidays Ooty</h2>
-                                    <p className="contentp">Easy drive to from Coimbatore and other cities • Enjoy activities like Rope adventure activities , Archery, Paintball etc* • Enjoy curated cocktails at Star Holidays LOCAL bar* • Enjoy your picnic in an expansive resort • Opt in* for luxurious spa treatment at the Subuthi spa (*not included in picnic package. Can be availed at additional cost.)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-            </div>
+        </div>
 
            
             

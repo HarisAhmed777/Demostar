@@ -43,6 +43,8 @@ import DesertPage from './components/Picnichomepage/DesertPage';
 import TemplesPage from './components/Picnichomepage/TemplePage';
 import FlowerPage from './components/Picnichomepage/FlowersPage';
 import BeachPage from './components/Picnichomepage/Beaches';
+import AndhraPicnic from './components/PicnicPage/AndhraPicnic';
+import KarnatakaPicnic from './components/PicnicPage/KarnatakaPicnic';
 
 function App() {
   return (
@@ -86,13 +88,8 @@ function App() {
             <Route path ='/DesertPage' element =  {<DesertPage/>}/>
             <Route path ='/TemplePage' element =  {<TemplesPage/>}/>
             <Route path ='/FlowersPage' element =  {<FlowerPage/>}/>
-
-
-
-
-
-
-
+            <Route path ='/AndhraPicnicPage' element =  {<AndhraPicnic/>}/>
+            <Route path ='/KarnatakaPicnicPage' element =  {<KarnatakaPicnic/>}/>
           </Routes>
           <Footer />
       </ContextProvider>

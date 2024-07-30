@@ -1,16 +1,17 @@
 import React,{useRef,useEffect} from "react";
 import cp1 from '../images/cp1.jpg';
-import KeralaBeaches from "../Picnichomepage/Beaches/KeralaBeaches";
-import KeralaFalls from "../Picnichomepage/Falls/KeralaFalls";
-import KeralaForest from "../Picnichomepage/Forest/KeralaForest";
-import KeralaHillStations from "../Picnichomepage/HillStation/KeralaHillStation";
-import KeralaTeaEstate from "../Picnichomepage/TeaEstate/KeralaTeaEstate";
-import KeralaMountains from "../Picnichomepage/Mountains/KeralaMountains";
-import KeralaTemples from "../Picnichomepage/Temples/KeralaTemples";
-import KeralaZoo from "../Picnichomepage/Zoo/KeralaZoo";
+import KarnatakaBeaches from "../Picnichomepage/Beaches/KarnatakaBeaches";
+import KarnatakaFalls from "../Picnichomepage/Falls/KarnatakaFalls";
+import KarnatakaHillStations from "../Picnichomepage/HillStation/KarnatakaHillStation";
+import KarnatakaMountains from "../Picnichomepage/Mountains/KarnatakaMountains";
+import KarnatakaTeaEstate from "../Picnichomepage/TeaEstate/KarnatakaTeaEstate";
+import KarnatakaTemples from "../Picnichomepage/Temples/KarnatakaTemples";
+import KarnatakaZoo from "../Picnichomepage/Zoo/KarnatakaZoo";
+import KarnatakaForest from "../Picnichomepage/Forest/KarnatakaForest";
 
 
-function KeralaPicnic(){
+
+function KarnatakaPicnic(){
     return(
         <>
         <div className="thirdimg">
@@ -30,14 +31,14 @@ function KeralaPicnic(){
 
         </div>
         <div className="over">
-        <KeralaBeaches/>
-        <KeralaFalls/>
-        <KeralaForest/>
-        <KeralaHillStations/>
-        <KeralaTeaEstate/>
-        <KeralaMountains/>
-        <KeralaTemples/>
-        <KeralaZoo/>
+        <KarnatakaBeaches/>
+        <KarnatakaFalls/>
+        <KarnatakaHillStations/>
+        <KarnatakaMountains/>
+        <KarnatakaTeaEstate/>
+        <KarnatakaTemples/>
+        <KarnatakaZoo/>
+        <KarnatakaForest/>
         </div>
 
            
@@ -46,4 +47,4 @@ function KeralaPicnic(){
     )
 }
 
-export default KeralaPicnic;
+export default KarnatakaPicnic;

@@ -1,16 +1,18 @@
 import React,{useRef,useEffect} from "react";
 import cp1 from '../images/cp1.jpg';
-import KeralaBeaches from "../Picnichomepage/Beaches/KeralaBeaches";
-import KeralaFalls from "../Picnichomepage/Falls/KeralaFalls";
-import KeralaForest from "../Picnichomepage/Forest/KeralaForest";
-import KeralaHillStations from "../Picnichomepage/HillStation/KeralaHillStation";
-import KeralaTeaEstate from "../Picnichomepage/TeaEstate/KeralaTeaEstate";
-import KeralaMountains from "../Picnichomepage/Mountains/KeralaMountains";
-import KeralaTemples from "../Picnichomepage/Temples/KeralaTemples";
-import KeralaZoo from "../Picnichomepage/Zoo/KeralaZoo";
+import AndhraBeaches from "../Picnichomepage/Beaches/AndhraBeaches";
+import AndhraFalls from "../Picnichomepage/Falls/AndhraFalls";
+import AndhraForest from "../Picnichomepage/Forest/AndhraForest";
+import AndhraHillStations from "../Picnichomepage/HillStation/AndhraHillStation";
+import AndhraTeaEstate from "../Picnichomepage/TeaEstate/AndhraTeaEstate";
+import AndhraTemples from "../Picnichomepage/Temples/AndhraTemples";
+import AndhraMountains from "../Picnichomepage/Mountains/AndhraMountains";
+import AndhraZoo from "../Picnichomepage/Zoo/AndhraZoo";
 
 
-function KeralaPicnic(){
+
+
+function AndhraPicnic(){
     return(
         <>
         <div className="thirdimg">
@@ -30,14 +32,14 @@ function KeralaPicnic(){
 
         </div>
         <div className="over">
-        <KeralaBeaches/>
-        <KeralaFalls/>
-        <KeralaForest/>
-        <KeralaHillStations/>
-        <KeralaTeaEstate/>
-        <KeralaMountains/>
-        <KeralaTemples/>
-        <KeralaZoo/>
+        <AndhraBeaches/>
+        <AndhraFalls/>
+        <AndhraForest/>
+        <AndhraHillStations/>
+        <AndhraTeaEstate/>
+        <AndhraTemples/>
+        <AndhraMountains/>
+        <AndhraZoo/>
         </div>
 
            
@@ -46,4 +48,4 @@ function KeralaPicnic(){
     )
 }
 
-export default KeralaPicnic;
+export default AndhraPicnic;
