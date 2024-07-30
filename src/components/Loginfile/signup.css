@@ -65,7 +65,7 @@
 }
 
 .form-control-both:focus, .form-control-sign:focus {
-    border-bottom-color: #ffcc00;  
+    border-bottom-color: #ffcc00 !important;  
 }
 .mobilestyle{
     outline: none !important;
@@ -108,7 +108,7 @@
 }
 
 .btn-login:hover, .btn-signup:hover {
-    background-color: #e6b800;  
+    background-color: #e6b800 ;  
 }
 
 .error-messagelogin, .error-message {

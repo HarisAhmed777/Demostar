@@ -13,9 +13,14 @@ import { Link, useNavigate } from 'react-router-dom';
 function Fourthpart() {
     const navigate = useNavigate();
 
-    const handleImageClick = (heading) => {
-        const title = heading;
-        navigate('/bookingpage', { state: {title} });
+    const handleImageClick = (heading,img) => {
+        const pkg = {
+            title :heading,
+            img:img,
+            catogory:"Kerala Picnic",
+
+        }
+        navigate('/bookingpage', { state: pkg });   
     };
 
     return (
@@ -25,7 +30,7 @@ function Fourthpart() {
                 <h1 className='textcenter clr'>Goa</h1>
                 <div className='foutheastimg'>
                     <div className="container d-flex justify-content-center align-items-center mt-2">
-                        <div className="image-container " onClick={() => handleImageClick('Puri')}>
+                        <div className="image-container " onClick={() => handleImageClick('Puri',eastimg)}>
                             <img src={eastimg} alt="Image" className="image" />
                             <div className="overlay">
                                 <h2 className="heading">A-Z Goa</h2>
@@ -42,7 +47,7 @@ function Fourthpart() {
                 <div className='d-flex justify-content-center row'>
                     <div className='foutheastimg  col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Goa')}>
+                            <div className="image-container " onClick={() => handleImageClick('Goa',goa)}>
                                 <img src={goa} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Rameshwaram</h2>
@@ -53,7 +58,7 @@ function Fourthpart() {
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Lonavala')}>
+                            <div className="image-container " onClick={() => handleImageClick('Lonavala',lonavala)}>
                                 <img src={lonavala} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">OOTY</h2>
@@ -64,7 +69,7 @@ function Fourthpart() {
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Mount Abu')}>
+                            <div className="image-container " onClick={() => handleImageClick('Mount Abu',mountabu)}>
                                 <img src={mountabu} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Kodaikanal</h2>
@@ -81,7 +86,7 @@ function Fourthpart() {
                 <div className='d-flex justify-content-center row'>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Wayanad')}>
+                            <div className="image-container " onClick={() => handleImageClick('Wayanad',wayanad)}>
                                 <img src={wayanad} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Wayanad</h2>
@@ -92,7 +97,7 @@ function Fourthpart() {
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Godavari')}>
+                            <div className="image-container " onClick={() => handleImageClick('Godavari',gpdavari)}>
                                 <img src={gpdavari} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Godavari</h2>
@@ -103,7 +108,7 @@ function Fourthpart() {
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Anaikatti')}>
+                            <div className="image-container " onClick={() => handleImageClick('Anaikatti',anaikatti)}>
                                 <img src={anaikatti} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Anaikatti</h2>
@@ -118,7 +123,7 @@ function Fourthpart() {
                     <div className='row'>
                         <div className='foutheastimg col-12 col-md-4 col-lg-4 ms-2'>
                             <div className="container d-flex justify-content-center align-items-center mt-2 ">
-                                <div className="image-container " onClick={() => handleImageClick('Alleppey')}>
+                                <div className="image-container " onClick={() => handleImageClick('Alleppey',alleppey)}>
                                     <img src={alleppey} alt="Image" className="image" />
                                     <div className="overlay">
                                         <h2 className="heading">Alleppey</h2>

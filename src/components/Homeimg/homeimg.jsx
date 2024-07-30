@@ -25,8 +25,13 @@ function Homeimg() {
 
 
     const handleBookClick = () => {
-        const title= location
-        navigate('/bookingpage', { state: {title} });
+        const catogory = "Picnic";
+        const pkg= {
+            title: location,
+            catogory: catogory
+        };
+        navigate('/bookingpage', { state: pkg });
+        console.log(pkg);
     };
     useEffect(() => {
         function setWindowHeight() {
@@ -73,7 +78,7 @@ function Homeimg() {
     return (
         <>
 <div className={`w-100 ${theme ? "bg-dark text-white" : null}`}>
-    <div className={`homeimg text-overlay`}>
+    <div className={`homeimg`}>
         <Carousel className="w-100 paddingtop mb-5">
             <Carousel.Item className="w-100 caro1">
                 <div className="carousel-bg caro1" ref={home1ImgRef} style={{ backgroundImage: `url(${cp11})` }}>

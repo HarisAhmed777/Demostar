@@ -51,7 +51,16 @@ function CollapsibleExample() {
               <NavDropdown href="#action/3.1" title="Picnic" id="collapsible-nav-dropdown" className=''>
                 <Link to = '/picnicpage' onClick={handleToggle}><NavDropdown.Item href="#action/3.1" className='text-dddd'>All Picnics</NavDropdown.Item></Link>
                 <Link to = '/tamilnadupicnic'onClick={handleToggle} ><NavDropdown.Item href="#action/3.2">Tamil Nadu</NavDropdown.Item></Link>
-                <Link to = '/keralapicnic' onClick={handleToggle}   ><NavDropdown.Item href="#action/3.3">Kerala</NavDropdown.Item></Link>
+                <Link to = '/keralapicnic' onClick={handleToggle}><NavDropdown.Item href="#action/3.3">Kerala</NavDropdown.Item></Link>
+                <Link to = '/Mountainpage' onClick={handleToggle}><NavDropdown.Item href="#action/3.4">Mountains</NavDropdown.Item></Link>
+                <Link to = '/Zoo' onClick={handleToggle}><NavDropdown.Item href="#action/3.5">Zoo</NavDropdown.Item></Link>
+                <Link to = '/SafariPage' onClick={handleToggle}><NavDropdown.Item href="#action/3.6">Safari</NavDropdown.Item></Link>
+                <Link to = '/BeachesPage' onClick={handleToggle}><NavDropdown.Item href="#action/3.7">Beaches</NavDropdown.Item></Link>
+                <Link to = '/ValleyPage' onClick={handleToggle}><NavDropdown.Item href="#action/3.8">Valley</NavDropdown.Item></Link>
+                <Link to = '/DesertPage' onClick={handleToggle}><NavDropdown.Item href="#action/3.9">Desert</NavDropdown.Item></Link>
+                <Link to = '/TemplePage' onClick={handleToggle}><NavDropdown.Item href="#action/3.10">Temples</NavDropdown.Item></Link>
+                <Link to = '/FlowersPage' onClick={handleToggle}><NavDropdown.Item href="#action/3.11">Flowers</NavDropdown.Item></Link>
+
               </NavDropdown>
               <Nav.Link href="#action/4.1" as={Link} to = '/offerpage'className='text-dddd' id="collapsible-nav-dropdown" onClick={handleToggle}>Offer</Nav.Link>
               <Nav.Link href="#action/5.1" as={Link} to = '/blogpage' className='text-dddd' onClick={handleToggle}>Blog</Nav.Link>

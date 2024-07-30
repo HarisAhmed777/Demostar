@@ -19,7 +19,6 @@ import { useContext ,useEffect} from 'react';
 import { Context } from './components/context';
 import { jwtDecode } from "jwt-decode";
 import Profile from './components/Dashboard/profile';
-// import Booking from './components/BookingPage/bookingpage';
 import UserBooking from './components/Dashboard/userbooking';
 import ResetPassword from './components/LoginandSignupapge/ResetPassword';
 import Bloging from './components/BlogPage/bloging';
@@ -35,14 +34,22 @@ import ServiceProviders from './components/TermsAndConditions/ServiceProviders/S
 import ThirdPartyInformation from './components/TermsAndConditions/ThirdPartyInformation/ThirdPartyInformation';
 import LegalDisclaimer from './components/TermsAndConditions/LegalDisclaimer/LegalDisclaimer';
 import SignupStep2 from './components/Loginfile/Signup2page';
+import Bookingpage2 from './components/BookingPage/Bookingpage2';
+import MountainsPage from './components/Picnichomepage/Mountainspage';
+import ZooPage from './components/Picnichomepage/Zoo';
+import SafariPage from './components/Picnichomepage/SafariPage';
+import ValleyPage from './components/Picnichomepage/ValleyPage';
+import DesertPage from './components/Picnichomepage/DesertPage';
+import TemplesPage from './components/Picnichomepage/TemplePage';
+import FlowerPage from './components/Picnichomepage/FlowersPage';
+import BeachPage from './components/Picnichomepage/Beaches';
 
 function App() {
   return (
     <>
       <ContextProvider>
-          <div className='headerp'>
             <Header />
-          </div>
+          
           <ScrollToTop/>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -70,6 +77,22 @@ function App() {
             <Route path = '/ServiceProviders' element =  {<ServiceProviders/>}/>
             <Route path = '/ThirdpartyInformation' element =  {<ThirdPartyInformation/>}/>
             <Route path = '/legalDisclaimer' element =  {<LegalDisclaimer/>}/>
+            <Route path = '/payment process' element =  {<Bookingpage2/>}/>
+            <Route path ='/Mountainpage' element =  {<MountainsPage/>}/>
+            <Route path ='/Zoo' element =  {<ZooPage/>}/>
+            <Route path ='/SafariPage' element =  {<SafariPage/>}/>
+            <Route path = '/BeachesPage' element = {<BeachPage/>}/>
+            <Route path ='/ValleyPage' element =  {<ValleyPage/>}/>
+            <Route path ='/DesertPage' element =  {<DesertPage/>}/>
+            <Route path ='/TemplePage' element =  {<TemplesPage/>}/>
+            <Route path ='/FlowersPage' element =  {<FlowerPage/>}/>
+
+
+
+
+
+
+
           </Routes>
           <Footer />
       </ContextProvider>

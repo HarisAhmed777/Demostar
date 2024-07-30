@@ -25,6 +25,11 @@
     transition: border-bottom-color 0.3s ease;
     color: #000;
 }
+.phone-input{
+    width: 100% !important;
+    outline: none !important;
+    border: none !important;
+}
 
 .bookinginput:focus, .bookinginput.phone-input:focus {
     border-bottom-color: #ffcc00;

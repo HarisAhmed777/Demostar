@@ -35,9 +35,15 @@ function PackagePage() {
       price: '3,400',
     }
   ];
-  function handlepackagebooking(pkg){
-    const title = pkg.loc;
-    navigate('/bookingpage',{state:{title}})
+  function handlepackagebooking(pkgw,catogory){
+    const pkg= {
+      title:pkgw.title,
+      img :pkgw.img,
+      duration :pkgw.duration,
+      price:pkgw.price,
+      catogory:catogory
+    }
+    navigate('/bookingpage',{state:pkg})
   }
 
   function scrollToPackageSecondPage() {
@@ -90,7 +96,7 @@ and unlock extraordinary destinations and memories.
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg,"School Package")}>Book now</button>
                   </div>
                   <div className="d-flex justify-content-between"></div>
                 </div>
@@ -123,7 +129,7 @@ and unlock extraordinary destinations and memories.
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg,"College Package")}>Book now</button>
             
                   </div>
                   <div className="d-flex justify-content-between"></div>
@@ -157,7 +163,7 @@ and unlock extraordinary destinations and memories.
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg)}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg,"Industrial Visit Package")}>Book now</button>
                   </div>
                   <div className="d-flex justify-content-between"></div>
                 </div>

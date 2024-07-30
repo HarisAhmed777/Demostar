@@ -7,16 +7,21 @@ import wayanad from '../images/picnics-wayanad.jpg';
 import gpdavari from '../images/picnics-godavari.jpg';
 import anaikatti from '../images/picnics-anaikatti.jpg';
 import ooty from '../images/picnics-ooty.jpg';
-import { Link, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import cp1 from '../images/cp1.jpg';
 
 
 function TamilNaduPicnic(){
     const navigate = useNavigate();
 
-    const handleImageClick = (heading) => {
-        const title = heading
-        navigate('/bookingpage', { state: {title} });
+    const handleImageClick = (heading,img) => {
+        const pkg = {
+            title :heading,
+            img:img,
+            catogory:"Tamil Nadu Picnic",
+
+        }
+        navigate('/bookingpage', { state: pkg });
     };
     return(
         <>
@@ -41,7 +46,7 @@ function TamilNaduPicnic(){
                 <h1 className='textcenter clr'>Tamil Nadu South</h1>
                 <div className='foutheastimg'>
                     <div className="container d-flex justify-content-center align-items-center mt-2">
-                        <div className="image-container " onClick={() => handleImageClick('Puri')}>
+                        <div className="image-container " onClick={() => handleImageClick('Puri',eastimg)}>
                             <img src={eastimg} alt="Image" className="image" />
                             <div className="overlay">
                                 <h2 className="heading">Mahaballipuram</h2>
@@ -57,7 +62,7 @@ function TamilNaduPicnic(){
                 <div className='d-flex justify-content-center row'>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Goa')}>
+                            <div className="image-container " onClick={() => handleImageClick('Goa',goa)}>
                                 <img src={goa} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Rameshwaram</h2>
@@ -68,7 +73,7 @@ function TamilNaduPicnic(){
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Lonavala')}>
+                            <div className="image-container " onClick={() => handleImageClick('Lonavala',lonavala)}>
                                 <img src={lonavala} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Kanchipuram</h2>
@@ -79,7 +84,7 @@ function TamilNaduPicnic(){
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Mount Abu')}>
+                            <div className="image-container " onClick={() => handleImageClick('Mount Abu',mountabu)}>
                                 <img src={mountabu} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Vellore</h2>
@@ -96,7 +101,7 @@ function TamilNaduPicnic(){
                 <div className='d-flex justify-content-center row'>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Wayanad')}>
+                            <div className="image-container " onClick={() => handleImageClick('Wayanad',wayanad)}>
                                 <img src={wayanad} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">KanyaKumari</h2>
@@ -107,7 +112,7 @@ function TamilNaduPicnic(){
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Godavari')}>
+                            <div className="image-container " onClick={() => handleImageClick('Godavari',gpdavari)}>
                                 <img src={gpdavari} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">OOTY</h2>
@@ -118,7 +123,7 @@ function TamilNaduPicnic(){
                     </div>
                     <div className='foutheastimg col-12 col-md-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Anaikatti')}>
+                            <div className="image-container " onClick={() => handleImageClick('Anaikatti',anaikatti)}>
                                 <img src={anaikatti} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Kodaikanal</h2>
@@ -131,7 +136,7 @@ function TamilNaduPicnic(){
                 <div className='d-flex row justify-content-start'>
                     <div className='foutheastimg col-12 col-md-4 col-lg-4'>
                         <div className="container d-flex justify-content-center align-items-center mt-2">
-                            <div className="image-container " onClick={() => handleImageClick('Ooty')}>
+                            <div className="image-container " onClick={() => handleImageClick('Ooty',ooty)}>
                                 <img src={ooty} alt="Image" className="image" />
                                 <div className="overlay">
                                     <h2 className="heading">Star Holidays Ooty</h2>

@@ -18,42 +18,58 @@ const picnicpackages = [
     {
         img: TCP1,
         title: "Mountains",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/Mountainpage"
     },
     {
         img: TCP2,
         title: "Safari",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/SafariPage"
+
     },
     {
         img: TCP3,
         title: "Desert",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/DesertPage"
+
     },
     {
         img: TCP4,
         title: "Flower",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/Flowerspage"
+
     },
     {
         img: TCP5,
         title: "Beach",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/BeachesPage"
+
     },
     {
         img: TCP6,
         title: "Temples",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/Templepage"
+
     },
     {
         img: TCP7,
-        title: "Yatch",
-        para: "356 tours 246 activites"
+        title: "Zoo",
+        para: "356 tours 246 activites",
+        apis: "/Zoo"
+
+
     },
     {
         img: TCP8,
         title: "Valley",
-        para: "356 tours 246 activites"
+        para: "356 tours 246 activites",
+        apis: "/Valleypage"
+
     }
 ];
 
@@ -74,7 +90,7 @@ function Picnicpackages() {
                             <h5 className="picnic-card-title">{pkg.title}</h5>
                             <div className="d-flex justify-content-between">
                                 <p className="pt-1">{pkg.para}</p>
-                                <Link to = '/picnicpage'><p><FontAwesomeIcon icon={faArrowRight} /></p></Link>
+                                <Link to = {pkg.apis}><p><FontAwesomeIcon icon={faArrowRight} /></p></Link>
                             </div>
                         </div>
                     </div>

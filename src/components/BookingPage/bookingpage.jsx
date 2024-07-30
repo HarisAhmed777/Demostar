@@ -26,7 +26,9 @@ function Booking() {
 
     return '';
   };
-
+const getcatogoryvalue = ()=>{
+  if(state.catogory) return state.catogory;
+}
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [city, setCity] = useState("");
@@ -34,6 +36,7 @@ function Booking() {
   const [startdate, setStartdate] = useState(new Date());
   const [enddate, setEnddate] = useState(new Date());
   const [mobile, setMobile] = useState("");
+  const [catogory,setCatogory] = useState("");
   const [email, setEmail] = useState("");
   const [promocode, setPromocode] = useState("");
   const [discount, setDiscount] = useState(0);
@@ -45,6 +48,7 @@ function Booking() {
   useEffect(() => {
     setEmail(user);
     setCity(getCityValue());
+    setCatogory(getcatogoryvalue())
   }, [user]);
 
   const handleStartDateChange = (date) => {
@@ -112,16 +116,15 @@ function Booking() {
       toast.error("Number of persons must be at least 1.", { autoClose: 3000 });
       return;
     }
-    const formattedStartDate = format(startdate, 'dd-MM-yyyy');
-    const formattedEndDate = format(enddate, 'dd-MM-yyyy');
     const bookingData = {
       name,
       age,
       email,
       persons,
       city,
-      startdate: formattedStartDate,
-      enddate: formattedEndDate,
+      catogory,
+      startdate: startdate, // Pass the date object directly
+      enddate: enddate, // Pass the date object directly
       mobile,
       totalamount: calculateTotalAmount(),
       promocode,
@@ -140,6 +143,7 @@ function Booking() {
       toast.error("Please Login and try again");
     }
   };
+  
 
   const validateName = (value) => /^[A-Za-z\s]+$/.test(value);
   const validateAge = (value) => /^[0-9]+$/.test(value);
@@ -245,8 +249,8 @@ function Booking() {
                   />
                 </div>
               </div>
-
-              <div className="form-group">
+              <div className="row">
+              <div className="form-group col-lg-6">
                 <label>Mobile Number:</label>
                 <PhoneInput
                   country={'in'}
@@ -256,6 +260,15 @@ function Booking() {
                   specialLabel=""
                   countryCodeEditable={true}
                 />
+              </div>
+              <div className="col-lg-6">
+                <label htmlFor="">Catogory</label>
+                <input 
+                type="text"
+                className="bookinginput m-0 pt-1"
+                value={getcatogoryvalue()} />
+
+              </div>
               </div>
 
               <div className="text-center">

@@ -43,7 +43,8 @@ function Custompackages(){
 
 
     const handlebooking= (pkg)=>{
-        console.log(pkg);
+        const catogory = "custom package";
+        pkg.catogory = catogory;
         navigate('/bookingpage', { state:pkg });
 
     }
