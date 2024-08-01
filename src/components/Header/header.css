@@ -22,7 +22,7 @@
   background-color: #f8f9fa;
   color: #000;
 }
-.text-dddd:focus{
+.text-dddd:active{
   color: orangered !important;
   /* transition: ease-out 0.5s; */
 }
@@ -37,7 +37,7 @@
     border: 0px !important;
     box-shadow: 0px !important;
 }
-.navbar-toggler:focus{
+.navbar-toggler:active{
   outline: none !important;
   border-radius: 0px !important;
   border: 0px !important;

@@ -80,7 +80,7 @@ function Profile() {
     };
 
     return (
-        <div className='bbody pt-5'>
+        <div className='bbody paddingtop'>
         <div className='profile-container prop'>
             <h1 className='profile-header text-white'>Your Profile</h1>
             {data ? (

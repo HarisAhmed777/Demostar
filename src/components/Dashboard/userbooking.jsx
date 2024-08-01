@@ -19,7 +19,7 @@ function UserBooking() {
     }, [user]);
 
     return (
-        <div className='userbooking-container-wrapper'>
+        <div className='userbooking-container-wrapper paddingtop'>
             <div className='userbooking-container'>
                 <h1 className='userbooking-header'>Your Bookings</h1>
                 {data.length > 0 ? (

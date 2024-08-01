@@ -15,31 +15,31 @@ function PackagePage() {
   const custompackages = [
     {
       img: cp1,
-      title: 'Rajastan Expenditure',
-      duration: '2 days 3 nights',
-      loc: 'Udaipur (2N) Mount Abu (2N)',
+      title: 'KanyaKumari Expenditure',
+      duration: '3 days 4 nights',
+      loc: 'Rameshwaram (2N) KanyaKumari (2N)',
       price: '3,400',
     },
     {
       img: cp1,
-      title: 'Rajastan Expenditure',
+      title: 'Chennai Expenditure',
       duration: '2 days 3 nights',
-      loc: 'Udaipur (2N) Mount Abu (2N)',
+      loc: 'malls(2N) Muselum(2N)',
+      price: '1,400',
+    },
+    {
+      img: cp1,
+      title: 'Ooty Expenditure',
+      duration: '4 days 5 nights',
+      loc: 'hills(2N) forest(2N)',
       price: '3,400',
     },
     {
       img: cp1,
-      title: 'Rajastan Expenditure',
-      duration: '2 days 3 nights',
-      loc: 'Udaipur (2N) Mount Abu (2N)',
-      price: '3,400',
-    },
-    {
-      img: cp1,
-      title: 'Rajastan Expenditure',
-      duration: '2 days 3 nights',
-      loc: 'Udaipur (2N) Mount Abu (2N)',
-      price: '3,400',
+      title: 'Munnar Expenditure',
+      duration: '5 days 6 nights',
+      loc: 'Munnar top(3N) down(2N)',
+      price: '5,200',
     },
   ];
   function handlepackagebooking(pkgw,catogory){
@@ -84,7 +84,7 @@ and unlock extraordinary destinations and memories.
         <div className="row">
           <h2 className='ml1'>School Package</h2>
           {custompackages.map((pkg, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
+            <div key={index} className="col-12 col-md-6 col-xl-3 col-lg-4 mb-4">
               <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
@@ -117,7 +117,7 @@ and unlock extraordinary destinations and memories.
         <div className="row">
           <h2 className='ml1'>College Package</h2>
           {custompackages.map((pkg, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
+            <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
               <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
@@ -148,11 +148,11 @@ and unlock extraordinary destinations and memories.
       </div>
       <div className="container mt-5 mb-5">
 
-        <div className="row">
-          <h2 className='ml1'>Indutrial Visit Package</h2>
+      <div className="row">
+          <h2 className='ml1'>Industial Visit Package</h2>
           {custompackages.map((pkg, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
-              <div className="card h-100 packaecard container">
+            <div key={index} className="col-12 col-md-6 col-xl-3 col-lg-4 mb-4">
+              <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
                   <p className="card-title fw-bold">{pkg.title}</p>
@@ -170,7 +170,7 @@ and unlock extraordinary destinations and memories.
                         </span>
                       </p>
                     </div>
-                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg,"Industrial Visit Package")}>Book now</button>
+                      <button className="mt-4 ms-3 packagesidebtn bgc p-1" onClick={()=>handlepackagebooking(pkg,"School Package")}>Book now</button>
                   </div>
                   <div className="d-flex justify-content-between"></div>
                 </div>
