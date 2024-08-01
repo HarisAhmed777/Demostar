@@ -10,20 +10,20 @@ function AvailPromo(){
           case 'school':
             return <div>
                         <p>Details for School Offers</p>
-                        <p>The promo code will be <span className="fw-bold text-warning"> DBJ30</span> </p>
+                        <p>The promo code will be <span className="fw-bold text-warning">WAH10</span> </p>
                         <p>Apply this promo on the booking page and enjoy the trip</p>
                     </div>;
           case 'college':
             return <div>
                         <p>Details for College Offers</p>
-                        <p>The promo code will be <span className="fw-bold text-warning"> CJY40 </span></p>
+                        <p>The promo code will be <span className="fw-bold text-warning">Starsch20</span></p>
                         <p>Apply this promo on the booking page and enjoy the trip</p>
 
                     </div>;
           case 'iv':
             return  <div>
                         <p>Details for Industial Visit Offers</p>
-                        <p>The promo code will be <span className="fw-bold text-warning"> WAH20 </span></p>
+                        <p>The promo code will be <span className="fw-bold text-warning">Starsch30</span></p>
                         <p>Apply this promo on the booking page and enjoy the trip</p>
 
                     </div>;
