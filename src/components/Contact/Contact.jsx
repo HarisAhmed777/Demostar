@@ -57,6 +57,11 @@ function Contact() {
                 });
                 if (response.status === 200) {
                     alert('Feedback submitted successfully');
+                    setEmail("");
+                    setFeedback("");
+                    setFirstName("");
+                    setPhonenumber("");
+                    setSecondname("");
                 } else {
                     alert('Failed to submit feedback');
                 }
