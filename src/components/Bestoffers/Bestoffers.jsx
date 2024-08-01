@@ -4,9 +4,10 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Bestoffers.css';
 import Offer from './Offer';
-import cp1 from '../images/cp1.jpg';
-import cp2 from '../images/cp2.avif';
-import cp3 from '../images/cp3.jpg';
+import cp1 from '../images/kodaikanal.webp';
+import cp2 from '../images/wonderla.avif';
+import cp3 from '../images/wayanadcity.jpg';
+import cp4 from '../images/mysore.jpg';
 
 function Bestoffers() {
   const { theme } = useContext(Context);
@@ -32,37 +33,37 @@ function Bestoffers() {
   const offersData = [
     {
       img: cp1,
-      title: "California Twilight Boat Cruise",
+      title: "Kodaikanal Hills",
       duration: "2 days 3 nights",
       price: "1000rs/person"
     },
     {
       img: cp2,
-      title: "Mountain Adventure Retreat",
+      title: "Wonderla",
       duration: "5 days 4 nights",
       price: "5000rs/person"
     },
     {
-      img: cp3,
-      title: "Desert Safari and Camping",
+      img: cp4,
+      title: "Mysore",
       duration: "3 days 2 nights",
       price: "3000rs/person"
     },
     {
-      img: cp1,
-      title: "California Twilight Boat Cruise",
+      img: cp3,
+      title: "Wayanad City",
       duration: "2 days 3 nights",
       price: "1000rs/person"
     },
     {
-      img: cp2,
-      title: "Mountain Adventure Retreat",
+      img: cp1,
+      title: "Kolli Hills",
       duration: "5 days 4 nights",
       price: "5000rs/person"
     },
     {
       img: cp3,
-      title: "Desert Safari and Camping",
+      title: "Wayanad City",
       duration: "3 days 2 nights",
       price: "3000rs/person"
     }

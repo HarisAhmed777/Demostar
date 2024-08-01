@@ -1,7 +1,9 @@
 import React from "react";
 import './Travelwithus.css'
-import profile from '../images/profile.avif';
-
+import exceptionalservice from '../images/Exceptional service.png'
+import localised from '../images/Localised.png';
+import offer from '../images/offer.png';
+import personalised from '../images/Personalised.png';
 
 
 
@@ -9,25 +11,25 @@ import profile from '../images/profile.avif';
 function Travelwithus() {
     const Traveldata = [
         {
-            img: profile,
+            img: personalised,
             heading: "Personalized Experiences",
             para: " Enjoy tailor-made travel itineraries designed to match your preferences and interests, ensuring every journey is uniquely yours",
             bgcolor: "#e4f9f9",
         },
         {
-            img: profile,
+            img: localised,
             heading: "Local Expertise",
             para: "Benefit from our deep knowledge of Ranipet and Tamil Nadu, offering insider tips and authentic experiences that showcase the region's cultural richness and natural beauty.",
             bgcolor: "#fcf2fa",
         },
         {
-            img: profile,
+            img: exceptionalservice,
             heading: "Exceptional Service",
             para: "From booking to journey's end, experience dedicated customer support and attention to detail that ensures a seamless and memorable travel experience. ",
             bgcolor: "#e3f0ff",
         },
         {
-            img: profile,
+            img:offer,
             heading: "Exclusive Offers",
             para: "Access special deals and packages that provide great value, making luxury travel affordable and accessible for all adventurers",
             bgcolor: "#f6f3fc",

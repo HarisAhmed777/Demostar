@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom'
 import './picnichomepage.css';
 import TCP1 from '../images/TCP1.jpg';
 import TCP2 from '../images/TCP2.jpg';
-import TCP3 from '../images/TCP3.jpg';
-import TCP4 from '../images/TCP4.jpg';
+import TCP3 from '../images/Falls.webp';
+import TCP4 from '../images/TeaEstate.webp';
 import TCP5 from '../images/TCP5.avif';
 import TCP6 from '../images/TCP6.jpg';
-import TCP7 from '../images/TCP7.jpg';
+import TCP7 from '../images/Zoo.webp';
 import TCP8 from '../images/TCP8.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";

@@ -1,35 +1,37 @@
 import React,{useContext}from "react";
 import './custompackages.css';
-import cp1 from '../images/cp1.jpg';
-import cp2 from '../images/cp2.avif';
-import cp3 from '../images/cp3.jpg';
+import cp1 from '../images/kodaikanal.webp';
+import cp2 from '../images/wonderla.avif';
+import cp3 from '../images/wayanadcity.jpg';
+import cp4 from '../images/mysore.jpg';
+
 import { Context } from "../context";
 import {Link,useNavigate} from 'react-router-dom'
 const packages = [
     {
         img: cp1,
-        title: "California sunset  Cruise",
+        title: "Kodaikanal Hills",
         duration: "2 days 3 nights",
         guest:"4 to 6 guest",
         price: "1000rs/person"
     },
     {
         img: cp2,
-        title: "Mountain Adventure Retreat",
-        duration: "5 days 4 nights",
+        title: "Wonderla",
+        duration: "3 days 2 nights",
         guest:"4 to 6 guest",
         price: "5000rs/person"
     },
     {
         img: cp3,
-        title: "Desert Safari and Camping",
+        title: "Wayanad City",
         duration: "3 days 2 nights",
         guest:"4 to 6 guest",
         price: "3000rs/person"
     },
     {
-        img: cp3,
-        title: "Desert Safari and Camping",
+        img: cp4,
+        title: "Mysore Palace",
         duration: "3 days 2 nights",
         guest:"4 to 6 guest",
         price: "3000rs/person"
