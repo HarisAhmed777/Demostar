@@ -33,7 +33,14 @@ function PackagePage() {
       duration: '2 days 3 nights',
       loc: 'Udaipur (2N) Mount Abu (2N)',
       price: '3,400',
-    }
+    },
+    {
+      img: cp1,
+      title: 'Rajastan Expenditure',
+      duration: '2 days 3 nights',
+      loc: 'Udaipur (2N) Mount Abu (2N)',
+      price: '3,400',
+    },
   ];
   function handlepackagebooking(pkgw,catogory){
     const pkg= {
@@ -77,7 +84,7 @@ and unlock extraordinary destinations and memories.
         <div className="row">
           <h2 className='ml1'>School Package</h2>
           {custompackages.map((pkg, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+            <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
               <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
@@ -110,7 +117,7 @@ and unlock extraordinary destinations and memories.
         <div className="row">
           <h2 className='ml1'>College Package</h2>
           {custompackages.map((pkg, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+            <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
               <div className="card h-100 packaecard">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
@@ -144,8 +151,8 @@ and unlock extraordinary destinations and memories.
         <div className="row">
           <h2 className='ml1'>Indutrial Visit Package</h2>
           {custompackages.map((pkg, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100 packaecard">
+            <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
+              <div className="card h-100 packaecard container">
                 <img className="cardimg" src={pkg.img} alt="Card image cap" />
                 <div className="card-body">
                   <p className="card-title fw-bold">{pkg.title}</p>

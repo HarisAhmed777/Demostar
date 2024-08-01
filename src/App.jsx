@@ -45,6 +45,7 @@ import FlowerPage from './components/Picnichomepage/FlowersPage';
 import BeachPage from './components/Picnichomepage/Beaches';
 import AndhraPicnic from './components/PicnicPage/AndhraPicnic';
 import KarnatakaPicnic from './components/PicnicPage/KarnatakaPicnic';
+import AllBlogs from './components/TestingImages';
 
 function App() {
   return (
@@ -90,6 +91,8 @@ function App() {
             <Route path ='/FlowersPage' element =  {<FlowerPage/>}/>
             <Route path ='/AndhraPicnicPage' element =  {<AndhraPicnic/>}/>
             <Route path ='/KarnatakaPicnicPage' element =  {<KarnatakaPicnic/>}/>
+            <Route path ='/allblogs' element =  {<AllBlogs/>}/>
+
           </Routes>
           <Footer />
       </ContextProvider>

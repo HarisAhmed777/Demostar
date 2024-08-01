@@ -41,11 +41,7 @@ function CollapsibleExample() {
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav" className={`justify-content-end ${isNavbarCollapsed ? 'collapse' : ''}`}>
             <Nav className=" navhome">
-            {isAuthorized?
-                        <NavDropdown title="Dashboard" id="collapsible-nav-dropdown">
-                        <Link to = '/profile'><NavDropdown.Item href="#action/1.1">Myprofile</NavDropdown.Item></Link>
-                        <Link to = '/booking'><NavDropdown.Item href="#action/1.2">Mybookings</NavDropdown.Item></Link>
-                        </NavDropdown>:null}
+                        
             <Nav.Link href="#action/2.1" onClick={handleToggle} as={Link} to="/" className='text-dddd home'>Home</Nav.Link>
               <Nav.Link href="#action/2.2" as={Link} to = '/packagepage'onClick={handleToggle} className='text-dddd' id="collapsible-nav-dropdown">Packages</Nav.Link>
               <NavDropdown href="#action/3.1" title="Picnic" id="collapsible-nav-dropdown" className=''>
@@ -66,7 +62,14 @@ function CollapsibleExample() {
                 !isAuthorized?<Nav.Link href="#action/7.1" className='text-dddd' onClick={handleToggle} as={Link} to="/login">Login</Nav.Link>:
                 <Nav.Link href="#action/8.1" className='text-dddd' onClick={handleLogout}>Logout</Nav.Link>
               }
-              <Nav.Link href="#action/9.1" as ={Link} to = '/login' className="text-dddd" onClick={handleToggle}>Sign Up</Nav.Link>
+              {
+              
+              !isAuthorized?<Nav.Link href="#action/9.1" as ={Link} to = '/login' className="text-dddd" onClick={handleToggle}>Sign Up</Nav.Link>:
+              <NavDropdown title="My Account" id="collapsible-nav-dropdown">
+              <Link to = '/profile'><NavDropdown.Item href="#action/1.1">Myprofile</NavDropdown.Item></Link>
+              <Link to = '/booking'><NavDropdown.Item href="#action/1.2">Mybookings</NavDropdown.Item></Link>
+              </NavDropdown>
+              }
             </Nav>
           </Navbar.Collapse>
         </Container>
