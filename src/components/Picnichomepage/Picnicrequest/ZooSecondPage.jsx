@@ -109,6 +109,17 @@ function ZooSecondPage() {
         axios.post(`${baseUrl}/submit-form`, formData)
             .then(response => {
                 console.log('Form submitted successfully:', response.data);
+                alert("Form Submitted Successfully");
+                setFormData({
+                    name: "",
+                    email: "",
+                    mobile: "",
+                    budget: "",
+                    travelDate: "",
+                    numberOfPeople: "",
+                    interest: "Customizing Package",
+                    desiredLocations: []
+                });
             })
             .catch(error => {
                 console.error('Error submitting form:', error);
