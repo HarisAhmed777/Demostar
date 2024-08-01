@@ -30,6 +30,9 @@
 .logoimg {
   /* height: 70px; */
   width: 120px;
+  padding: 0 !important;
+  margin: 0 !important;
+  align-self: start !important;
 }
 .navbar-toggler{
     outline: none !important;

@@ -14,7 +14,13 @@
 
 
 }
+.card {
+    transition: transform 0.3s ease;
+}
 
+.card:hover {
+    transform: translateY(-30px);
+}
 .card {
     border-radius:10px 10px 0px 0px;
     width: 19.3rem;
