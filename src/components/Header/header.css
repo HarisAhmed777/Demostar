@@ -22,7 +22,7 @@
   background-color: #f8f9fa;
   color: #000;
 }
-.text-dddd:active{
+.nav-link:active{
   color: orangered !important;
   /* transition: ease-out 0.5s; */
 }

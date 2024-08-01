@@ -116,7 +116,7 @@ function BlogPage(){
                             <img src={value.img} alt="" className='card-img' />
                             <p className='fw-bold'>{value.heading}</p>
                             <p>{value.para}</p>
-                            <p className='fw-bold text-primary fp' onClick={()=>handleblog(value)}><u>{value.read}</u></p>
+                            <p className='fw-bold text-primary fp curso' onClick={()=>handleblog(value)}><u>{value.read}</u></p>
                             <div className='bg-secondary d-flex justify-content-around pt-3'>
                                 <p>{value.typeis}</p>
                                 <p className=''>{value.date}</p>

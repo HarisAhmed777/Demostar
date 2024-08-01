@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './blogpage.css'
 
 function BlogCard({ img, heading, para, date, read }) {
     console.log('hi')
@@ -11,7 +11,7 @@ function BlogCard({ img, heading, para, date, read }) {
                 <h5 className="card-title">{heading}</h5>
                 <p className="card-text">{para}</p>
                 <p>{date}</p>
-                <a href="#" className="btn btn-primary">{read}</a>
+                <a href="#" className="btn btn-primary curso">{read}</a>
             </div>
         </div>
     );
