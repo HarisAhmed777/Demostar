@@ -1,32 +1,14 @@
-import React,{useRef,useEffect} from "react";
-import eastimg from '../images/picnics-goa.jpg';
-import goa from '../images/picnics-goa.jpg';
-import lonavala from '../images/picnics-lonavala.jpg';
-import mountabu from '../images/picnics-mount-abu.jpg';
-import wayanad from '../images/picnics-wayanad.jpg';
-import gpdavari from '../images/picnics-godavari.jpg';
-import anaikatti from '../images/picnics-anaikatti.jpg';
-import {useNavigate } from 'react-router-dom';
+import React from "react";
 import cp1 from '../images/cp1.jpg';
 import ZooSecondPage from "./Picnicrequest/ZooSecondPage";
-import TamilNaduZoo from "./Zoo/TamilNaduZoo";
-import AndhraZoo from "./Zoo/AndhraZoo";
-import KarnatakaZoo from "./Zoo/KarnatakaZoo";
-import KeralaZoo from "./Zoo/KeralaZoo";
+import TamilNaduForest from "./Forest/TamilNaduForest";
+import KeralaForest from "./Forest/KeralaForest";
+import KarnatakaForest from "./Forest/KarnatakaForest";
+import AndhraForest from "./Forest/AndhraForest";
 
 
-function ZooPage(){
-    const navigate = useNavigate();
+function ForestPage(){
 
-    const handleImageClick = (heading,img) => {
-        const pkg = {
-            title :heading,
-            img:img,
-            catogory:"Zoo Picnic",
-
-        }
-        navigate('/bookingpage', { state: pkg });
-    };
     return(
         <>
         <div className="thirdimg">
@@ -45,17 +27,15 @@ function ZooPage(){
             <p className="text-center">Either way we are sure you’ll go back home in the evening with a carload of lovely memories.</p>
 
         </div>
-        <TamilNaduZoo/>
-        <AndhraZoo/>
-        <KarnatakaZoo/>
-        <KeralaZoo/>
-        
-            <ZooSecondPage/>
+        <TamilNaduForest/>
+        <KeralaForest/>
+        <KarnatakaForest/>
+        <AndhraForest/>
 
-           
+           <ZooSecondPage/>
             
         </>
     )
 }
 
-export default ZooPage;
+export default ForestPage;

@@ -167,7 +167,79 @@ const getcatogoryvalue = ()=>{
   return (
     <>
       <div className="paddingtop">
-        <img src={cp4} alt="booking img" className="bookingimg" />
+        <img src={state.img?state.img:cp4} alt="booking img" className="bookingimg" />
+        <div className="container mt-2">
+          <div className="mb-4">
+          <h5>Destinations covered</h5>
+            <p>{state.mainpara}</p>
+            <p>{state.subpara}</p>
+          </div>
+          <div className="mb-4">
+            <h5 className="bg-secondary mb-4"><span className="ms-2">
+            Transportation</span></h5>
+            <p className="ms-2">{state.Transportation}</p>
+          </div>
+          <div>
+          <h5 className="bg-secondary mb-4"><span className="ms-2">Day 1 :{state.day1city}</span></h5>
+          <p className="mb-3 ms-2">Food ,BreakFast Lunch and Dinner</p>
+          <ul className="ms-4">
+          {Object.keys(state.day1plan[0]).map((key, index) => (
+          <li key={index}>{state.day1plan[0][key]}</li>
+          ))}
+          </ul>
+          <p>After sightseeing them return to hotel</p>
+          <p>Overnight at {state.day1city}</p>
+          </div>
+          <div>
+          <h5 className="bg-secondary mb-4"><span className="ms-2">Day 1 :{state.day1city}</span></h5>
+          <p className="mb-3 ms-2">Food ,BreakFast Lunch and Dinner</p>
+            <p>{state.day2mainpara}</p>
+            <p className="ms-2">{state.day2plan}</p>
+          </div>
+          <div>
+          <h5 className="bg-secondary mb-4"><span className="ms-2">Package cost per student{state.packagecostperstudent}</span></h5>
+          <div className="d-flex justify-content-between">
+          <p>Food plan :{state.foodplan}</p>
+          <p>Group size :{state.Groupsize}</p>
+          <p>Per head Cost :{state.perheadcost}</p>
+          
+          </div>
+            <hr />
+          </div>
+          <div className="d-flex justify-content-around">
+            <div>
+              <h5>Cost Includes</h5>
+              <ul className="ms-4">
+              {Object.keys(state.costincludes[0]).map((key, index) => (
+          <li key={index}>{state.costincludes[0][key]}</li>
+          ))}
+              </ul>
+            </div>
+            <div>
+              <h5>Cost excludes</h5>
+              <ul className="ms-4">
+              {Object.keys(state.costexcludes[0]).map((key, index) => (
+          <li key={index}>{state.costexcludes[0][key]}</li>
+          ))}
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        <div className="container">
+                    <h2>For more details</h2>
+                    <div className="row">
+                        <div className="col-lg-4 text-center">
+                            <p>Call Us <br /><span className="cllr fw-bold">+919876543210</span></p>
+                        </div>
+                        <div className="col-lg-4 text-center">
+                            <p>Email <br /><span className="cllr fw-bold">info@starholiday.com</span></p>
+                        </div>
+                        <div className="col-lg-4 text-center">
+                            <p>Office<br /><span className="cllr fw-bold">Navalpur Mosque Street <br />Ranipet-632401</span></p>
+                        </div>
+                    </div>
+                </div>
         <div className="booking-container pt-5 text-dark">
           <h2 className="fw-bold">Book now</h2>
           <form onSubmit={handleSubmit} className="w-100">

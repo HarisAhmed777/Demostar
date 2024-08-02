@@ -7,22 +7,21 @@ import gpdavari from '../images/picnics-godavari.jpg';
 import anaikatti from '../images/picnics-anaikatti.jpg';
 import {useNavigate } from 'react-router-dom';
 import cp1 from '../images/cp1.jpg';
-import TempleSecondPage from "./Picnicrequest/TempleSecondRequest";
-import TamilNaduTemples from "./Temples/TamilNaduTemples";
-import KeralaTemples from "./Temples/KeralaTemples";
-import KarnatakaHillStations from "./HillStation/KarnatakaHillStation";
-import KarnatakaTemples from "./Temples/KarnatakaTemples";
-import AndhraTemples from "./Temples/AndhraTemples";
+import DesertSecondPage from "./Picnicrequest/DesertSecondPage";
+import TamilNaduFalls from "./Falls/TamilNaduFalls";
+import KeralaFalls from "./Falls/KeralaFalls";
+import KarnatakaFalls from "./Falls/KarnatakaFalls";
+import AndhraFalls from "./Falls/AndhraFalls";
 
 
-function TemplesPage(){
+function FallsPage(){
     const navigate = useNavigate();
 
     const handleImageClick = (heading,img) => {
         const pkg = {
             title :heading,
             img:img,
-            catogory:"Temple Picnic",
+            catogory:"Desert Picnic",
 
         }
         navigate('/bookingpage', { state: pkg });
@@ -45,15 +44,15 @@ function TemplesPage(){
             <p className="text-center">Either way we are sure you’ll go back home in the evening with a carload of lovely memories.</p>
 
         </div>
-        <TamilNaduTemples/>
-        <KeralaTemples/>
-        <KarnatakaTemples/>
-        <AndhraTemples/>
+        <TamilNaduFalls/>
+        <KeralaFalls/>
+        <KarnatakaFalls/>
+        <AndhraFalls/>
 
            
-            <TempleSecondPage/>
+          <DesertSecondPage/>  
         </>
     )
 }
 
-export default TemplesPage;
+export default FallsPage;

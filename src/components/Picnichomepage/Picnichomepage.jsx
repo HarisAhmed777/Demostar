@@ -25,21 +25,21 @@ const picnicpackages = [
         img: TCP2,
         title: "Hill Stations",
         para: "356 tours 246 activites",
-        apis: "/SafariPage"
+        apis: "/HillStationsPage"
 
     },
     {
         img: TCP3,
         title: "Falls",
         para: "356 tours 246 activites",
-        apis: "/DesertPage"
+        apis: "/FallsPage"
 
     },
     {
         img: TCP4,
         title: "Tea Estate ",
         para: "356 tours 246 activites",
-        apis: "/Flowerspage"
+        apis: "/TeaEstatePage"
 
     },
     {
@@ -68,7 +68,7 @@ const picnicpackages = [
         img: TCP8,
         title: "Forest",
         para: "356 tours 246 activites",
-        apis: "/Valleypage"
+        apis: "/ForestPage"
 
     }
 ];

@@ -1,14 +1,29 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom'
 
-function Offer({img,title,duration,price}){
+function Offer({img,title,duration,price,mainpara,subpara,Transportation,day1city,day1plan,day2city,day2mainpara,day2plan,packagecostperstudent,foodplan,Groupsize,perheadcost,costincludes,costexcludes}){
     const navigate = useNavigate();
     function handlebookclick(title,img){
         const catogory = "Custom Packages";
         const pkg= {
             title: title,
             img:img,
-            catogory: catogory
+            catogory: catogory,
+            mainpara:mainpara,
+            subpara:subpara,
+            Transportation:Transportation,
+            day1city:day1city,
+            day1plan:day1plan,
+            day2city:day2city,
+            day2mainpara:day2mainpara,
+            day2plan:day2plan,
+            packagecostperstudent:packagecostperstudent,
+            foodplan:foodplan,
+            Groupsize:Groupsize,
+            perheadcost:perheadcost,
+            costincludes:costincludes,
+            costexcludes:costexcludes
+
         };
         navigate('/bookingpage', { state: pkg });
         console.log(packageDetails);

@@ -37,16 +37,16 @@ import SignupStep2 from './components/Loginfile/Signup2page';
 import Bookingpage2 from './components/BookingPage/Bookingpage2';
 import MountainsPage from './components/Picnichomepage/Mountainspage';
 import ZooPage from './components/Picnichomepage/Zoo';
-import SafariPage from './components/Picnichomepage/SafariPage';
-import ValleyPage from './components/Picnichomepage/ValleyPage';
-import DesertPage from './components/Picnichomepage/DesertPage';
 import TemplesPage from './components/Picnichomepage/TemplePage';
-import FlowerPage from './components/Picnichomepage/FlowersPage';
 import BeachPage from './components/Picnichomepage/Beaches';
 import AndhraPicnic from './components/PicnicPage/AndhraPicnic';
 import KarnatakaPicnic from './components/PicnicPage/KarnatakaPicnic';
 import AllBlogs from './components/TestingImages';
 import SchoolPackage from './components/PackagePage/SchoolPackage';
+import ForestPage from './components/Picnichomepage/ForestPage';
+import HillStationPage from './components/Picnichomepage/HillStationPage';
+import TeaEstatePage from './components/Picnichomepage/TeaEstatePage';
+import FallsPage from './components/Picnichomepage/FallsPage';
 
 function App() {
   return (
@@ -84,12 +84,12 @@ function App() {
             <Route path = '/payment process' element =  {<Bookingpage2/>}/>
             <Route path ='/Mountainpage' element =  {<MountainsPage/>}/>
             <Route path ='/Zoo' element =  {<ZooPage/>}/>
-            <Route path ='/SafariPage' element =  {<SafariPage/>}/>
+            <Route path ='/FallsPage' element =  {<FallsPage/>}/>
             <Route path = '/BeachesPage' element = {<BeachPage/>}/>
-            <Route path ='/ValleyPage' element =  {<ValleyPage/>}/>
-            <Route path ='/DesertPage' element =  {<DesertPage/>}/>
+            <Route path ='/ForestPage' element =  {<ForestPage/>}/>
+            <Route path ='/HillStationsPage' element =  {<HillStationPage/>}/>
             <Route path ='/TemplePage' element =  {<TemplesPage/>}/>
-            <Route path ='/FlowersPage' element =  {<FlowerPage/>}/>
+            <Route path ='/TeaEstatePage' element =  {<TeaEstatePage/>}/>
             <Route path ='/AndhraPicnicPage' element =  {<AndhraPicnic/>}/>
             <Route path ='/KarnatakaPicnicPage' element =  {<KarnatakaPicnic/>}/>
             <Route path ='/schoolpackage' element =  {<SchoolPackage/>}/>

@@ -1,31 +1,14 @@
 import React,{useRef,useEffect} from "react";
-import goa from '../images/picnics-goa.jpg';
-import lonavala from '../images/picnics-lonavala.jpg';
-import mountabu from '../images/picnics-mount-abu.jpg';
-import wayanad from '../images/picnics-wayanad.jpg';
-import gpdavari from '../images/picnics-godavari.jpg';
-import anaikatti from '../images/picnics-anaikatti.jpg';
-import {useNavigate } from 'react-router-dom';
 import cp1 from '../images/cp1.jpg';
-import BeachesSecondPage from "./Picnicrequest/BeachesRequest";
-import TamilNaduBeaches from "./Beaches/TamilNaduBeaches";
-import KarnatakaBeaches from "./Beaches/KarnatakaBeaches";
-import AndhraBeaches from "./Beaches/AndhraBeaches";
-import KeralaBeaches from "./Beaches/KeralaBeaches";
+import FlowersSecondPage from "./Picnicrequest/FlowersSecondPage";
+import TamilNaduTeaEstate from "./TeaEstate/TamilNaduTeaEstate";
+import AndhraTeaEstate from "./TeaEstate/AndhraTeaEstate";
+import KarnatakaTeaEstate from "./TeaEstate/KarnatakaTeaEstate";
+import KeralaTeaEstate from "./TeaEstate/KeralaTeaEstate";
 
 
-function BeachPage(){
-    const navigate = useNavigate();
+function TeaEstatePage(){
 
-    const handleImageClick = (heading,img) => {
-        const pkg = {
-            title :heading,
-            img:img,
-            catogory:"Beach Picnic",
-
-        }
-        navigate('/bookingpage', { state: pkg });
-    };
     return(
         <>
         <div className="thirdimg">
@@ -44,16 +27,15 @@ function BeachPage(){
             <p className="text-center">Either way we are sure you’ll go back home in the evening with a carload of lovely memories.</p>
 
         </div>
-        <TamilNaduBeaches/>
-        <KarnatakaBeaches/>
-        <AndhraBeaches/>
-        <KeralaBeaches/>
-            <BeachesSecondPage/>
+        <TamilNaduTeaEstate/>
+        <AndhraTeaEstate/>
+        <KarnatakaTeaEstate/>
+        <KeralaTeaEstate/>
 
-           
+           <FlowersSecondPage/>
             
         </>
     )
 }
 
-export default BeachPage;
+export default TeaEstatePage;
