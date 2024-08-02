@@ -58,7 +58,7 @@ function Bestoffers() {
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
         Groupsize:"45 Students",
-        perheadcost:"Rs:2000",
+        perheadcost:2000,
         costincludes:[
           {
               accomodation:"accomadation in non A/c rooms",
@@ -105,7 +105,7 @@ function Bestoffers() {
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
         Groupsize:"45 Students",
-        perheadcost:"Rs:2000",
+        perheadcost:2000,
         costincludes:[
           {
               accomodation:"accomadation in non A/c rooms",
@@ -152,7 +152,7 @@ function Bestoffers() {
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
         Groupsize:"45 Students",
-        perheadcost:"Rs:2000",
+        perheadcost:2000,
         costincludes:[
           {
               accomodation:"accomadation in non A/c rooms",
@@ -199,7 +199,7 @@ function Bestoffers() {
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
         Groupsize:"45 Students",
-        perheadcost:"Rs:2000",
+        perheadcost:2000,
         costincludes:[
           {
               accomodation:"accomadation in non A/c rooms",
@@ -246,7 +246,7 @@ function Bestoffers() {
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
         Groupsize:"45 Students",
-        perheadcost:"Rs:2000",
+        perheadcost:2000,
         costincludes:[
           {
               accomodation:"accomadation in non A/c rooms",
@@ -293,7 +293,7 @@ function Bestoffers() {
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
         Groupsize:"45 Students",
-        perheadcost:"Rs:2000",
+        perheadcost:2000,
         costincludes:[
           {
               accomodation:"accomadation in non A/c rooms",

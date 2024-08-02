@@ -41,8 +41,6 @@ import TemplesPage from './components/Picnichomepage/TemplePage';
 import BeachPage from './components/Picnichomepage/Beaches';
 import AndhraPicnic from './components/PicnicPage/AndhraPicnic';
 import KarnatakaPicnic from './components/PicnicPage/KarnatakaPicnic';
-import AllBlogs from './components/TestingImages';
-import SchoolPackage from './components/PackagePage/SchoolPackage';
 import ForestPage from './components/Picnichomepage/ForestPage';
 import HillStationPage from './components/Picnichomepage/HillStationPage';
 import TeaEstatePage from './components/Picnichomepage/TeaEstatePage';
@@ -81,7 +79,7 @@ function App() {
             <Route path = '/ServiceProviders' element =  {<ServiceProviders/>}/>
             <Route path = '/ThirdpartyInformation' element =  {<ThirdPartyInformation/>}/>
             <Route path = '/legalDisclaimer' element =  {<LegalDisclaimer/>}/>
-            <Route path = '/payment process' element =  {<Bookingpage2/>}/>
+            <Route path = '/paymentpage' element =  {<Bookingpage2/>}/>
             <Route path ='/Mountainpage' element =  {<MountainsPage/>}/>
             <Route path ='/Zoo' element =  {<ZooPage/>}/>
             <Route path ='/FallsPage' element =  {<FallsPage/>}/>
@@ -92,8 +90,6 @@ function App() {
             <Route path ='/TeaEstatePage' element =  {<TeaEstatePage/>}/>
             <Route path ='/AndhraPicnicPage' element =  {<AndhraPicnic/>}/>
             <Route path ='/KarnatakaPicnicPage' element =  {<KarnatakaPicnic/>}/>
-            <Route path ='/schoolpackage' element =  {<SchoolPackage/>}/>
-            <Route path ='/allblogs' element =  {<AllBlogs/>}/>
 
           </Routes>
           <Footer />

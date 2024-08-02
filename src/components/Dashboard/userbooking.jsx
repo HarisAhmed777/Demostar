@@ -25,6 +25,7 @@ function UserBooking() {
                 {data.length > 0 ? (
                     data.map((booking, index) => (
                         <div key={index} className='booking-item'>
+                            <p className='booking-detail'><span className='booking-label'>Booking:</span> <span className='booking-value'>{booking.booking_id}</span></p>
                             <p className='booking-detail'><span className='booking-label'>Name:</span> <span className='booking-value'>{booking.name}</span></p>
                             <p className='booking-detail'><span className='booking-label'>Age:</span> <span className='booking-value'>{booking.age}</span></p>
                             <p className='booking-detail'><span className='booking-label'>City:</span> <span className='booking-value'>{booking.city}</span></p>

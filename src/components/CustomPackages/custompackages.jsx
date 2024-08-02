@@ -13,7 +13,7 @@ const packages = [
         title: "Kodaikanal Hills",
         duration: "2 days 3 nights",
         guest:"4 to 6 guest",
-        price: "1000rs/person",
+        price: "1000",
         mainpara:"Experience an exclusively crafted 2-day Kodaikanal student tour package, meticulously designed to explore all the key attractions in Kodaikanal. Our comprehensive package encompasses accommodation, delectable meals, entrance tickets, expert guides, and immersive sightseeing. Uncover the essence of your study tour with the assurance of the best and most affordable prices. Embrace a low-cost guarantee for an enriching educational journey.",
         subpara:"Our primary concern amid the COVID-19 (Coronavirus) pandemic is ensuring strict adherence to all safety protocols mandated by the local and state government authorities and the Health Department.",
         Transportation:"49 seater AC Couch",
@@ -36,7 +36,7 @@ const packages = [
           packagecostperstudent:"Min 45",
           foodplan:"With Food",
           Groupsize:"45 Students",
-          perheadcost:"Rs:2000",
+          perheadcost:2000,
           costincludes:[
             {
                 accomodation:"accomadation in non A/c rooms",
@@ -87,7 +87,7 @@ const packages = [
           packagecostperstudent:"Min 45",
           foodplan:"With Food",
           Groupsize:"45 Students",
-          perheadcost:"Rs:2000",
+          perheadcost:2000,
           costincludes:[
             {
                 accomodation:"accomadation in non A/c rooms",
@@ -135,7 +135,7 @@ const packages = [
           packagecostperstudent:"Min 45",
           foodplan:"With Food",
           Groupsize:"45 Students",
-          perheadcost:"Rs:2000",
+          perheadcost:2000,
           costincludes:[
             {
                 accomodation:"accomadation in non A/c rooms",
@@ -183,7 +183,7 @@ const packages = [
           packagecostperstudent:"Min 45",
           foodplan:"With Food",
           Groupsize:"45 Students",
-          perheadcost:"Rs:2000",
+          perheadcost:2000,
           costincludes:[
             {
                 accomodation:"accomadation in non A/c rooms",

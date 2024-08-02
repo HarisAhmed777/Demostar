@@ -17,6 +17,7 @@ function Booking() {
   const location = useLocation();
   const state = location.state || {};
   console.log(state)
+  const cost = state.perheadcost
   const title = location.state ||{};
   const getCityValue = () => {
     // if (pkg.title) return pkg.title;
@@ -46,7 +47,7 @@ const getcatogoryvalue = ()=>{
   const { user } = useContext(Context);
 
   useEffect(() => {
-    setEmail(user);
+    setEmail(user || "");
     setCity(getCityValue());
     setCatogory(getcatogoryvalue())
   }, [user]);
@@ -81,7 +82,7 @@ const getcatogoryvalue = ()=>{
 
   const calculateTotalAmount = () => {
     const days = parseInt(calculateDays());
-    const totalAmountPerDay = persons * 1100;
+    const totalAmountPerDay = persons * cost;
     const totalAmount = parseInt(totalAmountPerDay * days);
     const discountedAmount = totalAmount - (totalAmount * discount / 100);
     return parseInt(discountedAmount);
@@ -129,18 +130,16 @@ const getcatogoryvalue = ()=>{
       totalamount: calculateTotalAmount(),
       promocode,
     };
-    try {
-      const response = await axios.post(`${baseUrl}/booking`, bookingData);
-      if (response.data.status === "ok") {
-        toast.success("Booking confirmed successfully, See Dashboard", { autoClose: 3000 });
-        setTimeout(() => {
-          navigate('/');
-        }, 2000);
-      } else {
-        toast.error("Internal Server error");
-      }
-    } catch (error) {
-      toast.error("Please Login and try again");
+    const combineddata = {
+      ...state,
+      ...bookingData
+    }
+    if (!user || Object.keys(user).length === 0) {
+      toast.error("Please login and try again");
+    }
+    else{
+      navigate('/paymentpage',{state:combineddata});
+
     }
   };
   
