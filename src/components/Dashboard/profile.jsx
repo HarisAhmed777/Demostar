@@ -18,6 +18,7 @@ function Profile() {
         email: '',
     });
     const { user } = useContext(Context);
+    console.log(user);
 
     useEffect(() => {
         fetch(`${baseUrl}/user?email=${user}`, {
@@ -34,6 +35,7 @@ function Profile() {
         })
         .then(view => {
             setData(view);
+            console.log(view);
             setFormData({
                 firstname: view.firstname,
                 lastname: view.lastname,
@@ -80,63 +82,79 @@ function Profile() {
     };
 
     return (
-        <div className='bbody paddingtop'>
-        <div className='profile-container prop'>
-            <h1 className='profile-header text-white'>Your Profile</h1>
-            {data ? (
-                <div className='profile-form'>
-                    <div className='profile-item'>
-                        <label>First Name:</label>
-                        <input
-                            type="text"
-                            name="firstname"
-                            value={formData.firstname}
-                            onChange={handleInputChange}
-                            disabled={!editMode}
-                        />
-                    </div>
-                    <div className='profile-item'>
-                        <label>Last Name:</label>
-                        <input
-                            type="text"
-                            name="lastname"
-                            value={formData.lastname}
-                            onChange={handleInputChange}
-                            disabled={!editMode}
-                        />
-                    </div>
-                    <div className='profile-item'>
-                        <label>Mobile Number:</label>
-                        <input
-                            type="text"
-                            name="mobilenumber"
-                            value={formData.mobilenumber}
-                            onChange={handleInputChange}
-                            disabled={!editMode}
-                        />
-                    </div>
-                    <div className='profile-item'>
-                        <label>Email:</label>
-                        <input
-                            type="text"
-                            name="email"
-                            value={formData.email}
-                            disabled
-                        />
-                    </div>
-                    <button onClick={handleEditToggle}>
-                        <FontAwesomeIcon icon={faEdit} /> {editMode ? 'Cancel' : 'Edit'}
-                    </button>
-                    <button onClick={handleUpdate} disabled={!editMode}>
-                        Update
-                    </button>
+        <>
+        <div className='mt-3 w-100'>
+    {data ? (
+        <>
+            <div className='container editprofilediv ps-4 '>
+                <div className='editprofiledi'>
+                    <h3 className='editprofile fw-light ps-3'>Edit Profile</h3> 
+                </div> 
+                <div className='d-flex ms-2 mt-3'>
+                    <label htmlFor="firstname" className='me-3 profilelabel'>First Name</label>
+                    <input type="text"
+                        id="firstname"
+                        name="firstname"
+                        value={formData.firstname}  
+                        onChange={handleInputChange}
+                        disabled={!editMode}                    
+                        className='profileinput'  
+                    />
                 </div>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-        <ToastContainer/>
-        </div>
+                <div className='ms-2 mt-3'>
+                    <label htmlFor="lastname" className='me-3'>Last Name</label>
+                    <input type="text" 
+                        id="lastname"
+                        className='profileinput' 
+                        name="lastname"
+                        value={formData.lastname}
+                        onChange={handleInputChange}
+                        disabled={!editMode}
+                    />
+                </div>
+                <div className='ms-2 mt-3'>
+                    <label htmlFor="mobilenumber" className='me-2 ms-2'>Phone No. </label>
+                    <input type="text"          
+                        id="mobilenumber"
+                        name="mobilenumber"
+                        value={formData.mobilenumber}
+                        onChange={handleInputChange}
+                        disabled={!editMode}
+                        className='profileinput' 
+                        placeholder='Mobile number ' 
+                    />
+                </div>
+                <div className='ms-2 mt-3'>
+                    <label htmlFor="email" className='me-3 ms-4'>Email</label>
+                    <input type="text"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        disabled
+                        className='profileinput ms-2'
+                    />
+                </div>
+            </div> 
+            <div className='container'> 
+            <div className='ms-2 mt-3 mb-4'>
+                <span onClick={handleEditToggle} className={`${editMode ? 'profileeditmode' : 'profilecancelmode'} me-4`}>
+                    <FontAwesomeIcon icon={faEdit} /> {editMode ? 'Cancel' : 'Edit'}
+                </span>
+                <span onClick={handleUpdate} disabled={!editMode} className={editMode ? 'profileupdatebutton' : ''}>
+                    Update
+                </span>
+            </div>
+            </div>
+        </>
+    ) : (
+        <p>Loading...</p>
+    )}
+</div>
+
+            
+
+
+        </>
        
     );
 }

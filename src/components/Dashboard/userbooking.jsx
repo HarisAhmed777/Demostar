@@ -1,11 +1,17 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Context } from "../context";
-import './userbooking.css'; 
 import { baseUrl } from "../../../url";
+import {
+    Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,
+    TablePagination, Typography
+} from '@mui/material';
+import './userbooking.css'; 
 
 function UserBooking() {
     const [data, setData] = useState([]);
     const { user } = useContext(Context);
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
 
     useEffect(() => {
         fetch(`${baseUrl}/userbooking?mail=${user}`)
@@ -18,25 +24,63 @@ function UserBooking() {
             });
     }, [user]);
 
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+
     return (
-        <div className='userbooking-container-wrapper paddingtop'>
-            <div className='userbooking-container'>
-                <h1 className='userbooking-header'>Your Bookings</h1>
+        <div className='userbookinghwholediv mt-3'>
+            <div className=''>
+                <Typography variant="h4" className='userbooking-header px-2 fw-light'>Your Bookings</Typography>
+                <TablePagination
+                            component="div"
+                            count={data.length}
+                            page={page}
+                            onPageChange={handleChangePage}
+                            rowsPerPage={rowsPerPage}
+                            onRowsPerPageChange={handleChangeRowsPerPage}
+                            rowsPerPageOptions={[5, 10, 25]}
+                        />
                 {data.length > 0 ? (
-                    data.map((booking, index) => (
-                        <div key={index} className='booking-item'>
-                            <p className='booking-detail'><span className='booking-label'>Booking:</span> <span className='booking-value'>{booking.booking_id}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>Name:</span> <span className='booking-value'>{booking.name}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>Age:</span> <span className='booking-value'>{booking.age}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>City:</span> <span className='booking-value'>{booking.city}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>Persons:</span> <span className='booking-value'>{booking.persons}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>Start Date:</span> <span className='booking-value'>{new Date(booking.startdate).toLocaleDateString()}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>End Date:</span> <span className='booking-value'>{new Date(booking.enddate).toLocaleDateString()}</span></p>
-                            <p className='booking-detail'><span className='booking-label'>Total Amount:</span> <span className='booking-value'>{booking.totalamount}</span></p>
-                        </div>
-                    ))
+                    <Paper>
+                        <TableContainer>
+                            <Table>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>Persons</TableCell>
+                                        <TableCell>Bookings and Details</TableCell>
+                                        <TableCell>Date</TableCell>
+                                        <TableCell>Amount</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((booking, index) => (
+                                        <TableRow key={index}>
+                                            <TableCell>{booking.persons}</TableCell>
+                                            <TableCell>
+                                                <p><span className='booking-label'>Booking ID:</span> {booking.booking_id}</p>
+                                                <p><span className='booking-label'>Name:</span> {booking.name}</p>
+                                                <p><span className='booking-label'>City:</span> {booking.city}</p>
+                                            </TableCell>
+                                            <TableCell>
+                                                <p><span className='booking-label'>Start Date:</span> {new Date(booking.startdate).toLocaleDateString()}</p>
+                                                <p><span className='booking-label'>End Date:</span> {new Date(booking.enddate).toLocaleDateString()}</p>
+                                            </TableCell>
+                                            <TableCell>{booking.totalamount}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                        
+                    </Paper>
                 ) : (
-                    <p className='no-bookings'>No bookings found.</p>
+                    <Typography variant="body1" className='no-bookings'>No bookings found.</Typography>
                 )}
             </div>
         </div>

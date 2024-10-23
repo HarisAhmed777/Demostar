@@ -1,0 +1,52 @@
+
+
+button {
+    position: relative;
+    background-color: #FDBE0E;
+    border: none;
+    border-radius: 5px !important;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 1;
+    overflow: hidden;
+    transition: opacity 0.3s;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FDBE0E;
+    opacity: 0.6;
+    transition: left 0.5s;
+    z-index: 0;
+}
+
+button:hover {
+    opacity: 0.9;
+    color: black;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+/* Ensure the text remains above the pseudo-element */
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.MuiInputBase-root {
+    margin-bottom: 12px;
+}
+.MuiTablePagination-actions{
+    margin-bottom: 12px;
+}

@@ -56,20 +56,27 @@ function CollapsibleExample() {
               <Nav.Link href="#action/4.1" as={Link} to = '/offerpage'className='text-dddd' id="collapsible-nav-dropdown" onClick={handleToggle}>Offer</Nav.Link>
               <Nav.Link href="#action/5.1" as={Link} to = '/blogpage' className='text-dddd' onClick={handleToggle}>Blog</Nav.Link>
               <Nav.Link href="#action/6.1" as={Link} to="/contactus" className='text-dddd' onClick={handleToggle}>Contact</Nav.Link>
+              {
+                isAuthorized?
+              <Nav.Link href="#action/6.1" as={Link} to="/dashboard" className='text-dddd' onClick={handleToggle}>Dashboard</Nav.Link>
+              :''
+
+              }
+
             </Nav>
             <Nav className="">
               {
                 !isAuthorized?<Nav.Link href="#action/7.1" className='text-dddd' onClick={handleToggle} as={Link} to="/login">Login</Nav.Link>:
                 <Nav.Link href="#action/8.1" className='text-dddd' onClick={handleLogout}>Logout</Nav.Link>
               }
-              {
-              
-              !isAuthorized?<Nav.Link href="#action/9.1" as ={Link} to = '/login' className="text-dddd" onClick={handleToggle}>Sign Up</Nav.Link>:
-              <NavDropdown title="My Account" id="collapsible-nav-dropdown">
-              <Link to = '/profile'><NavDropdown.Item href="#action/1.1">Myprofile</NavDropdown.Item></Link>
-              <Link to = '/booking'><NavDropdown.Item href="#action/1.2">Mybookings</NavDropdown.Item></Link>
-              </NavDropdown>
-              }
+             {/* {
+               isAuthorized ? (
+                <NavDropdown title="My Account" id="collapsible-nav-dropdown">
+                  <Link to='/profile'><NavDropdown.Item href="#action/1.1">My Profile</NavDropdown.Item></Link>
+                  <Link to='/booking'><NavDropdown.Item href="#action/1.2">My Bookings</NavDropdown.Item></Link>
+                </NavDropdown>
+               ) : null
+              } */}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -7,6 +7,35 @@
 }
 
 .bestofferborderradius{
+    width: 17rem!important;
+    /* overflow-x:clip !important; */
+    /* overflow-y:visible; */
+    gap: 0px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 
+}
+
+.cursor-pointer:hover{
+    cursor: pointer;
+}
+
+.cards-contaier{
+    display: flex !important;
+    gap: 0px !important;
+    overflow: visible;
+    width: 100% !important;
+}
+
+.packageimg {
+    background-image: url('../images/Package.webp');
+    /* background-color: rebeccapurple; */
+    height: 80vh !important;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }

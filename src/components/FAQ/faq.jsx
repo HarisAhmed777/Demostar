@@ -62,9 +62,9 @@ function FAQ() {
                     <div key={index}>
                         <div className="d-flex justify-content-between align-items-center ms-3">
                             <h4 className="fw-light">{faq.question}</h4>
-                            <button onClick={() => handleParaToggle(index)} className="btn btn-dark">
+                            <p onClick={() => handleParaToggle(index)} className="btn btn-dark">
                                 {visibleIndex === index ? '-' : '+'}
-                            </button>
+                            </p>
                         </div>
                         {visibleIndex === index && (
                             <p className="ms-3">{faq.answer}</p>

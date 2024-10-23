@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom'
+import './Bestoffers.css'
 
 function Offer({img,title,duration,price,mainpara,subpara,Transportation,day1city,day1plan,day2city,day2mainpara,day2plan,packagecostperstudent,foodplan,Groupsize,perheadcost,costincludes,costexcludes}){
     const navigate = useNavigate();
@@ -26,12 +27,11 @@ function Offer({img,title,duration,price,mainpara,subpara,Transportation,day1cit
 
         };
         navigate('/bookingpage', { state: pkg });
-        console.log(packageDetails);
         }
     
     return(
         <>
-        <div className={`cards-container`}>
+        <div className={`cards-contaier`}>
                     <div className="card bestofferborderradius">
                         <img className="cardimg bfcardimg" src={img} alt="Card image cap"/>
                         <div className={`card-body`}>

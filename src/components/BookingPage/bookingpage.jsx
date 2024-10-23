@@ -190,7 +190,7 @@ const getcatogoryvalue = ()=>{
           <p>Overnight at {state.day1city}</p>
           </div>
           <div>
-          <h5 className="bg-secondary mb-4"><span className="ms-2">Day 1 :{state.day1city}</span></h5>
+          <h5 className="bg-secondary mb-4"><span className="ms-2">Day 2 :{state.day2city}</span></h5>
           <p className="mb-3 ms-2">Food ,BreakFast Lunch and Dinner</p>
             <p>{state.day2mainpara}</p>
             <p className="ms-2">{state.day2plan}</p>

@@ -8,7 +8,7 @@ function DataTesti({ heading, comment, img, name }) {
         <>
             <div className="ms-4 ">
                 <div className="row">
-                    <div className="col">
+                    <div className="">
                         <h5>{heading}</h5>
                         <p>{comment}</p>
                         <div className="d-flex justify-content-between align-items-center">

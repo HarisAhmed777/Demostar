@@ -45,6 +45,8 @@ import ForestPage from './components/Picnichomepage/ForestPage';
 import HillStationPage from './components/Picnichomepage/HillStationPage';
 import TeaEstatePage from './components/Picnichomepage/TeaEstatePage';
 import FallsPage from './components/Picnichomepage/FallsPage';
+import Exclusiceholidaypage from './components/Bestoffers/Exclusiceholidaypage';
+import Dashboardhome from './components/Dashboard/Dashboardhome';
 
 function App() {
   return (
@@ -90,6 +92,8 @@ function App() {
             <Route path ='/TeaEstatePage' element =  {<TeaEstatePage/>}/>
             <Route path ='/AndhraPicnicPage' element =  {<AndhraPicnic/>}/>
             <Route path ='/KarnatakaPicnicPage' element =  {<KarnatakaPicnic/>}/>
+            <Route path = '/exclusiceholidaypage' element={<Exclusiceholidaypage/>}/>
+            <Route path = '/dashboard' element={<Dashboardhome/>}/>
 
           </Routes>
           <Footer />

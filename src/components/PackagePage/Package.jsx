@@ -15,15 +15,15 @@ function PackagePage() {
   const custompackages = [
     {
       img: cp1,
-      title: 'KanyaKumari Expenditure',
+      title: 'Rameshwaram & Kanyakumari ',
       duration: '3 days 4 nights',
       loc: 'Rameshwaram (2N) KanyaKumari (2N)',
       price: '3,400',
-      mainpara:"Experience an exclusively crafted 2-day Kodaikanal student tour package, meticulously designed to explore all the key attractions in Kodaikanal. Our comprehensive package encompasses accommodation, delectable meals, entrance tickets, expert guides, and immersive sightseeing. Uncover the essence of your study tour with the assurance of the best and most affordable prices. Embrace a low-cost guarantee for an enriching educational journey.",
+      mainpara:"Welcome to Rameshwaram, a sacred island town steeped in spirituality and mythology. Upon arrival, you’ll check into your hotel and get ready to explore this holy city, known for its temples and serene beaches.",
       subpara:"Our primary concern amid the COVID-19 (Coronavirus) pandemic is ensuring strict adherence to all safety protocols mandated by the local and state government authorities and the Health Department.",
       Transportation:"49 seater AC Couch",
-      day1city:"Kodaikanal",
-       day1: "Arrive at kodaikanal railway station and transfer to the hotel. After fresh up proceed for local sightseeing. This day you will cover……",
+      day1city:"Rameshwaram",
+       day1: " Arrival in Rameshwaram (Stay: 2 Nights)",
       day1plan: [
             {
               NTR: "Garden",
@@ -35,7 +35,7 @@ function PackagePage() {
               MeccaMasjid: "Mecca Masjid"
             }
           ],
-        day2city:"Kodaikanal",
+        day2city:"Rameshwaram Sightseeing",
         day2mainpara:"After breakfast proceed for Ramoji film city tour. One day will take to enjoy Ramoji Film City.",
         day2plan:"After dinner transfer and drop at Hyderabad railway station. From there you will board train depart to your hometown.",
         packagecostperstudent:"Min 45",
@@ -65,13 +65,13 @@ function PackagePage() {
       img: cp1,
       title: 'Chennai Expenditure',
       duration: '2 days 3 nights',
-      loc: 'malls(2N) Muselum(2N)',
+      loc: 'Key Attractions in Chennai (2 Nights)',
       price: '1,400',
       mainpara:"Experience an exclusively crafted 2-day Kodaikanal student tour package, meticulously designed to explore all the key attractions in Kodaikanal. Our comprehensive package encompasses accommodation, delectable meals, entrance tickets, expert guides, and immersive sightseeing. Uncover the essence of your study tour with the assurance of the best and most affordable prices. Embrace a low-cost guarantee for an enriching educational journey.",
       subpara:"Our primary concern amid the COVID-19 (Coronavirus) pandemic is ensuring strict adherence to all safety protocols mandated by the local and state government authorities and the Health Department.",
       Transportation:"49 seater AC Couch",
-      day1city:"Kodaikanal",
-       day1: "Arrive at kodaikanal railway station and transfer to the hotel. After fresh up proceed for local sightseeing. This day you will cover……",
+      day1city:"Arrival in Chennai (Stay: 2 Nights)",
+       day1: "Arrive in Chennai, a city known for its rich cultural heritage, bustling shopping streets, and modern lifestyle. Upon your arrival, you will be transferred to your hotel, and after check-in, prepare to explore the vibrant city.",
       day1plan: [
             {
               NTR: "Garden",
@@ -83,8 +83,8 @@ function PackagePage() {
               MeccaMasjid: "Mecca Masjid"
             }
           ],
-        day2city:"Kodaikanal",
-        day2mainpara:"After breakfast proceed for Ramoji film city tour. One day will take to enjoy Ramoji Film City.",
+        day2city:"Rameshwaram Sightseeing",
+        day2mainpara:"Start your day with a visit to some of the city’s other iconic spiritual and historical sites. Enjoy the tranquility and peace that Rameshwaram offers.",
         day2plan:"After dinner transfer and drop at Hyderabad railway station. From there you will board train depart to your hometown.",
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
@@ -92,9 +92,9 @@ function PackagePage() {
         perheadcost:2000,
         costincludes:[
           {
-              accomodation:"accomadation in non A/c rooms",
-              assistance:"assistance on arrival",
-              complimentary:"complimentary trip for 2 teachers",
+              accomodation:"accomadation in Chennai ",
+              assistance:"•	Comfortable transportation for city sightseeing.",
+              complimentary:"•	Guided tours of all major attractions",
               sharingplan:"Accomadation on quad share basic",
               meals:"2 BreakFast + 2Lunch + 3 dinners",
 
@@ -102,8 +102,8 @@ function PackagePage() {
         ],
         costexcludes:[
           {
-              fare:"train/flight fare",
-              portage:"Any portage at airports and hotels, and all items of personal nature.",
+              fare:"•	Airfare/train fare to and from the starting point.",
+              portage:"•	Entry fees to museums and attractions.",
               laundry:"laundry",
               cam:"camera fees",
           }
@@ -115,11 +115,11 @@ function PackagePage() {
       duration: '4 days 5 nights',
       loc: 'hills(2N) forest(2N)',
       price: '3,400',
-      mainpara:"Experience an exclusively crafted 2-day Kodaikanal student tour package, meticulously designed to explore all the key attractions in Kodaikanal. Our comprehensive package encompasses accommodation, delectable meals, entrance tickets, expert guides, and immersive sightseeing. Uncover the essence of your study tour with the assurance of the best and most affordable prices. Embrace a low-cost guarantee for an enriching educational journey.",
+      mainpara:"Arrive in Ooty, also known as the Queen of Hill Stations famous for its scenic beauty, lush gardens, and pleasant climate. Upon arrival, you will be transferred to your hotel for check-in. Spend the rest of the day at leisure.",
       subpara:"Our primary concern amid the COVID-19 (Coronavirus) pandemic is ensuring strict adherence to all safety protocols mandated by the local and state government authorities and the Health Department.",
       Transportation:"49 seater AC Couch",
-      day1city:"Kodaikanal",
-       day1: "Arrive at kodaikanal railway station and transfer to the hotel. After fresh up proceed for local sightseeing. This day you will cover……",
+      day1city:"Ooty",
+       day1: "	Ooty Lake: Enjoy a peaceful boat ride on this serene lake surrounded by eucalyptus trees.",
       day1plan: [
             {
               NTR: "Garden",
@@ -131,8 +131,8 @@ function PackagePage() {
               MeccaMasjid: "Mecca Masjid"
             }
           ],
-        day2city:"Kodaikanal",
-        day2mainpara:"After breakfast proceed for Ramoji film city tour. One day will take to enjoy Ramoji Film City.",
+        day2city:"Ooty Sightseeing",
+        day2mainpara:"After breakfast, embark on a day of exploration, discovering the many attractions Ooty has to offer.",
         day2plan:"After dinner transfer and drop at Hyderabad railway station. From there you will board train depart to your hometown.",
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
@@ -159,15 +159,15 @@ function PackagePage() {
     },
     {
       img: cp1,
-      title: 'Munnar Expenditure',
+      title: 'Munnar Tour Package',
       duration: '5 days 6 nights',
-      loc: 'Munnar top(3N) down(2N)',
+      loc: 'Munnar and nearby Attractions',
       price: '5,200',
-      mainpara:"Experience an exclusively crafted 2-day Kodaikanal student tour package, meticulously designed to explore all the key attractions in Kodaikanal. Our comprehensive package encompasses accommodation, delectable meals, entrance tickets, expert guides, and immersive sightseeing. Uncover the essence of your study tour with the assurance of the best and most affordable prices. Embrace a low-cost guarantee for an enriching educational journey.",
+      mainpara:"Arrive in Munnar, a picturesque hill station known for its sprawling tea gardens, lush green hills, and tranquil atmosphere. Upon arrival, you will be transferred to your hotel for check-in. Spend the rest of the day at leisure",
       subpara:"Our primary concern amid the COVID-19 (Coronavirus) pandemic is ensuring strict adherence to all safety protocols mandated by the local and state government authorities and the Health Department.",
       Transportation:"49 seater AC Couch",
-      day1city:"Kodaikanal",
-       day1: "Arrive at kodaikanal railway station and transfer to the hotel. After fresh up proceed for local sightseeing. This day you will cover……",
+      day1city:"Munnar tea Museum and Mattupetty Dam",
+       day1: "Arrive in Munnar, a picturesque hill station known for its sprawling tea gardens, lush green hills, and tranquil atmosphere. Upon arrival, you will be transferred to your hotel for check-in. Spend the rest of the day at leisure",
       day1plan: [
             {
               NTR: "Garden",
@@ -179,8 +179,8 @@ function PackagePage() {
               MeccaMasjid: "Mecca Masjid"
             }
           ],
-        day2city:"Kodaikanal",
-        day2mainpara:"After breakfast proceed for Ramoji film city tour. One day will take to enjoy Ramoji Film City.",
+        day2city:"Munnar SightSeeing",
+        day2mainpara:"After breakfast, embark on a full day of sightseeing to explore the natural beauty of Munnar.",
         day2plan:"After dinner transfer and drop at Hyderabad railway station. From there you will board train depart to your hometown.",
         packagecostperstudent:"Min 45",
         foodplan:"With Food",
@@ -188,20 +188,20 @@ function PackagePage() {
         perheadcost:2000,
         costincludes:[
           {
-              accomodation:"accomadation in non A/c rooms",
-              assistance:"assistance on arrival",
-              complimentary:"complimentary trip for 2 teachers",
-              sharingplan:"Accomadation on quad share basic",
+              accomodation:"accomadation in munnar (6 nights)",
+              assistance:"BreakFast And Dinner at the hotel",
+              complimentary:"Guided Tour of Major Attractions",
+              sharingplan:"Comfortable transportation for all sightseeing",
               meals:"2 BreakFast + 2Lunch + 3 dinners",
 
           }
         ],
         costexcludes:[
           {
-              fare:"train/flight fare",
-              portage:"Any portage at airports and hotels, and all items of personal nature.",
+              fare:"•	Airfare/train fare to and from the starting point",
+              portage:"•	Entry fees to parks and attractions.",
               laundry:"laundry",
-              cam:"camera fees",
+              cam:"•	Personal expenses like additional meals, tips, and shopping.",
           }
         ]
     },

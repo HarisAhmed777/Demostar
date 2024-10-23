@@ -3,8 +3,8 @@ import cp1 from '../images/cp1.jpg'
 export const blogs = [
     {
         img : cp1,
-        heading: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam culpa nesciunt, neque veritatis necessitatibus!",
-        para:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quae explicabo et placeat corporis ut modi illum, dolor odio officiis.",
+        heading: "School Excursions Made Exciting: Why Choose The Star Holiday for Your Next Trip",
+        para:"Planning a school excursion can be a daunting task, but with The Star Holiday's specially curated school packages, it's an adventure worth looking forward to! Our trips blend fun with education, providing students with hands-on learning experiences. Students can enjoy interactive and insightful tours, whether it’s a historical site or a nature trail. Our comprehensive safety measures ensure every child has a memorable yet safe experience.",
         secondpars: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas distinctio, corporis aut ut suscipit eaque omnis vitae quam iusto cupiditate dolores ab? Mollitia numquam aliquam rerum et ea quaerat adipisci quis iste nostrum perferendis asperiores, sit repellat impedit consequatur pariatur. Atque ratione obcaecati ducimus consectetur. Nam quam quod perferendis cumque.",
         read:"Read More",
         typeis : "Adventure",
